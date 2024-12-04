@@ -22,7 +22,7 @@ const ButtonSecondary = ({ text }) => {
                     >
 
                     </motion.div>
-                    <motion.h4
+                    <motion.h4d
                         animate={{
                             x: isHover ? -8 : 8,
                             color: isHover ? '#FFF' : '#0b286d'
@@ -31,7 +31,7 @@ const ButtonSecondary = ({ text }) => {
                             ease: 'easeIn',
                             duration: 0.4
                         }}
-                        className='text-lg font-semibold'>{text}</motion.h4>
+                        className='text-lg font-semibold'>{text}</motion.h4d>
                     <motion.div
                         animate={{
                             x: isHover ? 0 : 24
