@@ -1,7 +1,8 @@
 import FaTelegram from '@/icons/FaTelegram';
 import React from 'react';
 import TextAnimation from './TextAnimation';
-import { serif } from '@/app/layout';
+import { serif } from './Serif';
+
 
 const SectionTitle = ({ subHeading, heading1, heading2, width }) => {
     return (

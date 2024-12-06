@@ -20,10 +20,21 @@ import FaTicket from '@/icons/FaTicket';
 import Link from 'next/link';
 import TextAnimation from '@/shared/TextAnimation';
 import ButtonSecondary from '@/shared/ButtonSecondary';
+import video from '@/../public/assets/Abstract Energy Free White Background Videos, Motion Graphics, No Copyright _ All Background Videos.mp4'
 
 const AboutUs = () => {
     return (
-        <div className="grid 2xl:grid-cols-2 xl:grid-cols-2 grid-cols-1 max-w-[1440px] mx-auto 2xl:py-24 xl:py-24 2xl:pl-24 xl:pl-24 px-5 py-10 gap-24">
+        <div className="grid 2xl:grid-cols-2 xl:grid-cols-2 grid-cols-1 max-w-[1440px] mx-auto 2xl:py-24 xl:py-24 2xl:pl-24 xl:pl-24 px-5 py-10 gap-24 relative">
+             <div className='absolute right-0 left-0 top-0 bottom-0 -z-10'>
+                    <video
+                        className='w-full h-full object-contain opacity-40'
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        src={video} 
+                    />
+            </div>
             <div className='2xl:block xl:block hidden relative '>
                 <Image src={image} className='w-full max-h-[632px] object-cover object-center' priority placeholder='blur' alt='' />
                 <Animated className='absolute -left-14 top-28'>

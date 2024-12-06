@@ -11,6 +11,7 @@ import us from '../../public/assets/us.png'
 import gb from '../../public/assets/gb.png'
 import jp from '../../public/assets/jp.png'
 import nz from '../../public/assets/nz.png'
+import aus from '../../public/assets/images.jpg'
 import kr from '../../public/assets/kr.png'
 import uk from '../../public/assets/c6cae16cfb0b890601f8050cc179326a.png'
 import usa from '../../public/assets/2ba37f8e6ba6d9af3ea7e40a47287986.png'
@@ -21,17 +22,21 @@ import nzl from '../../public/assets/82c7acee9c6a83e97829b10c33b06123.png'
 import Link from 'next/link';
 import ButtonSecondary from '@/shared/ButtonSecondary';
 import { serif } from '@/shared/Serif';
+import { motion } from 'framer-motion'
 
-const Country = ({ country, flag, i }) => {
+const Country = ({ country, flag, i, image }) => {
     console.log(country);
     return (
-        <div className='h-full w-full pb-10 min-h-[560px]'>
+        <div className='h-full w-full pb-10 min-h-[560px] bg-red-50'>
             <div className='bg-orange py-6'>
                 <p className='text-white my-auto text-center uppercase 2xl:text-5xl xl:text-4xl text-2xl font-semibold'>{country}</p>
             </div>
             {
                 country === 'JAPAN' ?
-                    <div className='flex 2xl:flex-row xl:flex-row flex-col-reverse items-center 2xl:gap-12 xl:gap-10 gap-6 pl-10 pt-6'>
+                    <div className='flex relative 2xl:flex-row xl:flex-row flex-col-reverse items-center 2xl:gap-12 xl:gap-10 gap-6 pl-10 pt-6'>
+                        <div className='absolute inset-0'>
+                            <Image src={image} alt='' className='opacity-20 z-10 pointer-events-none object-contain' />
+                        </div>
                         <div className=''>
                             <ul className='mt-6 2xl:space-y-[26px] xl:space-y-6 space-y-4'>
                                 <li className='flex items-center gap-1'>
@@ -72,13 +77,16 @@ const Country = ({ country, flag, i }) => {
                             </div>
                         </div>
                         <div>
-                            <Image className='2xl:w-[240px] 2xl:h-[240px] xl:w-[220px] xl:h-[220px] w-[140px] h-[140px] rounded-full' src={flag} alt='' />
+                            <Image className='2xl:w-[240px] 2xl:h-[240px] xl:w-[220px] xl:h-[220px] w-[140px] h-[140px] rounded-full z-40' src={flag} alt='' />
                         </div>
                     </div>
                     :
                     country === 'South Korea' ?
-                        <div className='flex 2xl:flex-row xl:flex-row flex-col-reverse items-center 2xl:gap-12 xl:gap-10 gap-6 pl-10 pt-6'>
-                            <div className=''>
+                        <div className='flex 2xl:flex-row xl:flex-row flex-col-reverse items-center 2xl:gap-12 xl:gap-10 gap-6 pl-10 pt-6 relative'>
+                            <div className='absolute inset-0'>
+                                <Image src={image} alt='' className='opacity-20 z-10 pointer-events-none object-contain' />
+                            </div>
+                            <div className='z-40'>
                                 <ul className='mt-6 2xl:space-y-[26px] xl:space-y-6 space-y-4'>
                                     <li className='flex items-center gap-1'>
                                         <div className='rounded-full w-fit h-fit p-1 bg-deep-blue'>
@@ -124,11 +132,14 @@ const Country = ({ country, flag, i }) => {
                                 </div>
                             </div>
                             <div>
-                                <Image className='2xl:w-[240px] 2xl:h-[240px] xl:w-[220px] xl:h-[220px] w-[140px] h-[140px] rounded-full' src={flag} alt='' />
+                                <Image className='z-40 2xl:w-[240px] 2xl:h-[240px] xl:w-[220px] xl:h-[220px] w-[140px] h-[140px] rounded-full' src={flag} alt='' />
                             </div>
                         </div>
                         :
-                        <div className='flex 2xl:flex-row xl:flex-row items-center flex-col-reverse 2xl:gap-12 xl:gap-10 gap-6 pl-10 pt-6'>
+                        <div className='flex 2xl:flex-row xl:flex-row items-center flex-col-reverse 2xl:gap-12 xl:gap-10 gap-6 pl-10 pt-6 relative'>
+                            <div className='absolute inset-0'>
+                                <Image src={image} alt='' className='opacity-20 z-10 pointer-events-none object-contain' />
+                            </div>
                             <div className=''>
                                 <h3 className={`2xl:text-5xl xl:text-4xl text-2xl ${serif.className}`}>Student Visa</h3>
                                 <ul className='2xl:mt-6 xl:mt-6 mt-4 2xl:space-y-[26px] xl:space-y-6 space-y-4'>
@@ -170,7 +181,7 @@ const Country = ({ country, flag, i }) => {
                                 </div>
                             </div>
                             <div>
-                                <Image className='2xl:w-[240px] 2xl:h-[240px] xl:w-[220px] xl:h-[220px] w-[140px] h-[140px] rounded-full' src={flag} alt='' />
+                                <Image className='z-40 2xl:w-[240px] 2xl:h-[240px] xl:w-[220px] xl:h-[220px] w-[140px] h-[140px] rounded-full' src={flag} alt='' />
                             </div>
                         </div>
             }
@@ -190,7 +201,7 @@ const Accordion = () => {
 
     // Define accordion items
     const accordionItems = [
-        { title: 'AUstralia', image: world1, flag: au },
+        { title: 'AUstralia', image: aus, flag: au },
         { title: 'Canada', image: can, flag: ca },
         { title: 'USA', image: usa, flag: us },
         { title: 'UK', image: uk, flag: gb },
@@ -245,27 +256,34 @@ const Accordion = () => {
         <div className='flex items-stretch my-10'>
             {
                 accordionItems.map((item, index) => (
-                    <div key={index} className={`${openIndex === index ? 'w-[70%]' : 'flex-grow'}`}>
-                        {
-                            openIndex === index ?
-                                <div
-                                    className={`transition-all flex-1 duration-300 overflow-hidden ${openIndex === index ? 'w-full' : 'w-0'
-                                        }`}
-                                >
-                                    <div className='flex flex-col flex-1'>
-                                        <Country i={index} country={item.title} flag={item.flag} />
-                                    </div>
+                    <div key={index} className={`flex ${openIndex === index ? 'w-[70%]' : 'flex-grow'}`}>
+                        {openIndex === index ? (
+                            <motion.div
+                                initial={{ x: '100%', opacity: 0 }}
+                                animate={{ x: 0, opacity: 1 }}
+                                exit={{ x: '100%', opacity: 0 }}
+                                transition={{ duration: 0.5, ease: 'easeInOut' }}
+                                className="flex-1 w-full overflow-hidden"
+                            >
+                                <div className="flex flex-col flex-1">
+                                    <Country i={index} country={item.title} image={item.image} flag={item.flag} />
                                 </div>
-                                :
-                                <button
-                                    className={`py-3 h-full w-full border-r-[0.2px] border-r-blue font-semibold relative flex-1 count text-white 2xl:min-w-[100px] xl:min-w-[80px] border-[#E8FFFE]`}
-                                    onClick={() => toggleAccordion(index)}
-                                >
-                                    {/* <Image className='h-full z-40 opacity-60' src={item.image} alt={`${item.title}`} /> */}
-                                    <span className='w-fit h-fit vertical z-10 top-10 left-[32%] 2xl:text-3xl xl:text-3xl font-semibold absolute uppercase'>{item.title}</span>
-                                    <Image className='absolute bottom-3 left-1/2 -translate-x-1/2 rounded-full w-[50px] h-[50px]' src={item?.flag} alt='' />
-                                </button>
-                        }
+                            </motion.div>
+                        ) : (
+                            <button
+                                className={`py-3 count h-full w-full border-r-[0.2px] border-r-blue font-semibold relative flex-1 text-white 2xl:min-w-[100px] xl:min-w-[80px] border-[#E8FFFE]`}
+                                onClick={() => toggleAccordion(index)}
+                            >
+                                <span className="w-fit h-fit vertical z-10 top-10 left-[32%] 2xl:text-3xl xl:text-3xl font-semibold absolute uppercase">
+                                    {item.title}
+                                </span>
+                                <Image
+                                    className="absolute bottom-3 left-1/2 -translate-x-1/2 rounded-full w-[50px] h-[50px]"
+                                    src={item.flag}
+                                    alt=""
+                                />
+                            </button>
+                        )}
                     </div>
                 ))
             }

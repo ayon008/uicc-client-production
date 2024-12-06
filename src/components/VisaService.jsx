@@ -22,6 +22,8 @@ import { FaUserGraduate } from 'react-icons/fa';
 import { RiBuildingLine } from 'react-icons/ri';
 import { serif } from '@/shared/Serif';
 import { MdLanguage } from 'react-icons/md';
+import video from '@/../public/assets/animate.mp4';
+import SectionTitle from '@/shared/SectionTitles';
 
 // import img3 from '../../public/assets/'
 
@@ -94,7 +96,17 @@ export default function VisaService() {
     }
 
     return (
-        <div className='sliders px-10'>
+        <div className='sliders relative px-10'>
+            <div className='absolute right-0 w-full left-0 -top-10 pointer-events-none -z-10 opacity-35'>
+                <video
+                    className=''
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    src={video} />
+            </div>
+            <SectionTitle subHeading={'VISA SERVICES'} heading1={'Committed to provide you'} heading2={'the best visa services'} width={60} />
             <Swiper
                 ref={swiperRef}
                 pagination={{ clickable: true }}

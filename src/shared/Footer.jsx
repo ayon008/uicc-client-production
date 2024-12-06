@@ -10,6 +10,7 @@ import logo from '../../public/assets/logo.svg'
 import Link from 'next/link';
 import ButtonSecondary from './ButtonSecondary';
 import TextAnimation from './TextAnimation';
+import Animated from './Animated';
 
 const Footer = () => {
     return (
@@ -94,7 +95,9 @@ const Footer = () => {
                         <div className='w-full h-[1px] bg-white 2xl:my-6 xl:my-4 my-2'></div>
                         <div className='mt-10'>
                             <Link href={'/signUp'}>
-                                <ButtonSecondary text={'Register Now'} />
+                                <Animated>
+                                    <ButtonSecondary text={'Register Now'} />
+                                </Animated>
                             </Link>
                         </div>
                     </aside>
