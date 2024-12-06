@@ -107,10 +107,6 @@ html {
   background: var(--333, linear-gradient(180deg, #0b286d 0%, #0f172a 100%));
 }
 
-.notice-main {
-  background: var(--333, linear-gradient(180deg, #0b286d 0%, #0f172a 100%));
-}
-
 .notice::before {
   content: "";
   position: absolute;

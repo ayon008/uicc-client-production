@@ -15,7 +15,10 @@ import canFlag from '../../public/assets/canada.png'
 import person1 from '../../public/assets/slide-h1-2.png'
 import person2 from '../../public/assets/slide-h1-3.png'
 import person3 from '../../public/assets/Hue_Saturation-603x722.png'
+import person4 from '../../public/assets/file (1).png'
+import person5 from '../../public/assets/file.png'
 import Link from 'next/link';
+import Image from 'next/image';
 
 const SelectTab = () => {
     const swiperRef = useRef(null);
@@ -49,10 +52,10 @@ const SelectTab = () => {
                         <Banner bannerImage={bannerImage1} index={activeIndex + 1} person={person3} flag={canFlag} />
                     </SwiperSlide>
                     <SwiperSlide>
-                        <Banner bannerImage={bannerImage1} index={activeIndex + 1} person={person2} flag={nzFlag} />
+                        <Banner bannerImage={bannerImage1} index={activeIndex + 1} person={person5} flag={nzFlag} />
                     </SwiperSlide>
                     <SwiperSlide>
-                        <Banner person={person1} index={activeIndex + 1} bannerImage={bannerImage1} flag={usFlag} />
+                        <Banner person={person4} index={activeIndex + 1} bannerImage={bannerImage1} flag={usFlag} />
                     </SwiperSlide>
                 </Swiper>
                 <div className="custom-pagination flex gap-4 justify-center 2xl:mb-0 xl:mb-0 mb-6">

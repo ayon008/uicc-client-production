@@ -2,9 +2,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-const Animated = ({ children, className }) => {
+const Animated = ({ children, className, index }) => {
     return (
         <motion.div
+            key={index ? index : 0}
             initial={{
                 clipPath: 'inset(0 100% 0 0)',  // Start from off-screen to the right
                 opacity: 0,  // Start invisible for a smooth fade-in

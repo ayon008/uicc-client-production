@@ -96,7 +96,7 @@ export default function VisaService() {
     }
 
     return (
-        <div className='sliders relative px-10'>
+        <div className='sliders relative px-10 py-20'>
             <div className='absolute right-0 w-full left-0 -top-10 pointer-events-none -z-10 opacity-35'>
                 <video
                     className=''

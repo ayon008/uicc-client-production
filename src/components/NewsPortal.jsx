@@ -8,7 +8,7 @@ import img1 from '../../public/assets/image (4).png'
 
 const NewsPortal = () => {
     return (
-        <div className="2xl:mb-32 xl:mb-24 mb-16">
+        <div className="2xl:mb-32 xl:mb-24 mb-16 py-20">
             <SectionTitle subHeading={'Latest News'} heading1={'Our Latest News'} />
             <div className="px-6 grid 2xl:grid-cols-2 xl:grid-cols-2 grid-cols-1 gap-x-2 gap-y-2 mt-10">
                 <NewsCard img={img3} text={'Learn Korean with Confidence UICC has launched a new Korean Language Course tailored for K-pop fans, professionals, and aspiring students aiming to work or study in Korea. Enroll today to explore the culture and language of Korea! Master Japanese in 90 Days We are excited to announce an intensive Japanese Language Crash Course for those planning to take the JLPT exam or pursue careers in Japan.'} heading={'New Course Launches'} />

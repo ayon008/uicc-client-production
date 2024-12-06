@@ -253,7 +253,7 @@ const Accordion = () => {
         //         </>
         //     ))}
         // </div>
-        <div className='flex items-stretch my-10'>
+        <div className='flex items-stretch'>
             {
                 accordionItems.map((item, index) => (
                     <div key={index} className={`flex ${openIndex === index ? 'w-[70%]' : 'flex-grow'}`}>
