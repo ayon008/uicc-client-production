@@ -1,5 +1,6 @@
 import AboutUs from "@/components/AboutUs";
 import Accordion from "@/components/Countries";
+import NewsPortal from "@/components/NewsPortal";
 import Notice from "@/components/Notice";
 import SelectTab from "@/components/SelectTab";
 import VisaService from "@/components/VisaService";
@@ -16,6 +17,7 @@ export default function Home() {
       <div>
         <Accordion />
       </div>
+      <NewsPortal />
     </div>
   );
 }
