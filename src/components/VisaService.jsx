@@ -106,32 +106,66 @@ export default function VisaService() {
                     playsInline
                     src={video} />
             </div>
-            <SectionTitle subHeading={'VISA SERVICES'} heading1={'Committed to provide you'} heading2={'the best visa services'} width={60} />
-            <Swiper
-                ref={swiperRef}
-                pagination={{ clickable: true }}
-                autoplay={{
-                    delay: 8000, // Time in milliseconds before moving to the next slide
-                    disableOnInteraction: false, // Keeps autoplay running after user interaction
-                }}
-                onSlideChange={handleSlideChange}
-                modules={[Autoplay]}
-                className="mySwiper mt-10">
-                <SwiperSlide>
-                    <div className='grid grid-cols-3 gap-6'>
+            <SectionTitle subHeading={'VISA SERVICES'} heading1={'Committed to provide '} heading2={'you the best visa services'} />
+            <div className='2xl:block xl:block hidden'>
+                <Swiper
+                    ref={swiperRef}
+                    pagination={{ clickable: true }}
+                    autoplay={{
+                        delay: 8000, // Time in milliseconds before moving to the next slide
+                        disableOnInteraction: false, // Keeps autoplay running after user interaction
+                    }}
+                    onSlideChange={handleSlideChange}
+                    modules={[Autoplay]}
+                    className="mySwiper mt-10">
+                    <SwiperSlide>
+                        <div className='grid 2xl:grid-cols-3 xl:grid-cols-3 gap-6'>
+                            <Card img={img4} headline={'IELTS'} icon={<FaBook color="white" size="3rem" />} text={'Navigating the IELTS exam can be overwhelming, but our agency makes it easy. We assist with preparation, scheduling, and all the necessary steps to ensure you’re ready. Focus on acing the test—we’ll take care of the logistics!'} />
+                            <Card img={img5} headline={'Korean Language'} icon={<FaLanguage color="white" size="3rem" />} text={'Learning Korean made simple—our agency supports you through every step of the process, from selecting the right course to providing guidance on exams and certifications. Focus on mastering the language, and let us handle the details'} />
+                            <Card img={img6} headline={'Chinese Language'} icon={<MdLanguage color="white" size="3rem" />} text={'Mastering Chinese is now easier with our agency. We guide you through course selection, exam preparation, and certification, ensuring a smooth learning journey. Focus on your language skills while we manage the rest!'} />
+                        </div>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <div className='grid 2xl:grid-cols-3 xl:grid-cols-3 gap-6'>
+                            <Card img={img1} headline={'Student Visa'} icon={<FaUserGraduate color="white" size="3rem" />} text={'Our agency streamlines the student visa process, handling documentation, applications, and interview prep while keeping you updated. Focus on your education—we’ll manage the rest!'} />
+                            <Card img={img2} headline={'Work Visa'} icon={<RiBuildingLine color="white" size="3rem" />} text={'We streamline the worker visa process for you, handling everything from paperwork and application submissions to interview coaching. Concentrate on your professional growth while we take care of the visa details!'} />
+                            <Card img={img3} headline={'Tourist Visa'} icon={<FaBusinessTime color="white" size="3rem" />} text={'Planning your dream vacation? Our agency handles your tourist visa process from start to finish, including documentation, application, and updates. You focus on the adventure—we’ll handle the paperwork!'} />
+                        </div>
+                    </SwiperSlide>
+                </Swiper>
+            </div>
+            <div className='2xl:hidden xl:hidden block'>
+                <Swiper
+                    ref={swiperRef}
+                    pagination={{ clickable: true }}
+                    autoplay={{
+                        delay: 8000, // Time in milliseconds before moving to the next slide
+                        disableOnInteraction: false, // Keeps autoplay running after user interaction
+                    }}
+                    onSlideChange={handleSlideChange}
+                    slidesPerView={1}
+                    modules={[Autoplay]}
+                    className="mySwiper mt-10 2xl:hidden xl:hidden block">
+                    <SwiperSlide>
                         <Card img={img4} headline={'IELTS'} icon={<FaBook color="white" size="3rem" />} text={'Navigating the IELTS exam can be overwhelming, but our agency makes it easy. We assist with preparation, scheduling, and all the necessary steps to ensure you’re ready. Focus on acing the test—we’ll take care of the logistics!'} />
+                    </SwiperSlide>
+                    <SwiperSlide>
                         <Card img={img5} headline={'Korean Language'} icon={<FaLanguage color="white" size="3rem" />} text={'Learning Korean made simple—our agency supports you through every step of the process, from selecting the right course to providing guidance on exams and certifications. Focus on mastering the language, and let us handle the details'} />
+                    </SwiperSlide>
+                    <SwiperSlide>
                         <Card img={img6} headline={'Chinese Language'} icon={<MdLanguage color="white" size="3rem" />} text={'Mastering Chinese is now easier with our agency. We guide you through course selection, exam preparation, and certification, ensuring a smooth learning journey. Focus on your language skills while we manage the rest!'} />
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <div className='grid grid-cols-3 gap-6'>
+                    </SwiperSlide>
+                    <SwiperSlide>
                         <Card img={img1} headline={'Student Visa'} icon={<FaUserGraduate color="white" size="3rem" />} text={'Our agency streamlines the student visa process, handling documentation, applications, and interview prep while keeping you updated. Focus on your education—we’ll manage the rest!'} />
+                    </SwiperSlide>
+                    <SwiperSlide>
                         <Card img={img2} headline={'Work Visa'} icon={<RiBuildingLine color="white" size="3rem" />} text={'We streamline the worker visa process for you, handling everything from paperwork and application submissions to interview coaching. Concentrate on your professional growth while we take care of the visa details!'} />
+                    </SwiperSlide>
+                    <SwiperSlide>
                         <Card img={img3} headline={'Tourist Visa'} icon={<FaBusinessTime color="white" size="3rem" />} text={'Planning your dream vacation? Our agency handles your tourist visa process from start to finish, including documentation, application, and updates. You focus on the adventure—we’ll handle the paperwork!'} />
-                    </div>
-                </SwiperSlide>
-            </Swiper>
+                    </SwiperSlide>
+                </Swiper>
+            </div>
             <div className="custom-pagination-1 flex gap-4 justify-center mt-1">
                 <button className='' onClick={() => goToSlide(0)}>
                     <motion.div

@@ -6,7 +6,7 @@ const Notice = () => {
     return (
         <div className='count flex items-center'>
             <div className=''>
-                <h2 className='notice p-6 w-fit relative 2xl:text-3xl xl:text-2xl text-xl font-semibold text-white z-10'>NOTICE</h2>
+                <h2 className='notice p-6 w-fit relative 2xl:text-3xl xl:text-2xl text-lg font-semibold text-white z-10'>NOTICE</h2>
             </div>
             <Marquee autoFill>
                 <p className='text-white mx-10'>This is Notice</p>

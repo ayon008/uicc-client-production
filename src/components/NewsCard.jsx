@@ -11,7 +11,7 @@ const NewsCard = ({ text, heading, img }) => {
             <div className='2xl:p-7 xl:p-5 p-2'>
                 <div className='border-2 border-[#E7E7E7] flex items-center gap-4 rounded-lg'>
                     <div className='w-[40%] flex flex-col h-full'>
-                        <Image className='w-full h-[300px] object-center' src={img} alt='' />
+                        <Image className='w-full h-[300px] object-cover' src={img} alt='' />
                     </div>
                     <div className='flex flex-col h-full space-y-4 pr-6 w-[60%]'>
                         <div className='pl-10'>

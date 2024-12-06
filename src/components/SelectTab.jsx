@@ -12,11 +12,11 @@ import bannerImage1 from '../../public/assets/pexels-lkloeppel-466685.jpg'
 import usFlag from '../../public/assets/flag-h1-2.png'
 import nzFlag from '../../public/assets/flag-h1-3.png'
 import canFlag from '../../public/assets/canada.png'
-import person1 from '../../public/assets/slide-h1-2.png'
-import person2 from '../../public/assets/slide-h1-3.png'
-import person3 from '../../public/assets/Hue_Saturation-603x722.png'
-import person4 from '../../public/assets/file (1).png'
-import person5 from '../../public/assets/file.png'
+import person1 from '../../public/assets/file (6).png'
+import person2 from '../../public/assets/file (2).png'
+import person3 from '../../public/assets/file (7).png'
+
+// import person5 from '../../public/assets/file.png'
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -49,13 +49,13 @@ const SelectTab = () => {
                     modules={[Navigation, Autoplay]} // Include Autoplay in modules
                     className="mySwiper 2xl:mt-10 xl:mt-10 mt-0 overflow-hidden">
                     <SwiperSlide>
-                        <Banner bannerImage={bannerImage1} index={activeIndex + 1} person={person3} flag={canFlag} />
+                        <Banner bannerImage={bannerImage1} index={activeIndex + 1} person={person2} flag={canFlag} />
                     </SwiperSlide>
                     <SwiperSlide>
-                        <Banner bannerImage={bannerImage1} index={activeIndex + 1} person={person5} flag={nzFlag} />
+                        <Banner bannerImage={bannerImage1} index={activeIndex + 1} person={person1} flag={nzFlag} />
                     </SwiperSlide>
                     <SwiperSlide>
-                        <Banner person={person4} index={activeIndex + 1} bannerImage={bannerImage1} flag={usFlag} />
+                        <Banner person={person3} index={activeIndex + 1} bannerImage={bannerImage1} flag={usFlag} />
                     </SwiperSlide>
                 </Swiper>
                 <div className="custom-pagination flex gap-4 justify-center 2xl:mb-0 xl:mb-0 mb-6">
@@ -105,7 +105,7 @@ const SelectTab = () => {
                         </motion.div>
                     </button>
                 </div>
-                <div className={'grid grid-cols-5'}>
+                <div className={'grid 2xl:grid-cols-5 xl:grid-cols-5 grid-cols-2'}>
                     <Link href={'/language-training'} className={`border-[0.1px] border-[#E5E7EB] text-deep-blue cursor-pointer 2xl:py-6 xl:py-4 py-2 text-center hover:bg-deep-blue hover:text-white transition-all duration-300 ease-linear font-semibold 2xl:text-2xl xl:text-lg text-[8px]`} >
                         Language Training
                     </Link>
@@ -118,7 +118,7 @@ const SelectTab = () => {
                     <Link href={'/air-ticket'} className={`border-[0.1px] border-[#E5E7EB] text-deep-blue cursor-pointer 2xl:py-6 xl:py-4 text-center py-2 hover:bg-deep-blue hover:text-white transition-all duration-300 ease-linear font-semibold 2xl:text-2xl xl:text-lg text-[8px]`} >
                         Air Ticketing
                     </Link>
-                    <Link href={'/'} className={`border-[0.1px] border-[#E5E7EB] text-deep-blue cursor-pointer 2xl:py-6 xl:py-4 text-center py-2 hover:bg-deep-blue hover:text-white transition-all duration-300 ease-linear font-semibold 2xl:text-2xl xl:text-lg text-[8px]`}>
+                    <Link href={'/'} className={`border-[0.1px] border-[#E5E7EB] text-deep-blue cursor-pointer 2xl:py-6 xl:py-4 text-center py-2 hover:bg-deep-blue hover:text-white transition-all duration-300 ease-linear font-semibold 2xl:text-2xl xl:text-lg text-[8px] 2xl:block xl:block hidden`}>
                         Training Center
                     </Link>
                 </div>

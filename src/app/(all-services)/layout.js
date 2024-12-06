@@ -8,7 +8,7 @@ import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import ServiceBanner from '@/shared/ServiceBanner';
 import { serif } from '@/shared/Serif';
-import video from '../../../public/assets/Abstract White Background 4K - Motion Graphics Background Loop - White Video Loop.mp4'
+import video from '@/../public/assets/Abstract White Background 4K - Motion Graphics Background Loop - White Video Loop.mp4'
 
 const links = [
     {
@@ -202,12 +202,12 @@ export default function RootLayout({ children }) {
                                                 </div>
                                                 {
                                                     link?.subArray?.length > 0 &&
-                                                    <ul tabIndex={0} className="dropdown-content menu bg-base-100 rounded-box w-full z-[1] px-8 py-6 shadow-2xl space-y-4 ml-4">
+                                                    <ul tabIndex={0} className="dropdown-content menu bg-base-100 rounded-box w-full z-[1] py-6 shadow-2xl ml-4">
                                                         {
                                                             link?.subArray.map((item, i) => {
                                                                 return (
                                                                     <Link key={i} href={item.href}>
-                                                                        <li className='text-xl font-normal cursor-pointer' key={i}>
+                                                                        <li className='text-xl font-normal cursor-pointer hover:bg-gray px-8 py-2 rounded-lg transition-all duration-200 ease-in' key={i}>
                                                                             {item.name}
                                                                         </li>
                                                                     </Link>

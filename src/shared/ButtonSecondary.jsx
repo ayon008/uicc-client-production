@@ -10,7 +10,7 @@ const ButtonSecondary = ({ text }) => {
         <div className='w-fit h-fit overflow-clip bg-white px-7 py-4 rounded-[40px] btn border-none' onMouseEnter={(e) => setHover(true)} onMouseLeave={() => setHover(false)}>
             <button className=''>
                 <div className='flex items-center justify-center gap-1'>
-                    <motion.div className='w-[8px] h-[8px] bg-deep-blue rounded-full'
+                    <motion.div className='w-[8px] h-[8px] bg-orange rounded-full'
                         animate={{
                             scale: isHover ? 50 : 1,
                             // background:isHover?'':'#FFF'

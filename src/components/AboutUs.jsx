@@ -25,32 +25,37 @@ import video from '@/../public/assets/Abstract Energy Free White Background Vide
 const AboutUs = () => {
     return (
         <div className="grid 2xl:grid-cols-2 xl:grid-cols-2 grid-cols-1 max-w-[1440px] mx-auto 2xl:py-24 xl:py-24 2xl:pl-24 xl:pl-24 px-5 py-10 gap-24 relative">
-             <div className='absolute right-0 left-0 top-0 bottom-0 -z-10'>
-                    <video
-                        className='w-full h-full object-cover opacity-40'
-                        autoPlay
-                        loop
-                        muted
-                        playsInline
-                        src={video} 
-                    />
+            <div className='absolute right-0 left-0 top-0 bottom-0 -z-10'>
+                <video
+                    className='w-full h-full object-cover opacity-40'
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    src={video}
+                />
             </div>
-            <div className='2xl:block xl:block hidden relative '>
-                <Image src={image} className='w-full max-h-[632px] object-cover object-center' priority placeholder='blur' alt='' />
-                <Animated className='absolute -left-14 top-28'>
-                    <div className='bg-orange hover:bg-deep-blue transition-all duration-300 ease-linear cursor-pointer flex items-center gap-7 px-8 py-6 rounded-3xl'>
-                        <div className='w-[60px] h-[60px] rounded-full bg-white relative'>
+            <div className='relative '>
+                <Animated className='2xl:absolute xl:absolute relative 2xl:mb-0 xl:mb-0 mb-2 2xl:-left-14 xl:-left-14 2xl:top-28 xl:top-28 2xl:w-auto xl:w-auto w-3/4'>
+                    <div className='bg-orange hover:bg-deep-blue transition-all duration-300 ease-linear cursor-pointer flex items-center 2xl:gap-7 xl:gap-7 gap-3 2xl:px-8 2xl:py-6 xl:px-8 xl:py-6 px-4 py-2 2xl:rounded-3xl xl:rounded-3xl rounded-lg'>
+                        <div className='2xl:w-[60px] 2xl:h-[60px] xl:w-[60px] xl:h-[60px] 2xl:block xl:block hidden rounded-full bg-white relative'>
                             <div className='w-fit h-fit absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2'>
-                                <FaPhoneAlt size={'1.2rem'} color='#c6250c' />
+                                <FaPhoneAlt size={'1.2rem'} color='#c6250c' className='2xl:block xl:block hidden' />
+                            </div>
+                        </div>
+                        <div className='2xl:hidden xl:hidden block w-[40px] h-[40px] rounded-full bg-white relative'>
+                            <div className='w-fit h-fit absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2'>
+                                <FaPhoneAlt size={'0.6rem'} color='#c6250c' className='' />
                             </div>
                         </div>
                         <div>
-                            <p className={`text-white text-lg font-normal ${serif.className}`}>Call For Consultation</p>
-                            <h3 className={`mt-1 ${rubik.className} font-semibold text-white text-2xl`}>+8801726108060</h3>
+                            <p className={`text-white 2xl:text-lg xl:text-lg text-sm font-normal ${serif.className}`}>Call For Consultation</p>
+                            <h3 className={`mt-1 ${rubik.className} font-semibold text-white 2xl:text-2xl xl:text-2xl text-xl`}>+8801726108060</h3>
                         </div>
                     </div>
                 </Animated>
-                <Animated className='absolute -right-24 bottom-16 pt-10 pr-10 bg-transparent'>
+                <Image src={image} className='w-full max-h-[632px] object-cover object-center' priority placeholder='blur' alt='' />
+                <Animated className='absolute 2xl:-right-24 2xl:bottom-16 xl:-right-24 xl:bottom-16 2xl:left-auto xl:left-auto left-0 -bottom-5 pt-10 pr-10 bg-transparent'>
                     <div className='w-[250px] bg-white py-10 px-6 rounded-2xl relative'>
                         <div className='w-fit h-fit absolute -top-4 -right-4 bg-deep-blue p-4 rounded-full'>
                             <FiSend size={'1.5rem'} color='white' />
@@ -78,10 +83,10 @@ const AboutUs = () => {
                         </div>
                     </div>
                 </Animated>
-                <Animated className='absolute top-10 -right-14'>
+                <Animated className='2xl:block xl:block hidden absolute top-10 -right-14'>
                     <Image className="" src={img1} alt="" />
                 </Animated>
-                <Animated className='absolute -left-14 bottom-28'>
+                <Animated className='2xl:block xl:block hidden absolute -left-14 bottom-28'>
                     <Image className="" src={img2} alt="" />
                 </Animated>
             </div>
@@ -96,7 +101,7 @@ const AboutUs = () => {
                 <TextAnimation className="2xl:text-4xl xl:text-4xl text-2xl font-semibold mt-2 2xl:leading-[40px] xl:leading-[40px] uppercase">
                     <p className='whitespace-nowrap'>We help Making your</p>
                 </TextAnimation>
-                <TextAnimation delay={0.3} scale={0} className="2xl:text-4xl xl:text-4xl text-2xl font-semibold -mt-14 uppercase">
+                <TextAnimation delay={0.3} scale={0} className="2xl:text-4xl xl:text-4xl text-2xl font-semibold 2xl:-mt-14 xl:-mt-14 -mt-6 uppercase">
                     <p><span className="dream relative">Dream into</span> Reality</p>
                 </TextAnimation>
                 <p className="">

@@ -1,5 +1,5 @@
 'use client'
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { FaCheck } from 'react-icons/fa';
 import flag1 from '../../public/assets/aeacee374b2878078f489fb0e8234989.png'
 import Image from 'next/image';
@@ -22,7 +22,7 @@ import nzl from '../../public/assets/82c7acee9c6a83e97829b10c33b06123.png'
 import Link from 'next/link';
 import ButtonSecondary from '@/shared/ButtonSecondary';
 import { serif } from '@/shared/Serif';
-import { motion } from 'framer-motion'
+import { motion, useMotionValue } from 'framer-motion'
 
 const Country = ({ country, flag, i, image }) => {
     console.log(country);
@@ -33,7 +33,7 @@ const Country = ({ country, flag, i, image }) => {
             </div>
             {
                 country === 'JAPAN' ?
-                    <div className='flex relative 2xl:flex-row xl:flex-row flex-col-reverse items-center 2xl:gap-12 xl:gap-10 gap-6 pl-10 pt-6'>
+                    <div className='flex relative 2xl:flex-row xl:flex-row flex-col-reverse items-center 2xl:gap-12 xl:gap-10 gap-6 2xl:pl-10 xl:pl-10 pl-3 pt-6'>
                         <div className='absolute inset-0'>
                             <Image src={image} alt='' className='opacity-20 z-10 pointer-events-none object-contain' />
                         </div>
@@ -82,7 +82,7 @@ const Country = ({ country, flag, i, image }) => {
                     </div>
                     :
                     country === 'South Korea' ?
-                        <div className='flex 2xl:flex-row xl:flex-row flex-col-reverse items-center 2xl:gap-12 xl:gap-10 gap-6 pl-10 pt-6 relative'>
+                        <div className='flex 2xl:flex-row xl:flex-row flex-col-reverse items-center 2xl:gap-12 xl:gap-10 gap-6 2xl:pl-10 xl:pl-10 pl-3 pt-6 relative'>
                             <div className='absolute inset-0'>
                                 <Image src={image} alt='' className='opacity-20 z-10 pointer-events-none object-contain' />
                             </div>
@@ -125,7 +125,7 @@ const Country = ({ country, flag, i, image }) => {
                                         <p className='2xl:text-xl xl:text-xl text-lg font-normal'>Associate program (D4)</p>
                                     </li>
                                 </ul>
-                                <div className='2xl:mt-10 xl:mt-8 mt-4'>
+                                <div className='2xl:mt-10 xl:mt-8 mt-6'>
                                     <Link href={'/signUp'}>
                                         <ButtonSecondary text={'Register Now'} />
                                     </Link>
@@ -136,7 +136,7 @@ const Country = ({ country, flag, i, image }) => {
                             </div>
                         </div>
                         :
-                        <div className='flex 2xl:flex-row xl:flex-row items-center flex-col-reverse 2xl:gap-12 xl:gap-10 gap-6 pl-10 pt-6 relative'>
+                        <div className='flex 2xl:flex-row xl:flex-row items-center flex-col-reverse 2xl:gap-12 xl:gap-10 gap-6 2xl:pl-10 xl:pl-10 pl-3 pt-6 relative'>
                             <div className='absolute inset-0'>
                                 <Image src={image} alt='' className='opacity-20 z-10 pointer-events-none object-contain' />
                             </div>
@@ -174,7 +174,7 @@ const Country = ({ country, flag, i, image }) => {
                                         <p className='2xl:text-xl xl:text-xl text-lg font-normal'>90% Visa Success rate</p>
                                     </li>
                                 </ul>
-                                <div className='2xl:mt-10 xl:mt-8 mt-4'>
+                                <div className='2xl:mt-10 xl:mt-8 mt-6'>
                                     <Link href={'/signUp'}>
                                         <ButtonSecondary text={'Register Now'} />
                                     </Link>
@@ -193,15 +193,17 @@ const Country = ({ country, flag, i, image }) => {
 const Accordion = () => {
     // Track which accordion item is open
     const [openIndex, setOpenIndex] = useState(0);
+    const [buttonPosition, setButtonPosition] = useState('right1');
 
     // Toggle the accordion item based on index
     const toggleAccordion = (index) => {
         setOpenIndex(openIndex === index ? null : index);
+        setButtonPosition(buttonPosition === `right${index}` ? `left${index}` : `right${index}`);
     };
 
     // Define accordion items
     const accordionItems = [
-        { title: 'AUstralia', image: aus, flag: au },
+        { title: 'Australia', image: aus, flag: au },
         { title: 'Canada', image: can, flag: ca },
         { title: 'USA', image: usa, flag: us },
         { title: 'UK', image: uk, flag: gb },
@@ -211,84 +213,84 @@ const Accordion = () => {
     ];
 
     return (
-        // <div className="2xl:w-fit xl:w-fit w-full flex 2xl:flex-row xl:flex-row flex-col 2xl:items-center xl:items-center items-start 2xl:justify-end xl:justify-end justify-normal mx-auto 2xl:mb-32 xl:mb-24 mb-16">
-        //     {accordionItems.map((item, index) => (
-        //         <>
-        //             <div data-aos="fade-up"
-        //                 data-aos-anchor-placement="top-bottom" key={index} className="2xl:flex xl:flex hidden flex-row-reverse border border-[#E8FFFE] h-[500px]">
-        //                 {openIndex !== index && (
-        //                     <button
-        //                         className={`py-3 h-full font-semibold relative hover:scale-110 transition-all duration-300 ease-in-out flex-1 count text-white 2xl:min-w-[100px] xl:min-w-[80px] border-[#E8FFFE]`}
-        //                         onClick={() => toggleAccordion(index)}
-        //                     >
-        //                         {/* <Image className='h-full z-40 opacity-60' src={item.image} alt={`${item.title}`} /> */}
-        //                         <span className='w-fit h-fit vertical z-10 top-10 left-[32%] 2xl:text-3xl xl:text-3xl font-semibold absolute uppercase'>{item.title}</span>
-        //                         <Image className='absolute bottom-3 left-1/2 -translate-x-1/2 rounded-full w-[50px] h-[50px]' src={item?.flag} alt='' />
-        //                     </button>
-        //                 )}
-        //                 <div
-        //                     className={`transition-all flex-1 duration-300 overflow-hidden ${openIndex === index ? 'max-w-full min-w-[650px] 2xl:pr-6' : 'max-w-0 min-w-0'
-        //                         }`}
-        //                 >
-        //                     <Country i={index} country={item.title} flag={item.flag} />
-        //                 </div>
-        //             </div>
-        //             <div data-aos="fade-up"
-        //                 data-aos-anchor-placement="top-bottom" key={index} className="2xl:hidden xl:hidden w-full flex flex-col border border-[#E8FFFE] h-auto">
-        //                 {openIndex !== index && (
-        //                     <button
-        //                         className={`py-4 font-semibold relative hover:scale-110 transition-all duration-300 ease-in-out border-[#E8FFFE]`}
-        //                         onClick={() => toggleAccordion(index)}
-        //                     >
-        //                         <div className='flex items-center justify-between w-full px-6 relative'>
-        //                             <h1 className='w-fit h-fit 2xl:text-3xl xl:text-3xl font-semibold uppercase z-30'>{item.title}</h1>
-        //                             <Image className='rounded-full w-[50px] h-[50px] z-30' src={item?.flag} alt='' />
-        //                             <Image className='h-full opacity-60 absolute inset-0 z-10' src={item.image} alt={`${item.title}`} />
-        //                         </div>
-        //                     </button>
-        //                 )}
-        //                 
 
-        //             </div>
-        //         </>
-        //     ))}
-        // </div>
-        <div className='flex items-stretch'>
-            {
-                accordionItems.map((item, index) => (
-                    <div key={index} className={`flex ${openIndex === index ? 'w-[70%]' : 'flex-grow'}`}>
-                        {openIndex === index ? (
-                            <motion.div
-                                initial={{ x: '100%', opacity: 0 }}
-                                animate={{ x: 0, opacity: 1 }}
-                                exit={{ x: '100%', opacity: 0 }}
-                                transition={{ duration: 0.5, ease: 'easeInOut' }}
-                                className="flex-1 w-full overflow-hidden"
-                            >
-                                <div className="flex flex-col flex-1">
-                                    <Country i={index} country={item.title} image={item.image} flag={item.flag} />
-                                </div>
-                            </motion.div>
-                        ) : (
-                            <button
-                                className={`py-3 count h-full w-full border-r-[0.2px] border-r-blue font-semibold relative flex-1 text-white 2xl:min-w-[100px] xl:min-w-[80px] border-[#E8FFFE]`}
-                                onClick={() => toggleAccordion(index)}
-                            >
-                                <span className="w-fit h-fit vertical z-10 top-10 left-[32%] 2xl:text-3xl xl:text-3xl font-semibold absolute uppercase">
-                                    {item.title}
-                                </span>
-                                <Image
-                                    className="absolute bottom-3 left-1/2 -translate-x-1/2 rounded-full w-[50px] h-[50px]"
-                                    src={item.flag}
-                                    alt=""
-                                />
-                            </button>
-                        )}
-                    </div>
-                ))
-            }
+        <>
+            <div className='items-stretch 2xl:flex xl:flex hidden'>
+                {
+                    accordionItems.map((item, index) => (
+                        <div key={index} className={`flex ${openIndex === index ? 'w-[70%]' : 'flex-grow'}`}>
+                            {openIndex === index ? (
+                                <motion.div
+                                    initial={{ x: '100%', opacity: 0 }}
+                                    animate={{ x: 0, opacity: 1 }}
+                                    exit={{ x: '100%', opacity: 0 }}
+                                    transition={{ duration: 0.5, ease: 'easeInOut' }}
+                                    className="flex-1 w-full overflow-hidden"
+                                >
+                                    <div className="flex flex-col flex-1">
+                                        <Country i={index} country={item.title} image={item.image} flag={item.flag} />
+                                    </div>
+                                </motion.div>
+                            ) : (
+                                <button
+                                    className={`py-3 count h-full w-full border-r-[0.2px] border-r-blue font-semibold relative flex-1 text-white 2xl:min-w-[100px] xl:min-w-[80px] border-[#E8FFFE]`}
+                                    onClick={() => toggleAccordion(index, item.title)}
+                                >
+                                    <span className="w-fit h-fit vertical z-10 top-10 left-[32%] 2xl:text-3xl xl:text-3xl font-semibold absolute uppercase">
+                                        {item.title}
+                                    </span>
+                                    <Image
+                                        className="absolute bottom-3 left-1/2 -translate-x-1/2 rounded-full w-[50px] h-[50px]"
+                                        src={item.flag}
+                                        alt=""
+                                    />
+                                </button>
+                            )
+                            }
+                        </div >
+                    ))
+                }
+            </div >
+            <div className='items-stretch 2xl:hidden xl:hidden flex flex-col'>
+                {
+                    accordionItems.map((item, index) => (
+                        <div key={index} className={`max-h-[800px] flex flex-col ${openIndex === index ? 'h-[70%]' : 'flex-1'}`}>
+                            {openIndex === index ?
+                                (
+                                    <motion.div
+                                        initial={{ y: '100%', opacity: 0 }}
+                                        animate={{ y: 0, opacity: 1 }}
+                                        exit={{ x: '100%', opacity: 0 }}
+                                        transition={{ duration: 0.5, ease: 'easeInOut' }}
+                                        className="flex-1 w-full overflow-hidden"
+                                    >
+                                        <div className="flex flex-col flex-1">
+                                            <Country i={index} country={item.title} image={item.image} flag={item.flag} />
+                                        </div>
+                                    </motion.div>
+                                )
+                                : (
+                                    <button
+                                        className={`py-10 font-semibold relative transition-all count duration-300 ease-in-out border-[#E8FFFE]`}
+                                        onClick={() => toggleAccordion(index)}
+                                    >
+                                        <span className="w-fit h-fit z-10 top-1/2 -translate-y-1/2 left-4 text-white text-lg 2xl:text-3xl xl:text-3xl font-semibold absolute uppercase">
+                                            {item.title}
+                                        </span>
+                                        <Image
+                                            className="absolute right-4 top-1/2 -translate-y-1/2 rounded-full w-[50px] h-[50px]"
+                                            src={item.flag}
+                                            alt=""
+                                        />
+                                    </button>
+                                )}
 
-        </div>
+
+                        </div>
+                    ))
+                }
+
+            </div ></>
     );
 };
 

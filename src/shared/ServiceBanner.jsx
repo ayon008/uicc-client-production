@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import React from 'react';
-import bannerImage from '../../public/assets/b2b545a4b68bed225816755c8afd2c42.png';
+import bannerImage from '../../public/assets/95fd7409683450e056377de24dc1e82b.png';
 
 const ServiceBanner = ({ text }) => {
     // Define the animation variants
@@ -15,7 +15,7 @@ const ServiceBanner = ({ text }) => {
     return (
         <div className="relative 2xl:mt-[100px] xl:mt-[100px]">
             {/* Background image */}
-            <Image src={bannerImage} className="w-full max-h-[380px] min-h-[220px] object-fill" alt="Banner" />
+            <Image src={bannerImage} className="w-full max-h-[380px] min-h-[220px] object-cover" alt="Banner" />
 
             {/* Overlay with text */}
             <div className="absolute inset-0">

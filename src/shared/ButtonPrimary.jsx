@@ -5,10 +5,10 @@ import { serif } from './Serif';
 import wave from '../../public/assets/animated_wave.svg'
 import Image from 'next/image';
 
-const ButtonPrimary = ({ text }) => {
+const ButtonPrimary = ({ text, width }) => {
     const [hover, setHover] = useState(false)
     return (
-        <div className="w-fit h-fit overflow-clip count px-7 py-4 rounded-[40px] btn border-none relative btn-hover" onMouseEnter={(e) => setHover(true)} onMouseLeave={(e) => setHover(false)}>
+        <div className={`${width ? 'w-full rounded-lg' : 'w-fit rounded-[40px]'} h-fit overflow-clip count px-7 py-4  btn border-none relative btn-hover`} onMouseEnter={(e) => setHover(true)} onMouseLeave={(e) => setHover(false)}>
             <motion.a
                 initial='initial'
                 whileHover='hovered'

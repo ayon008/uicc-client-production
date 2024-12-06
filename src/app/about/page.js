@@ -10,14 +10,23 @@ import BottomSection from '@/shared/BottomSection';
 import ServiceHistory from '@/shared/ServiceHistory';
 import AboutUs from '@/components/AboutUs';
 import ChooseUs from '@/components/ChooseUs';
-
+import video from '@/../public/assets/Abstract White Background 4K - Motion Graphics Background Loop - White Video Loop.mp4'
 
 const page = () => {
     return (
         <div className='max-w-[1440px] relative mx-auto'>
+            <div className='absolute right-0 left-0 top-0 bottom-0 -z-10'>
+                <video
+                    className='w-full h-full object-cover opacity-30'
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    src={video} />
+            </div>
             <ServiceBanner text={'About Us'} />
             <div className='2xl:my-20 xl:my-16 my-10 2xl:px-0 xl:px-0 px-6'>
-                <SectionTitle heading={'We Help Making your Dream into Reality'} subHeading={'About Our Company'} />
+                <SectionTitle heading1={'We Help Making your'} heading2={'Dream into Reality'} subHeading={'About Our Company'} />
             </div>
             <div className='flex 2xl:px-10 xl:px-10 px-6 justify-between gap-10 mt-10'>
                 <div className='flex-1 2xl:block xl:block hidden'>
@@ -50,7 +59,7 @@ const page = () => {
                 </div>
             </div>
             <AboutUs />
-            <ChooseUs/>
+            <ChooseUs />
             <div>
                 <SectionTitle heading1={'We Have the Best Team'} subHeading={'Our Team'} />
                 <div className='2xl:mt-72 xl:mt-72 mt-16'>

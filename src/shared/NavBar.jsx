@@ -17,6 +17,7 @@ import { usePathname } from 'next/navigation';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { AiOutlineClose } from 'react-icons/ai';
 import { FaFacebook, FaFacebookSquare, FaLinkedinIn, FaTwitterSquare, FaWhatsappSquare } from 'react-icons/fa';
+import { serif } from './Serif';
 
 const Navbar = () => {
     const [scrolled, setScrolled] = useState(false);
@@ -53,16 +54,16 @@ const Navbar = () => {
     }, [open]);
 
     const navItems = <>
-        <li className={`2xl:text-xl xl:text-base text-sm font-semibold hover:text-orange transition-all duration-100 ${pathname === '/' ? 'text-orange' : ''}`}>
+        <li className={`2xl:text-xl xl:text-base text-sm ${serif.className} font-semibold hover:text-orange transition-all duration-100 ${pathname === '/' ? 'text-orange' : ''}`}>
             <Link href="/">Home</Link>
         </li>
-        <li className={`2xl:text-xl xl:text-base text-sm font-semibold hover:text-orange transition-all duration-100 ${pathname === '/about' ? 'text-orange' : ''}`}>
+        <li className={`2xl:text-xl xl:text-base text-sm font-semibold hover:text-orange ${serif.className} transition-all duration-100 ${pathname === '/about' ? 'text-orange' : ''}`}>
             <Link href="/about">About</Link>
         </li>
-        <li className={`2xl:text-xl xl:text-base text-sm font-semibold hover:text-orange transition-all duration-100 ${pathname === '/services' ? 'text-orange' : ''}`}>
+        <li className={`2xl:text-xl xl:text-base text-sm font-semibold hover:text-orange ${serif.className} transition-all duration-100 ${pathname === '/services' ? 'text-orange' : ''}`}>
             <Link href="/services">Services</Link>
         </li>
-        <li className={`2xl:text-xl xl:text-base text-sm font-semibold hover:text-orange transition-all duration-100 2xl:-mr-5 xl:-mr-5 ${pathname === '/universities' ? 'text-orange' : ''}`}>
+        <li className={`2xl:text-xl xl:text-base text-sm font-semibold hover:text-orange ${serif.className} transition-all duration-100 2xl:-mr-5 xl:-mr-5 ${pathname === '/universities' ? 'text-orange' : ''}`}>
             <Link href="/universities">Associate Universities</Link>
         </li>
         <li className='2xl:hidden xl:hidden block'><Link href="/ielts" className='uppercase font-semibold 2xl:text-xl xl:text-base text-sm 2xl:hidden xl:hidden block'>IELTS</Link></li>
@@ -85,14 +86,14 @@ const Navbar = () => {
                 </ul>
             </div>
         </li>
-        <li className={`2xl:text-xl xl:text-base text-sm font-semibold hover:text-orange transition-all duration-100 ${pathname === '/contact' ? 'text-orange' : ''}`}>
+        <li className={`2xl:text-xl xl:text-base text-sm font-semibold hover:text-orange ${serif.className} transition-all duration-100 ${pathname === '/contact' ? 'text-orange' : ''}`}>
             <Link href="/contact">Contact</Link>
         </li>
     </>
 
 
     return (
-        <div className='w-full relative z-50'>
+        <div className={`w-full relative z-50`}>
             <div className='w-full 2xl:h-[60px] shadow-xl xl:h-[60px] h-0 hidden bg-orange 2xl:flex xl:flex items-center justify-between'>
                 {/* Nav Start */}
                 <div className='nav-start  flex px-11 py-[12px] gap-1'>
