@@ -1,10 +1,11 @@
 'use client'
-import useAuth from '@/Hooks/useAuth';
+
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import Swal from 'sweetalert2';
+import useAuth from '../Hooks/useAuth';
 
 const Google = () => {
     return (

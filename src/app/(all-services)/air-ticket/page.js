@@ -1,5 +1,3 @@
-'use client'
-import React, { useState } from 'react';
 import Image from 'next/image';
 import img1 from '@/../public/assets/44923e5447f015910dcbb865d34f84e2.png'
 import img2 from '@/../public/assets/b655cb9ea254db8e60a6ccaa93a1d36b.png'
