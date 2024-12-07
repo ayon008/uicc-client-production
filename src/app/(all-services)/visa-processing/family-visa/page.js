@@ -1,9 +1,11 @@
 
+'use server'
 import Image from 'next/image';
 import img2 from '../../../../../public/assets/hoi-an-photographer-AILAeiIBrBg-unsplash.jpg'
 import FaTicket from '@/icons/FaTicket';
 import FaTelegram from '@/icons/FaTelegram';
-import { TickIcon } from '../../layout';
+import TickIcon from '@/components/TickIcon';
+
 
 const Page = () => {
     return (

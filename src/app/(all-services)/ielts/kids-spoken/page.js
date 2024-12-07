@@ -1,8 +1,9 @@
+'use server'
 import React from 'react';
 import Image from 'next/image';
 import img1 from '../../../../../public/assets/agence-olloweb-Z2ImfOCafFk-unsplash.jpg'
 import img2 from '../../../../../public/assets/santi-vedri-O5EMzfdxedg-unsplash.jpg'
-import { TickIcon } from '../../layout';
+import TickIcon from '@/components/TickIcon';
 
 
 const Page = () => {

@@ -3,7 +3,12 @@
 import Footer from '@/shared/Footer';
 import Navbar from '@/shared/Navbar';
 import React, { useEffect, useState } from 'react';
-import Loading from '@/components/Loader';
+import dynamic from 'next/dynamic';
+
+// Dynamically import the Loading component
+const DynamicLoading = dynamic(() => import('@/components/Loader'), {
+    ssr: false // Disable server-side rendering for this component
+});
 import { serif } from '@/shared/Serif';
 
 const LoadingProvider = ({ children }) => {
@@ -17,7 +22,7 @@ const LoadingProvider = ({ children }) => {
     }, []);
 
     if (loading) {
-        return <Loading />;
+        return <DynamicLoading />;
     }
 
     return (

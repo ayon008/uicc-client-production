@@ -1,8 +1,10 @@
+'use server'
 import React from 'react';
 import Image from 'next/image';
 import img1 from '../../../../../public/assets/cdc-GDokEYnOfnE-unsplash.jpg'
 import img2 from '../../../../../public/assets/thought-catalog-RdmLSJR-tq8-unsplash.jpg'
-import { TickIcon } from '../../layout';
+import TickIcon from '@/components/TickIcon';
+
 
 
 const Page = () => {

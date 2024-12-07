@@ -1,9 +1,9 @@
+'use server'
 import React from 'react';
 import Image from 'next/image';
 import img1 from '../../../../../public/assets/timothy-ries-nlLII3H_tcY-unsplash.jpg'
-import FaTicket from '@/icons/FaTicket';
-import FaTelegram from '@/icons/FaTelegram';
-import { TickIcon } from '../../layout';
+import TickIcon from '@/components/TickIcon';
+
 
 const Page = () => {
     return (
