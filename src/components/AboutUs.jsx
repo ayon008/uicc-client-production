@@ -31,7 +31,7 @@ const AboutUs = () => {
                     autoPlay
                     loop
                     muted>
-                    <source src='/assets/Abstract Energy Free White Background Videos, Motion Graphics, No Copyright _ All Background Videos.mp4' type="video/mp4" />
+                    <source src={video} type="video/mp4" />
                 </video>
             </div>
             <div className='relative '>
