@@ -146,8 +146,9 @@ export default function Parent({ children }) {
                             autoPlay
                             loop
                             muted
-                            playsInline
-                            src={video} />
+                            playsInline>
+                            <source src={video} type="video/mp4" />
+                        </video>
                     </div>
                     <div className="tabs grid 2xl:grid-cols-[1fr_2fr] xl:grid-cols-[1fr_2fr] grid-cols-1 items-start gap-10">
                         <div className='2xl:order-1 xl:order-1 order-2'>

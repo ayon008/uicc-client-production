@@ -6,7 +6,7 @@ import Image from 'next/image';
 import ielts from '../../public/assets/image (4).png'
 import img2 from '../../public/assets/7cf35f6ab24ee8d5c906ab5657a6ca72.png'
 import img1 from '../../public/assets/429b4dc278066dff3de30390f03f017e.png'
-import video from '../../public/assets/Cool black Background.mp4'
+import video from '@/../public/assets/Cool black Background.mp4'
 
 const ServicesCom = () => {
     return (
@@ -19,7 +19,9 @@ const ServicesCom = () => {
                         loop
                         muted
                         playsInline
-                        src={video} />
+                    >
+                        <source src={video} type="video/mp4" />
+                    </video>
                 </div>
                 <div className='2xl:w-[60%] xl:w-[60%] w-[90%] mx-auto'>
                     <ScrollDim heading1={'We Provide Language Support and Visa Processing'} heading2={'and Visa Processing'} show={true} subHeading={'Our Services'} />

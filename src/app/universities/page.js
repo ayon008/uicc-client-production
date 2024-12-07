@@ -212,9 +212,9 @@ const page = () => {
                     autoPlay
                     loop
                     muted
-                    playsInline
-                    src={video}
-                />
+                    playsInline>
+                    <source src={video} type="video/mp4" />
+                </video>
             </div>
             <ServiceBanner text={'Universities'} />
             <div className="2xl:my-28 xl:my-20 my-10">

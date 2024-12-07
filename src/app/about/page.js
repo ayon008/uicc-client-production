@@ -22,7 +22,9 @@ const page = () => {
                     loop
                     muted
                     playsInline
-                    src={video} />
+                >
+                    <source src={video} type="video/mp4" />
+                </video>
             </div>
             <ServiceBanner text={'About Us'} />
             <div className='2xl:my-20 xl:my-16 my-10 2xl:px-0 xl:px-0 px-6'>

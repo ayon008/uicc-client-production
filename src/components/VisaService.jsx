@@ -103,8 +103,10 @@ export default function VisaService() {
                     autoPlay
                     loop
                     muted
-                    playsInline
-                    src={video} />
+                    preload=''
+                    playsInline>
+                    <source src={video} type="video/mp4" />
+                </video>
             </div>
             <SectionTitle subHeading={'VISA SERVICES'} heading1={'Committed to provide '} heading2={'you the best visa services'} />
             <div className='2xl:block xl:block hidden'>

@@ -24,8 +24,9 @@ const page = () => {
                         autoPlay
                         loop
                         muted
-                        playsInline
-                        src={video} />
+                        playsInline>
+                        <source src={video} type="video/mp4" />
+                    </video>
                 </div>
                 <SectionTitle heading1={'Committed to provide'} heading2={'you best visa services'} subHeading={'Visa Services'} />
                 <div className="grid 2xl:grid-cols-3 xl:grid-cols-3 grid-cols-1 mt-10 w-7xl mx-auto 2xl:px-10 xl:px-10 2xl:gap-0 xl:gap-0 gap-6">
