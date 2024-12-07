@@ -10,7 +10,7 @@ import BottomSection from '@/shared/BottomSection';
 import ServiceHistory from '@/shared/ServiceHistory';
 import AboutUs from '@/components/AboutUs';
 import ChooseUs from '@/components/ChooseUs';
-import video from '@/../public/assets/Abstract White Background 4K - Motion Graphics Background Loop - White Video Loop.mp4'
+import video from '@/../public/assets/Abstract White Background 4K - Motion Graphics Background Loop - White Video Loop.mp4';
 
 const page = () => {
     return (
@@ -21,8 +21,7 @@ const page = () => {
                     autoPlay
                     loop
                     muted
-                    playsInline
-                >
+                    playsInline>
                     <source src={video} type="video/mp4" />
                 </video>
             </div>

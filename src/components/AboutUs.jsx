@@ -20,7 +20,7 @@ import FaTicket from '@/icons/FaTicket';
 import Link from 'next/link';
 import TextAnimation from '@/shared/TextAnimation';
 import ButtonSecondary from '@/shared/ButtonSecondary';
-import video from '../../public/assets/Abstract Energy Free White Background Videos, Motion Graphics, No Copyright _ All Background Videos (online-video-cutter.com).mp4';
+// import video from '../../public/assets/About.mp4';
 
 const AboutUs = () => {
     return (
@@ -31,7 +31,7 @@ const AboutUs = () => {
                     autoPlay
                     loop
                     muted>
-                    <source src={video} type="video/mp4" />
+                    <source src='/assets/About.mp4' type="video/mp4" />
                 </video>
             </div>
             <div className='relative '>
