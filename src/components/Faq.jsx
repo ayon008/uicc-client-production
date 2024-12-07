@@ -23,7 +23,7 @@ const Faq = () => {
                             Frequently Asked Questions
                         </TextAnimation>
                     </h1>
-                    <div className="mt-10 space-y-2">
+                    <div className="mt-10 space-y-2 2xl:min-h-auto xl:min-h-auto min-h-[600px]">
                         <FaqInput index={'1'} ques={'Q1. What language can I learn at UICC?'} ans={'Now we offer courses In IELTS,Japanese,Korean and coming soon German and Chinese.'} />
                         <FaqInput index={'2'} ques={'Q2. Where is UICC located?'} ans={'UICC is located in BNS Center(Level-10),Sector-07,Uttara,Dhaka.'} />
                         <FaqInput index={'3'} ques={'Q3.What makes UICC unique compared to other language institutes?'} ans={'We provide certified trainers,flexible class schedules,digital classrooms and customized learning plans for students.'} />
