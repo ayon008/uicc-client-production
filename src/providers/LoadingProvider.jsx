@@ -1,7 +1,5 @@
 'use client';
 
-import Footer from '@/shared/Footer';
-import Navbar from '@/shared/Navbar';
 import React, { useEffect, useState } from 'react';
 import dynamic from 'next/dynamic';
 
@@ -10,6 +8,8 @@ const DynamicLoading = dynamic(() => import('@/components/Loader'), {
     ssr: false // Disable server-side rendering for this component
 });
 import { serif } from '@/shared/Serif';
+import Navbar from '@/shared/NavBar';
+import Footer from '@/shared/Footer';
 
 const LoadingProvider = ({ children }) => {
     const [loading, setLoading] = useState(true);
