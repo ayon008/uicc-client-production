@@ -1,6 +1,6 @@
 import Image from 'next/image';
-import img1 from '@/../public/assets/44923e5447f015910dcbb865d34f84e2.png'
-import img2 from '@/../public/assets/b655cb9ea254db8e60a6ccaa93a1d36b.png'
+import img1 from '@/../public/assets/raychan-mnypcmLnXE0-unsplash.jpg'
+import img2 from '@/../public/assets/john-mcarthur-X_MOr6oa4-k-unsplash.jpg'
 import FaTicket from '@/icons/FaTicket';
 import FaTelegram from '@/icons/FaTelegram';
 import { TickIcon } from '../layout';
@@ -48,9 +48,9 @@ const Page = () => {
                         </span>
                     </li>
                 </ul>
-                <div className='flex items-center mt-8 gap-6'>
-                    <Image className='flex-1' src={img1} alt='' />
-                    <Image className='flex-1' src={img2} alt='' />
+                <div className='flex items-center mt-8 gap-6 w-full overflow-hidden'>
+                    <Image className='w-1/2 h-full object-cover' src={img1} alt='' />
+                    <Image className='w-1/2 h-full object-cover' src={img2} alt='' />
                 </div>
                 <div className="flex-1 flex flex-col justify-between px-10">
                     <div className="mt-16">
