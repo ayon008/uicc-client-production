@@ -7,7 +7,7 @@ import { serif } from '@/shared/Serif';
 import FaqInput from './FaqInput';
 const Faq = () => {
     return (
-        <div className="2xl:px-10 xl:px-10 px-6 max-w-[1440px] mx-auto flex gap-2 2xl:my-36 xl:my-38 my-20 max-h-[550px]">
+        <div className="2xl:px-10 xl:px-10 px-6 max-w-[1440px] mx-auto flex gap-2 2xl:my-36 xl:my-38 my-20">
             <Image className="max-h-[550px] object-contain 2xl:block xl:block hidden" src={image3} alt="" />
             <div className="flex-1">
                 <div>
