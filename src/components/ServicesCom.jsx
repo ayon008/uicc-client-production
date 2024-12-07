@@ -6,7 +6,7 @@ import Image from 'next/image';
 import ielts from '../../public/assets/image (4).png'
 import img2 from '../../public/assets/7cf35f6ab24ee8d5c906ab5657a6ca72.png'
 import img1 from '../../public/assets/429b4dc278066dff3de30390f03f017e.png'
-import video from '@/../public/assets/Cool black Background.mp4'
+import video from '@/../public/assets/Cool black Background (1).mp4'
 
 const ServicesCom = () => {
     return (

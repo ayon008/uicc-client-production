@@ -20,7 +20,7 @@ import FaTicket from '@/icons/FaTicket';
 import Link from 'next/link';
 import TextAnimation from '@/shared/TextAnimation';
 import ButtonSecondary from '@/shared/ButtonSecondary';
-import video from '../../public/assets/Abstract Energy Free White Background Videos, Motion Graphics, No Copyright _ All Background Videos.mp4';
+import video from '../../public/assets/Abstract Energy Free White Background Videos, Motion Graphics, No Copyright _ All Background Videos (online-video-cutter.com).mp4';
 
 const AboutUs = () => {
     return (
