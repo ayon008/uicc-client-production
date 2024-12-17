@@ -9,17 +9,17 @@ import FaWhatsapp from '@/icons/FaWhatsapp';
 import Image from 'next/image';
 import React, { useEffect, useState } from 'react';
 import logo from '../../public/assets/logo (1).svg';
-import { MdSearch } from 'react-icons/md';
+import { MdArrowForwardIos, MdSearch } from 'react-icons/md';
 import Link from 'next/link';
 import DropDown from '@/icons/DrowDown';
 import { motion } from "framer-motion";
 import { usePathname } from 'next/navigation';
 import { GiHamburgerMenu } from 'react-icons/gi';
-import { AiOutlineClose } from 'react-icons/ai';
-import { FaFacebook, FaFacebookSquare, FaLinkedinIn, FaTwitterSquare, FaWhatsappSquare } from 'react-icons/fa';
+import { AiOutlineArrowRight, AiOutlineClose } from 'react-icons/ai';
+import { FaArrowRight, FaFacebook, FaFacebookSquare, FaLinkedinIn, FaTwitterSquare, FaWhatsappSquare } from 'react-icons/fa';
 import { serif } from './Serif';
 
-const Navbar = () => {
+const NavBar = () => {
     const [scrolled, setScrolled] = useState(false);
     const pathname = usePathname();
     console.log(scrolled);
@@ -53,6 +53,117 @@ const Navbar = () => {
         };
     }, [open]);
 
+    const arr = [
+        'A', 'B', 'C'
+    ]
+
+    const Option = ({ children, arr }) => {
+        return (
+            <motion.div
+                whileHover="show"
+                initial="hidden"
+                className="uppercase font-semibold 2xl:text-xl xl:text-base text-sm py-3 w-full"
+            >
+                <motion.span
+                    variants={{
+                        show: {
+                            color: '#c6250c', // Change color on hover
+                            x: 40, // Move 40px to the right
+                            transition: { duration: 0.3, ease: 'easeInOut' }, // Smooth transition
+                        },
+                        hidden: {
+                            color: '#000000', // Default color
+                            x: 0, // Default position
+                            transition: { duration: 0.3, ease: 'easeInOut' },
+                        },
+                    }}
+                    className="relative"
+                >
+                    <span className='flex items-center justify-between'>
+                        <span className='flex items-center parent-you'>
+                            <span className="w-[0px] h-[4px] bg-orange line-option">
+
+                            </span>
+                            <span>
+                                {children}
+                            </span>
+                        </span>
+                        <span className='z-40'>
+                            <MdArrowForwardIos />
+                        </span>
+                    </span>
+                    {/* 2nd hover */}
+                    <motion.div
+                        variants={{
+                            show: {
+                                opacity: 1,
+                                y: 0,
+                                pointerEvents: 'auto',
+                                transition: {
+                                    duration: 0.4, // Animation duration when showing
+                                    delay: 0.2, // Add delay when showing
+                                },
+                            },
+                            hidden: {
+                                opacity: 0,
+                                y: 40,
+                                pointerEvents: 'none',
+                                transition: {
+                                    duration: 0.3, // Animation duration when hiding
+                                    delay: 0.1, // Add delay when hiding
+                                },
+                            }
+                        }}
+                        className="h-[200px] w-[300px] bg-transparent absolute -top-[25%] left-[90%] z-30">
+
+                        <div className='ml-[67px] shadow-2xl rounded-2xl'>
+                            {
+                                arr?.map((a, i) => {
+                                    console.log(a);
+                                    return (
+                                        <li className='border-b-[0.60px] parent-option border-opacity-30 border-b-gray bg-white' key={i}>
+                                            <motion.span
+                                                variants={{
+                                                    show: {
+                                                        color: '#c6250c', // Change color on hover
+                                                        x: 40, // Move 40px to the right
+                                                        transition: { duration: 0.3, ease: 'easeInOut' }, // Smooth transition
+                                                    },
+                                                    hidden: {
+                                                        color: '#000000', // Default color
+                                                        x: 0, // Default position
+                                                        transition: { duration: 0.3, ease: 'easeInOut' },
+                                                    },
+                                                }}
+                                                className="relative"
+                                            >
+                                                <span className='flex items-center justify-between'>
+                                                    <span className='flex items-center parent-you'>
+                                                        <span className="w-[0px] h-[4px] bg-orange line-option">
+
+                                                        </span>
+                                                        <span className=''>
+                                                            {a}
+                                                        </span>
+                                                    </span>
+                                                    <span>
+                                                        <MdArrowForwardIos />
+                                                    </span>
+                                                </span>
+                                            </motion.span>
+                                        </li>
+                                    )
+                                })
+                            }
+
+                        </div>
+                        {/*  */}
+                    </motion.div>
+                </motion.span>
+            </motion.div>
+        )
+    }
+
     const navItems = <>
         <li className={`2xl:text-xl xl:text-base text-sm ${serif.className} font-semibold hover:text-orange transition-all duration-100 ${pathname === '/' ? 'text-orange' : ''}`}>
             <Link href="/">Home</Link>
@@ -60,8 +171,99 @@ const Navbar = () => {
         <li className={`2xl:text-xl xl:text-base text-sm font-semibold hover:text-orange ${serif.className} transition-all duration-100 ${pathname === '/about' ? 'text-orange' : ''}`}>
             <Link href="/about">About</Link>
         </li>
-        <li className={`2xl:text-xl xl:text-base text-sm font-semibold hover:text-orange ${serif.className} transition-all duration-100 ${pathname === '/services' ? 'text-orange' : ''}`}>
-            <Link href="/services">Services</Link>
+        <li className='relative'>
+            <div
+            >
+                <motion.div
+                    whileHover='show'
+                    initial='hidden'
+                    className={`2xl:text-xl xl:text-base 2xl:h-[60px] xl:h-[60px] text-sm font-semibold h-full hover-color hover:text-orange ${serif.className} transition-all duration-100 flex gap-[2px] ${pathname === '/services' ? 'text-orange' : ''}`}>
+                    <span className='my-auto'>Education</span>
+                    <div className='h-fit my-auto'>
+                        <DropDown />
+                    </div>
+                    <motion.div
+                        variants={{
+                            show: {
+                                opacity: 1,
+                                y: 0,
+                                pointerEvents: 'auto',
+                                transition: {
+                                    duration: 0.4, // Animation duration when showing
+                                    delay: 0.2, // Add delay when showing
+                                },
+                            },
+                            hidden: {
+                                opacity: 0,
+                                y: 40,
+                                pointerEvents: 'none',
+                                transition: {
+                                    duration: 0.3, // Animation duration when hiding
+                                    delay: 0.1, // Add delay when hiding
+                                },
+                            }
+                        }}
+                        className='w-[350px] pt-10 px-10 pb-6 absolute top-[60px] bg-white left-0'>
+                        <li className='border-b-[0.60px] parent-option border-opacity-30 border-b-gray '>
+                            <Option arr={arr}>IELTS</Option>
+                        </li>
+                        <li className='border-b-[0.60px] parent-option border-opacity-30 border-b-gray '>
+                            <Option>Japanese Language</Option>
+                        </li>
+                        <li className='border-b-[0.60px] parent-option border-opacity-30 border-b-gray '>
+                            <Option>Korean Language</Option>
+                        </li>
+                        <li className='border-b-[0.60px] parent-option border-opacity-30 border-b-gray '>
+                            <Option>German Language</Option>
+                        </li>
+                        <li className='parent-option'>
+                            <Option>Chinese Language</Option>
+                        </li>
+                        {/* <li className='border-b-[0.60px] border-opacity-30 border-b-gray py-6'><Link href="/korean-language/korean-regular-batch" className='uppercase font-semibold 2xl:text-xl xl:text-base text-sm text-black'></Link></li> */}
+                        {/* <li className='border-b-[0.60px] border-opacity-30 border-b-gray py-6'><Link href="/japanese-language/japanese-language-course-n5" className='uppercase font-semibold 2xl:text-xl xl:text-base text-sm text-black'></Link></li> */}
+                        {/* <li className='border-b-[0.60px] border-opacity-30 border-b-gray py-6'><Link href="/german-language/basic-german" className='uppercase font-semibold 2xl:text-xl xl:text-base text-sm text-black'>German Language</Link></li> */}
+                        {/* <li className='pt-6'><Link href="/chinese-language/basic-chinese" className='uppercase font-semibold 2xl:text-xl xl:text-base text-sm text-black'>Chinese Language</Link></li> */}
+                    </motion.div>
+                </motion.div>
+            </div>
+        </li>
+        <li className='relative'>
+            <div
+            >
+                <motion.div
+                    whileHover='show'
+                    initial='hidden'
+                    className={`2xl:text-xl xl:text-base 2xl:h-[60px] xl:h-[60px] text-sm font-semibold h-full hover-color hover:text-orange ${serif.className} transition-all duration-100 flex gap-[2px] ${pathname === '/services' ? 'text-orange' : ''}`}>
+                    <span className='my-auto'>Education</span>
+                    <div className='h-fit my-auto'>
+                        <DropDown />
+                    </div>
+                    <motion.div
+                        variants={{
+                            show: {
+                                opacity: 1,
+                                y: 0,
+                                pointerEvents: 'auto',
+                                transition: {
+                                    duration: 0.4, // Animation duration when showing
+                                    delay: 0.2, // Add delay when showing
+                                },
+                            },
+                            hidden: {
+                                opacity: 0,
+                                y: 20,
+                                pointerEvents: 'none',
+                                transition: {
+                                    duration: 0.3, // Animation duration when hiding
+                                    delay: 0.1, // Add delay when hiding
+                                },
+                            }
+                        }}
+                        className='w-[200px] h-[200px] absolute top-[72px] bg-red-500 left-0'>
+
+                    </motion.div>
+                </motion.div>
+            </div>
         </li>
         <li className={`2xl:text-xl xl:text-base text-sm font-semibold hover:text-orange ${serif.className} transition-all duration-100 2xl:-mr-5 xl:-mr-5 ${pathname === '/universities' ? 'text-orange' : ''}`}>
             <Link href="/universities">Associate Universities</Link>
@@ -71,25 +273,12 @@ const Navbar = () => {
         <li><Link href="/japanese-language/japanese-language-course-n5" className='uppercase font-semibold 2xl:text-xl xl:text-base text-sm 2xl:hidden xl:hidden block'>Japanese Language</Link></li>
         <li className='2xl:hidden xl:hidden block'><Link href="/german-language/basic-german" className='uppercase font-semibold 2xl:text-xl xl:text-base text-sm 2xl:hidden xl:hidden block'>German Language</Link></li>
         <li className='2xl:hidden xl:hidden block'><Link href="/chinese-language/basic-chinese" className='uppercase font-semibold 2xl:text-xl xl:text-base text-sm 2xl:hidden xl:hidden block'>Chinese Language</Link></li>
-        <li className='2xl:block xl:block hidden'>
-            <div className="dropdown dropdown-hover">
-                <div className='2xl:text-xl xl:text-base text-sm font-semibold dropdown-icon hover:text-orange transition-all duration-100 flex items-center cursor-pointer'>
-                    <span tabIndex={0} role="button">Education</span>
-                    <DropDown />
-                </div>
-                <ul tabIndex={0} className="dropdown-content 2xl:block xl:block hidden menu  bg-[#FBFCFF] z-[1] xl:w-64 2xl:w-72 pb-2 pt-[40px] px-2 top-5 -left-8">
-                    <li><Link href="/ielts" className='uppercase font-semibold 2xl:text-xl xl:text-base text-sm'>IELTS</Link></li>
-                    <li><Link href="/korean-language/korean-regular-batch" className='uppercase font-semibold 2xl:text-xl xl:text-base text-sm'>Korean Language</Link></li>
-                    <li><Link href="/japanese-language/japanese-language-course-n5" className='uppercase font-semibold 2xl:text-xl xl:text-base text-sm'>Japanese Language</Link></li>
-                    <li><Link href="/german-language/basic-german" className='uppercase font-semibold 2xl:text-xl xl:text-base text-sm'>German Language</Link></li>
-                    <li><Link href="/chinese-language/basic-chinese" className='uppercase font-semibold 2xl:text-xl xl:text-base text-sm'>Chinese Language</Link></li>
-                </ul>
-            </div>
-        </li>
+
         <li className={`2xl:text-xl xl:text-base text-sm font-semibold hover:text-orange ${serif.className} transition-all duration-100 ${pathname === '/contact' ? 'text-orange' : ''}`}>
             <Link href="/contact">Contact</Link>
         </li>
     </>
+
 
 
     return (
@@ -134,10 +323,10 @@ const Navbar = () => {
             </div>
             <div className='absolute 2xl:top-[60px] xl:top-[60px] top-0 inset-0'>
                 <div className='bg-[#FBFCFF]'>
-                    <div className='flex items-center justify-between  max-w-[1440px] mx-auto relative 2xl:h-[100px] xl:h-[100px] h-[50px] 2xl:py-10 xl:py-10 2xl:px-11 xl:px-11 px-4'>
+                    <div className='flex items-center justify-between  max-w-[1440px] mx-auto relative 2xl:h-[100px] xl:h-[100px] h-[80px] 2xl:py-10 xl:py-10 2xl:px-11 xl:px-11 px-4'>
                         <div className='absolute top-0 2xl:left-11 xl:left-11 left-5'>
                             <div className='nav-start bg-white shadow-xl'>
-                                <Image className='2xl:w-[140px] xl:w-[140px] w-[70px] 2xl:h-[110px] xl:h-[110px] h-auto object-contain' src={logo} alt='logo' />
+                                <Image className='2xl:w-[140px] xl:w-[140px] w-[110px] 2xl:h-[110px] xl:h-[110px] h-auto object-contain' src={logo} alt='logo' />
                             </div>
                         </div>
                         <div className='2xl:w-[275px] xl:w-[275px] 2xl:block xl:block hidden h-full'>
@@ -225,13 +414,13 @@ const Navbar = () => {
                     }
                 </motion.div>
             }
-            <motion.div
+            {/* <motion.div
                 initial={{ top: -2000 }}
                 animate={{ top: scrolled ? 0 : -200 }}
                 transition={{ duration: 0.5, ease: "easeInOut", delay: 0.01 }}
                 className={`bg-[#FBFCFF] shadow-xl fixed right-0 left-0 z-50`}
             >
-                <div className='flex 2xl:h-[100px] xl:h-[100px] h-[50px] items-center justify-between  max-w-[1440px] mx-auto relative 2xl:py-10 xl:py-10 2xl:px-11 xl:px-11 px-4'>
+                <div className='flex 2xl:h-[100px] xl:h-[100px] h-[80px] items-center justify-between  max-w-[1440px] mx-auto relative 2xl:py-10 xl:py-10 2xl:px-11 xl:px-11 px-4'>
                     <div className='absolute top-0 2xl:left-11 xl:left-11 left-5'>
                         <div className='nav-start bg-white shadow-xl'>
                             <Image className='2xl:w-[140px] xl:w-[140px] w-[70px] 2xl:h-[110px] xl:h-[110px] h-auto object-contain' src={logo} alt='logo' />
@@ -280,9 +469,9 @@ const Navbar = () => {
                         </div>
                     </div>
                 </div>
-            </motion.div>
+            </motion.div> */}
         </div>
     );
 };
 
-export default Navbar;
+export default NavBar;

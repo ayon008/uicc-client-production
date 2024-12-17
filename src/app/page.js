@@ -16,8 +16,8 @@ import ServiceHistory from "@/shared/ServiceHistory";
 export default function Home() {
   return (
     <div>
-      <SelectTab />
-      <Notice />
+      {/* <SelectTab /> */}
+      {/* <Notice />
       <AboutUs />
       <div>
         <Accordion />
@@ -29,7 +29,7 @@ export default function Home() {
       <SectionTitle subHeading={'OUR COURSES'} heading1={'Best available courses'} heading2={'for you and boost your carrier'} width={60} />
       <Slider />
       <Faq />
-      <NewsPortal />
+      <NewsPortal /> */}
     </div>
   );
 }

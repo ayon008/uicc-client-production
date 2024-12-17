@@ -10,6 +10,27 @@ html {
   padding: 0px;
 }
 
+.hover-color:hover .dropdown-path {
+  stroke: #ff6347;
+  /* Change to your desired color */
+}
+
+.parent-option:hover .line-option {
+  opacity: 1;
+  width: 18px !important;
+  margin-right: 12px !important;
+  transition: width 200ms linear, margin-right 200ms linear;
+  /* visibility immediately after opacity */
+}
+
+.parent-option .line-option {
+  opacity: 1;
+  width: 0x !important;
+  margin-right: 0px !important;
+  transition: width 200ms linear, margin-right 200ms linear;
+  /* visibility immediately after opacity */
+}
+
 .bn-primary:hover {
   @apply bg-deep-blue;
 }
@@ -287,7 +308,7 @@ input:not(:checked)~.collapse-title .icon-plus {
 
 /* Pseudo-element styles */
 .hover-element::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 50%;
@@ -319,7 +340,6 @@ input:not(:checked)~.collapse-title .icon-plus {
   transform: scale(0.9);
   /* Adds a subtle click animation */
 }
-
 
 .label-text {
   background: var(--333, linear-gradient(180deg, #0b286d 0%, #0f172a 100%));
