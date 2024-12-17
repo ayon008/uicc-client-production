@@ -7,7 +7,7 @@ import { serif } from '@/shared/Serif';
 import FaqInput from './FaqInput';
 const Faq = () => {
     return (
-        <div className="2xl:px-10 xl:px-10 px-6 max-w-[1440px] mx-auto flex gap-2 2xl:my-36 xl:my-38 my-20 max-h-[550px]">
+        <div className="2xl:px-10 xl:px-10 px-6 max-w-[1440px] mx-auto flex gap-2 2xl:my-36 xl:my-38 my-20">
             <Image className="max-h-[550px] object-contain 2xl:block xl:block hidden" src={image3} alt="" />
             <div className="flex-1">
                 <div>
@@ -23,7 +23,7 @@ const Faq = () => {
                             Frequently Asked Questions
                         </TextAnimation>
                     </h1>
-                    <div className="mt-10 space-y-2">
+                    <div className="mt-10 space-y-2 h-auto">
                         <FaqInput index={'1'} ques={'Q1. What language can I learn at UICC?'} ans={'Now we offer courses In IELTS,Japanese,Korean and coming soon German and Chinese.'} />
                         <FaqInput index={'2'} ques={'Q2. Where is UICC located?'} ans={'UICC is located in BNS Center(Level-10),Sector-07,Uttara,Dhaka.'} />
                         <FaqInput index={'3'} ques={'Q3.What makes UICC unique compared to other language institutes?'} ans={'We provide certified trainers,flexible class schedules,digital classrooms and customized learning plans for students.'} />

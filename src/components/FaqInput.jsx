@@ -13,7 +13,7 @@ const FaqInput = ({ ques, ans, index }) => {
             style={{
                 boxShadow: "0px 5px 16px 0px rgba(8, 15, 52, 0.06)"
             }} className="collapse rounded-2xl bg-[#FFF] h-fit">
-            <input type="checkbox" id={`${index}`} className="hidden" />
+            <input type="checkbox" id={`${index}`} name="my-accordion-1" className="hidden" />
             <label htmlFor={`${index}`} className="collapse-title cursor-pointer faq 2xl:text-[22px] xl:text-lg text-sm font-semibold flex items-center p-6 justify-between">
                 {ques}
                 <span className="icon-container ml-5">
