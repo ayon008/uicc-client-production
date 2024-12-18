@@ -23,6 +23,22 @@ html {
   /* visibility immediately after opacity */
 }
 
+.parent-option-1:hover .line-option-1 {
+  opacity: 1;
+  width: 18px !important;
+  margin-right: 12px !important;
+  transition: width 200ms linear, margin-right 200ms linear;
+  /* visibility immediately after opacity */
+}
+
+.parent-option-1 .line-option-1 {
+  opacity: 1;
+  width: 0x !important;
+  margin-right: 0px !important;
+  transition: width 200ms linear, margin-right 200ms linear;
+  /* visibility immediately after opacity */
+}
+
 .parent-option .line-option {
   opacity: 1;
   width: 0x !important;
@@ -280,6 +296,107 @@ input:not(:checked)~.collapse-title .icon-plus {
 .count {
   background: var(--333, linear-gradient(180deg, #0b286d 0%, #0f172a 100%));
 }
+
+.count-btn {
+  background: linear-gradient(180deg, #0b286d 0%, #0f172a 100%);
+  position: relative;
+  transition: none;
+  /* Disable direct transition for gradients */
+  overflow: hidden;
+}
+
+.count-btn:hover {
+  animation: gradient-fade 600ms ease-in-out forwards;
+  /* Smooth transition */
+}
+
+@keyframes gradient-fade {
+  0% {
+    background: linear-gradient(180deg, #c6250c 0%, #c6250c 100%);
+  }
+
+  5% {
+    background: linear-gradient(180deg, #c6250c 0%, #c6250c 100%);
+  }
+
+  10% {
+    background: linear-gradient(180deg, #c6250c 0%, #c6250c 100%);
+  }
+
+  15% {
+    background: linear-gradient(180deg, #c6250c 0%, #c6250c 100%);
+  }
+
+  20% {
+    background: linear-gradient(180deg, #c6250c 0%, #c6250c 100%);
+  }
+
+  25% {
+    background: linear-gradient(180deg, #c6250c 0%, #c6250c 100%);
+  }
+
+  30% {
+    background: linear-gradient(180deg, #c6250c 0%, #c6250c 100%);
+  }
+
+  35% {
+    background: linear-gradient(180deg, #c6250c 0%, #c6250c 100%);
+  }
+
+  40% {
+    background: linear-gradient(180deg, #c6250c 0%, #c6250c 100%);
+  }
+
+  45% {
+    background: linear-gradient(180deg, #c6250c 0%, #c6250c 100%);
+  }
+
+  50% {
+    background: linear-gradient(180deg, #c6250c 0%, #c6250c 100%);
+  }
+
+  55% {
+    background: linear-gradient(180deg, #c6250c 0%, #c6250c 100%);
+  }
+
+  60% {
+    background: linear-gradient(180deg, #c6250c 0%, #c6250c 100%);
+  }
+
+  65% {
+    background: linear-gradient(180deg, #c6250c 0%, #c6250c 100%);
+  }
+
+  70% {
+    background: linear-gradient(180deg, #c6250c 0%, #c6250c 100%);
+  }
+
+  75% {
+    background: linear-gradient(180deg, #c6250c 0%, #c6250c 100%);
+  }
+
+  80% {
+    background: linear-gradient(180deg, #c6250c 0%, #c6250c 100%);
+  }
+
+  85% {
+    background: linear-gradient(180deg, #c6250c 0%, #c6250c 100%);
+  }
+
+  90% {
+    background: linear-gradient(180deg, #c6250c 0%, #c6250c 100%);
+  }
+
+  95% {
+    background: linear-gradient(180deg, #c6250c 0%, #c6250c 100%);
+  }
+
+  100% {
+    background: linear-gradient(180deg, #c6250c 0%, #c6250c 100%);
+  }
+}
+
+
 
 /*  */
 /* .btn-hover {

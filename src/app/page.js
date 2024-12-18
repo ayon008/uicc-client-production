@@ -16,12 +16,13 @@ import ServiceHistory from "@/shared/ServiceHistory";
 export default function Home() {
   return (
     <div>
-      {/* <SelectTab /> */}
-      {/* <Notice />
+      <SelectTab />
+      <Notice />
       <AboutUs />
-      <div>
+      <div className="overflow-x-hidden">
         <Accordion />
       </div>
+      {/* 
       <VisaService />
       <ServicesCom />
       <ServiceHistory />

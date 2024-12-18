@@ -16,7 +16,7 @@ import video from '@/../public/assets/Abstract White Background 4K - Motion Grap
 const page = () => {
     return (
         <div>
-            <ServiceBanner text={'Services'} />
+            <ServiceBanner text1={'Services'} />
             <div className="pt-20 2xl:px-10 xl:px-10 px-6 relative">
                 <div className='absolute right-0 left-0 top-0 bottom-0 -z-10'>
                     <video

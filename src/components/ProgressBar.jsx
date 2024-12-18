@@ -4,16 +4,16 @@ import { motion } from 'framer-motion';
 import CountUp from 'react-countup';
 import { useInView } from 'react-intersection-observer';
 
-
 const SemiCircularProgressBar = () => {
     const { ref, inView } = useInView({
-        triggerOnce: false, // Trigger animation only once
+        triggerOnce: true, // Trigger animation only once
         threshold: 0.5, // Trigger when 50% of the element is visible
     });
+
     return (
-        <div className="flex justify-center items-center relative mt-4">
+        <div className="flex justify-center items-center relative mt-4" ref={ref}>
             <svg viewBox="0 0 120 70" className="w-64 h-36">
-                {/* Background Circle with Smaller Radius */}
+                {/* Background Circle */}
                 <path
                     d="M 20 60 A 45 45 0 1 1 100 60" // Adjusted radius from 55 to 45
                     fill="none"
@@ -21,7 +21,7 @@ const SemiCircularProgressBar = () => {
                     strokeWidth="4"
                 />
 
-                {/* Animated Progress Circle with Smaller Radius */}
+                {/* Animated Progress Circle */}
                 <motion.path
                     d="M 20 60 A 45 45 0 1 1 100 60" // Adjusted radius
                     fill="none"
@@ -29,7 +29,7 @@ const SemiCircularProgressBar = () => {
                     strokeWidth="4"
                     strokeLinecap="round"
                     initial={{ pathLength: 0 }}
-                    whileInView={{ pathLength: 0.95 }}
+                    animate={inView ? { pathLength: 0.95 } : { pathLength: 0 }}
                     transition={{
                         duration: 1.5,
                         ease: 'easeInOut',
@@ -38,17 +38,16 @@ const SemiCircularProgressBar = () => {
             </svg>
 
             {/* Percentage/Status Text */}
-            <div ref={ref} className="absolute flex flex-col items-center text-deep-blue">
+            <div className="absolute flex flex-col items-center text-deep-blue">
                 <motion.span
                     initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
+                    animate={inView ? { opacity: 1 } : { opacity: 0 }}
                     transition={{ duration: 1.5, ease: 'easeInOut' }}
-                    className='mb-2'
+                    className="mb-2"
                 >
                     <p className="text-base">Successful</p>
                 </motion.span>
-                {
-                    inView &&
+                {inView && (
                     <CountUp
                         className="font-semibold text-deep-blue text-lg"
                         start={0}
@@ -57,7 +56,7 @@ const SemiCircularProgressBar = () => {
                         useEasing={true}
                         separator=","
                     />
-                }
+                )}
             </div>
         </div>
     );

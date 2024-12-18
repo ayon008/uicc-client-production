@@ -19,9 +19,9 @@ const Footer = () => {
                 <div className='2xl:block xl:block hidden px-4'>
                     <div className='bg-orange flex flex-col rounded-lg'>
                         <div className='w-[20%] relative'>
-                            <TextAnimation className={'absolute left-2 top-0'}>
+                            <Animated className={'absolute left-2 top-0'}>
                                 <Image className='w-full' src={logo} alt='logo' />
-                            </TextAnimation>
+                            </Animated>
                         </div>
                         <div className='w-[75%] ml-auto h-full flex items-center justify-between 2xl:py-7 xl:py-5  2xl:pr-10 xl:pr-8'>
                             <div className='flex items-center gap-4'>

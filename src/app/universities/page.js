@@ -216,7 +216,7 @@ const page = () => {
                     <source src={video} type="video/mp4" />
                 </video>
             </div>
-            <ServiceBanner text={'Universities'} />
+            <ServiceBanner text1={'Universities'} />
             <div className="2xl:my-28 xl:my-20 my-10">
                 <SectionTitle
                     subHeading={'Associate Universities'}

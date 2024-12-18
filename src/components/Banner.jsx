@@ -23,11 +23,11 @@ const Banner = ({ bannerImage, flag, person, index }) => {
                     src={bannerImage}
                     alt="Banner Image"
                     layout="fill"
-                    initial={{ scale: 1 }}
+                    initial={{ scale: 1.5 }}
                     animate={{ scale: 1.2 }}
                     transition={{
-                        duration: 10,
-                        ease: [0.42, 0, 0.58, 1], // Custom cubic-bezier for smooth easing
+                        duration: 20,
+                        ease: 'linear', // Custom cubic-bezier for smooth easing
                         repeat: Infinity,
                         repeatType: 'reverse',
                     }}
@@ -35,7 +35,7 @@ const Banner = ({ bannerImage, flag, person, index }) => {
                     className="w-full h-full object-fill z-0"
                 />
             </div>
-            <div className='absolute inset-0 z-10 bg-gradient-to-r from-white/90 via-white/80 to-white/80'></div>
+            {/* <div className='absolute inset-0 z-10 bg-gradient-to-r from-white/90 via-white/80 to-white/80'></div>
             <div className='2xl:block xl:block hidden'>
                 <MotionImage
                     key={index}
@@ -50,13 +50,13 @@ const Banner = ({ bannerImage, flag, person, index }) => {
                     }}
                     className="absolute z-20"
                 />
-            </div>
+            </div> */}
 
-            <div className='absolute flex items-center 2xl:w-auto xl:w-auto -translate-y-1/2 h-fit top-1/2 2xl:left-20 xl:left-16 left-6 z-50'>
+            {/* <div className='absolute flex items-center 2xl:w-auto xl:w-auto -translate-y-1/2 h-fit top-1/2 2xl:left-20 xl:left-16 left-6 z-50'>
                 <div className="2xl:space-y-16 xl:space-y-10 space-y-6">
-                    {/* <div className="w-fit 2xl:mx-0 xl:mx-0 mx-auto rounded-xl  p-3 welcome">
+                    <div className="w-fit 2xl:mx-0 xl:mx-0 mx-auto rounded-xl  p-3 welcome">
                         <h5 className=" font-semibold text-deep-blue uppercase"></h5>
-                    </div> */}
+                    </div>
                     <button className='2xl:text-xl xl:text-base text-sm uppercase inline-block text-center p-3 border-2 border-deep-blue relative shadow-xl text-deep-blue hover:text-white focus:text-white transition-all ease-in duration-300 z-40 hover-element'>
                         <span className='z-40'>Welcome to UICC</span>
                     </button>
@@ -98,14 +98,14 @@ const Banner = ({ bannerImage, flag, person, index }) => {
                         </Link>
                     </div>
                 </div>
-            </div>
+            </div> */}
 
 
-            <div className="absolute right-10 bottom-0 z-30 h-[90%] 2xl:block xl:block hidden">
+            {/* <div className="absolute right-10 bottom-0 z-30 h-[90%] 2xl:block xl:block hidden">
                 <BannerAnimation index={index} className={'h-full'}>
                     <Image src={person} className="h-full w-auto" alt="" />
                 </BannerAnimation>
-            </div>
+            </div> */}
         </div>
     );
 };

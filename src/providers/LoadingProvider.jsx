@@ -14,16 +14,16 @@ import Footer from '@/shared/Footer';
 const LoadingProvider = ({ children }) => {
     const [loading, setLoading] = useState(true);
 
-    useEffect(() => {
-        const timer = setTimeout(() => {
-            setLoading(false);
-        }, 800);
-        return () => clearTimeout(timer);
-    }, []);
+    // useEffect(() => {
+    //     const timer = setTimeout(() => {
+    //         setLoading(false);
+    //     }, 800);
+    //     return () => clearTimeout(timer);
+    // }, []);
 
-    if (loading) {
-        return <DynamicLoading />;
-    }
+    // if (loading) {
+    //     return <DynamicLoading />;
+    // }
 
     return (
         <div className={`min-h-screen w-full ${serif.className}`}>

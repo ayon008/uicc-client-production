@@ -11,7 +11,7 @@ import BottomSection from '@/shared/BottomSection';
 const page = () => {
     return (
         <div className=''>
-            <ServiceBanner text={'Contact Us'} />
+            <ServiceBanner text1={'Contact Us'} />
             <div className='grid 2xl:grid-cols-3 xl:grid-cols-3 grid-cols-1 gap-6 2xl:px-11 xl:px-8 2xl:py-14 xl:py-10 p-6 max-w-[1440px] mx-auto 2xl:mb-36 xl:mb-28 mb-16'>
                 <div className="card card-compact rounded-lg shadow-xl relative">
                     <figure>

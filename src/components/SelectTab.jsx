@@ -39,8 +39,10 @@ const SelectTab = () => {
         <div>
             <div className='2xl:mt-[100px] xl:mt-[100px] mt-0 sliders relative'>
                 <Swiper
+                    lazy={true} // Lazy load for heavy images
+                    preloadImages={false}
+                    speed={600}
                     ref={swiperRef}
-                    pagination={{ clickable: true }}
                     autoplay={{
                         delay: 6000, // Time in milliseconds before moving to the next slide
                         disableOnInteraction: false, // Keeps autoplay running after user interaction

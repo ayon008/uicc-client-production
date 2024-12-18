@@ -225,7 +225,7 @@ const Accordion = () => {
                                     animate={{ x: 0, opacity: 1 }}
                                     exit={{ x: '100%', opacity: 0 }}
                                     transition={{ duration: 0.5, ease: 'easeInOut' }}
-                                    className="flex-1 w-full overflow-hidden"
+                                    className="flex-1 w-full overflow-hidden max-h-full"
                                 >
                                     <div className="flex flex-col flex-1">
                                         <Country i={index} country={item.title} image={item.image} flag={item.flag} />
@@ -233,7 +233,7 @@ const Accordion = () => {
                                 </motion.div>
                             ) : (
                                 <button
-                                    className={`py-3 count h-full w-full border-r-[0.2px] border-r-blue font-semibold relative flex-1 text-white 2xl:min-w-[100px] xl:min-w-[80px] border-[#E8FFFE]`}
+                                    className={`py-3 count-btn h-full w-full border-r-[0.2px] border-r-blue font-semibold relative flex-1 text-white 2xl:min-w-[100px] xl:min-w-[80px] border-[#E8FFFE]`}
                                     onClick={() => toggleAccordion(index, item.title)}
                                 >
                                     <span className="w-fit h-fit vertical z-10 top-10 left-[32%] 2xl:text-3xl xl:text-3xl font-semibold absolute uppercase">
