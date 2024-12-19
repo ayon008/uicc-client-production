@@ -17,7 +17,7 @@ export default function Home() {
   return (
     <div>
       <SelectTab />
-      <Notice />
+      {/* <Notice /> */}
       <AboutUs />
       <div className="overflow-x-hidden">
         <Accordion />

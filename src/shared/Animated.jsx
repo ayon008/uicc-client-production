@@ -12,7 +12,8 @@ const Animated = ({ children, className, index }) => {
             key={index ? index : 0}
             initial={{
                 clipPath: 'inset(0 100% 0 0)', // Start off-screen to the right
-                opacity: 0, // Start invisible for a smooth fade-in
+                opacity: 0,
+                 // Start invisible for a smooth fade-in
             }}
             animate={isInView && { // Trigger animation when in view
                 clipPath: 'inset(0 0% 0 0)', // Fully reveal the element

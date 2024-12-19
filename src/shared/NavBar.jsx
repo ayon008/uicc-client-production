@@ -15,8 +15,8 @@ import DropDown from '@/icons/DrowDown';
 import { motion } from "framer-motion";
 import { usePathname } from 'next/navigation';
 import { GiHamburgerMenu } from 'react-icons/gi';
-import { AiOutlineArrowRight, AiOutlineClose } from 'react-icons/ai';
-import { FaArrowRight, FaChevronDown, FaFacebook, FaFacebookSquare, FaLinkedinIn, FaTwitterSquare, FaWhatsappSquare } from 'react-icons/fa';
+import { FaChevronDown, FaFacebookSquare, FaLinkedinIn, FaTwitterSquare, FaWhatsappSquare } from 'react-icons/fa';
+import { IoCloseOutline } from 'react-icons/io5';
 import { serif } from './Serif';
 
 const NavBar = () => {
@@ -24,7 +24,6 @@ const NavBar = () => {
     const pathname = usePathname();
     const [clicked1, setClicked1] = useState(false);
     const [clicked2, setClicked2] = useState(false);
-    console.log(scrolled);
     const [open, setOpen] = useState(false);
     const [nav, setNav] = useState(false);
 
@@ -98,7 +97,7 @@ const NavBar = () => {
         { name: 'Visa', href: '/visa-processing' },
         { name: 'Student Visa', href: '/visa-processing/student-visa' },
         { name: 'Tourist Visa', href: '/visa-processing/tourist-visa' },
-        { name: 'Worker Visa', href: '/visa-processing/worker-visa' },
+        { name: 'Work Visa', href: '/visa-processing/worker-visa' },
         { name: 'Family Visa', href: '/visa-processing/family-visa' }
     ];
 
@@ -170,7 +169,6 @@ const NavBar = () => {
                             <div className='rounded flex-1 p-6 bg-white shadow-xl'>
                                 {
                                     arr?.map((a, i) => {
-                                        console.log(a);
                                         return (
                                             <motion.div key={i}
                                                 whileHover="show"
@@ -219,6 +217,7 @@ const NavBar = () => {
         )
     }
 
+    console.log(nav);
 
     const navItems = <>
         <li className={`2xl:text-xl xl:text-base text-sm ${serif.className} font-semibold hover:text-orange transition-all duration-100 ${pathname === '/' ? 'text-orange' : ''}`}>
@@ -275,10 +274,6 @@ const NavBar = () => {
                         <li className='parent-option'>
                             <Option arr={Chinese}>Chinese Language</Option>
                         </li>
-                        {/* <li className='border-b-[0.60px] border-opacity-30 border-b-gray py-6'><Link href="/korean-language/korean-regular-batch" className='uppercase font-semibold 2xl:text-xl xl:text-base text-sm text-black'></Link></li> */}
-                        {/* <li className='border-b-[0.60px] border-opacity-30 border-b-gray py-6'><Link href="/japanese-language/japanese-language-course-n5" className='uppercase font-semibold 2xl:text-xl xl:text-base text-sm text-black'></Link></li> */}
-                        {/* <li className='border-b-[0.60px] border-opacity-30 border-b-gray py-6'><Link href="/german-language/basic-german" className='uppercase font-semibold 2xl:text-xl xl:text-base text-sm text-black'>German Language</Link></li> */}
-                        {/* <li className='pt-6'><Link href="/chinese-language/basic-chinese" className='uppercase font-semibold 2xl:text-xl xl:text-base text-sm text-black'>Chinese Language</Link></li> */}
                     </motion.div>
                 </motion.div>
             </div>
@@ -338,6 +333,11 @@ const NavBar = () => {
                                 <Link href={'/air-ticket'}>
                                     Air Ticket
                                 </Link>
+                            </Option>
+                        </li>
+                        <li className='parent-option border-opacity-30 border-b-gray '>
+                            <Option show={true}>
+                                Digital Marketing
                             </Option>
                         </li>
                         <li className='parent-option border-opacity-30 border-b-gray '>
@@ -441,11 +441,18 @@ const NavBar = () => {
                                         d="M4 6h16M4 12h16M4 18h7" />
                                 </svg>
                             </div>
-                            <motion.div
-                                animate={{ left: nav ? 0 : -1000 }}
-                                transition={{ duration: 0.5, ease: "linear" }}
-                                className='h-screen flex items-stretch fixed top-0 overflow-auto z-[60] w-full bg-white'>
-                                <span onClick={() => setNav(false)} className='absolute top-2 right-4 text-3xl'>X</span>
+
+                            <div
+                                className={`h-screen w-full bg-white overflow-y-auto overflow-x-hidden z-[60] transition-all duration-1000 ease-in-out fixed top-0 right-0 ${nav ? 'left-0' : '-left-full'
+                                    }`}
+                            >
+                                <span
+                                    onClick={() => setNav(false)}
+                                    className="absolute top-2 right-4 text-3xl cursor-pointer"
+                                >
+                                    X
+                                </span>
+
                                 <div className="p-10 w-full">
                                     <Image src={logo} alt="" className="w-[100px] h-auto" />
                                     <div className='relative mt-4 mb-5'>
@@ -457,10 +464,10 @@ const NavBar = () => {
                                     <div className='mt-6'>
                                         <ul className='pb-10'>
                                             <li className={`2xl:text-xl xl:text-base text-sm ${serif.className} hover:text-orange transition-all duration-100 font-bold pb-3 border-b-[0.60px] border-b-black border-opacity-20 ${pathname === '/' ? 'text-orange' : ''}`}>
-                                                <a href={'/'}>Home</a>
+                                                <Link href={'/'}>Home</Link>
                                             </li>
                                             <li className={`2xl:text-xl xl:text-base text-sm font-semibold hover:text-orange ${serif.className} py-3 border-b-[0.60px] border-b-black border-opacity-20 transition-all duration-100 ${pathname === '/about' ? 'text-orange' : ''}`}>
-                                                <a href="/about">About</a>
+                                                <Link href="/about">About</Link>
                                             </li>
                                             <li className={`2xl:text-xl xl:text-base text-sm font-semibold hover:text-orange ${serif.className} transition-all duration-100`}>
                                                 <div className='flex items-center justify-between border-b-[0.60px] border-b-black border-opacity-20 py-3'>
@@ -488,7 +495,7 @@ const NavBar = () => {
                                                         {
                                                             navMobile?.map((a, i) => (
                                                                 <p key={i} className='py-2 text-black hover:text-orange transition-all duration-300 ease-linear border-b-[0.60px] border-b-black border-opacity-20'>
-                                                                    <a href={a.href}>{a.name}</a>
+                                                                    <Link href={a.href}>{a.name}</Link>
                                                                 </p>
                                                             ))
                                                         }
@@ -522,32 +529,47 @@ const NavBar = () => {
                                                         {
                                                             Visa?.map((a, i) => (
                                                                 <p key={i} className='py-2 text-black hover:text-orange transition-all duration-300 ease-linear border-b-[0.60px] border-b-black border-opacity-20'>
-                                                                    <a href={a.href}>{a.name}</a>
+                                                                    <Link href={a.href}>{a.name}</Link>
                                                                 </p>
                                                             ))
                                                         }
                                                         <p className='py-2 text-black hover:text-orange border-b-[0.60px] border-b-black border-opacity-20 transition-all duration-300 ease-linear'>
-                                                            <a href={'/language-training'}>Language Training</a>
+                                                            <Link href={'/language-training'}>Language Training</Link>
                                                         </p>
                                                         <p className='py-2 text-black hover:text-orange transition-all duration-300 border-b-[0.60px] border-b-black border-opacity-20 ease-linear'>
-                                                            <a href={'/air-ticket'}>
+                                                            <Link href={'/air-ticket'}>
                                                                 Air Ticket
-                                                            </a>
+                                                            </Link>
+                                                        </p>
+                                                        <p className='py-2 text-black hover:text-orange transition-all duration-300 border-b-[0.60px] border-b-black border-opacity-20 ease-linear'>
+                                                            <Link href={'/air-ticket'}>
+                                                                Digital Marketing
+                                                            </Link>
+                                                        </p>
+                                                        <p className='py-2 text-black hover:text-orange transition-all duration-300 border-b-[0.60px] border-b-black border-opacity-20 ease-linear'>
+                                                            <Link href={'/air-ticket'}>
+                                                                Web Design
+                                                            </Link>
+                                                        </p>
+                                                        <p className='py-2 text-black hover:text-orange transition-all duration-300 border-b-[0.60px] border-b-black border-opacity-20 ease-linear'>
+                                                            <Link href={'/air-ticket'}>
+                                                                Web Development
+                                                            </Link>
                                                         </p>
                                                     </motion.div>
 
                                                 </>
                                             </li>
                                             <li className={`2xl:text-xl xl:text-base text-sm ${serif.className} hover:text-orange transition-all text-black duration-100 font-bold py-3 border-b-[0.60px] border-b-black border-opacity-20 ${pathname === '/universities' ? 'text-orange' : ''}`}>
-                                                <a href="/universities">Associate Universities</a>
+                                                <Link href="/universities">Associate Universities</Link>
                                             </li>
                                             <li className={`2xl:text-xl xl:text-base text-sm ${serif.className} hover:text-orange transition-all text-black duration-100 font-bold py-3 ${pathname === '/contact' ? 'text-orange' : ''}`}>
-                                                <a href="/contact">Contact</a>
+                                                <Link href="/contact">Contact</Link>
                                             </li>
                                         </ul>
                                     </div>
                                 </div>
-                            </motion.div>
+                            </div>
                         </div>
                         <div className='hidden items-center gap-6 2xl:flex xl:flex'>
                             <div className='w-fit'>
@@ -573,7 +595,7 @@ const NavBar = () => {
                 >
                     <div className='w-[35%] h-full bg-[#FFFFFF] relative overflow-y-auto pb-10'>
                         <div className='w-fit h-fit absolute top-6 right-6 btn' onClick={() => setOpen(!open)}>
-                            <AiOutlineClose size={'1.5rem'} />
+                            <IoCloseOutline size={'1.5rem'} />
                         </div>
                         <div className='mt-20 w-fit mx-auto flex items-center gap-3'>
                             <Image className='2xl:w-[140px] xl:w-[140px] w-[70px] 2xl:h-[110px] xl:h-[110px] h-auto object-contain' src={logo} alt='logo' />
@@ -606,7 +628,8 @@ const NavBar = () => {
             <motion.div
                 initial={{ top: -2000 }}
                 animate={{ top: scrolled ? 0 : -200 }}
-                transition={{ duration: 0.5, ease: "easeInOut", delay: 0.01 }}
+                exit={{ top: -2000, transition: { duration: 0, ease: "linear" } }}
+                transition={{ duration: 0.5, ease: "linear", delay: 0.01 }}
                 className={`bg-[#FBFCFF] shadow-xl fixed right-0 left-0 z-50`}
             >
                 <div className='flex 2xl:h-[100px] xl:h-[100px] h-[80px] items-center justify-between  max-w-[1440px] mx-auto relative 2xl:py-10 xl:py-10 2xl:px-11 xl:px-11 px-4'>
