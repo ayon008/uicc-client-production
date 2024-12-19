@@ -176,8 +176,8 @@ const SelectTab = () => {
                         className='object-contain h-full overflow-hidden'
                     />
                 </div>
-                <div className="absolute right-0 w-fit bottom-0 z-30 h-[90%] 2xl:block xl:block hidden">
-                    <BannerAnimation activeIndex={activeIndex} className={'h-full'}>
+                <div className="absolute right-0 w-fit bottom-0 z-30 h-fit 2xl:block xl:block hidden">
+                    <BannerAnimation activeIndex={activeIndex} className={'h-fit'}>
                         {
                             activeIndex === 0 &&
                             <Image src={person4} className="h-[600px] w-auto object-contain" alt="" />
