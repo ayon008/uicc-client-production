@@ -161,7 +161,7 @@ const SelectTab = () => {
         <div className="mb-20">
             <div className='overflow-hidden relative'>
                 <Image src={bannerImage} alt="" className="w-full h-[650px] object-fill z-30 image-animation" />
-                <div className='w-fit h-fit absolute top-16 left-0 z-20'>
+                <div className='w-fit h-fit absolute top-16 left-0 z-20 overflow-hidden'>
                     <MotionImage
                         key={activeIndex}
                         src={flag}
@@ -173,30 +173,30 @@ const SelectTab = () => {
                             duration: 1.2,
                             ease: [0.42, 0, 0.58, 1], // Custom cubic-bezier for smoother easing
                         }}
-                        className='object-contain'
+                        className='object-contain h-full overflow-hidden'
                     />
                 </div>
                 <div className="absolute right-0 w-fit bottom-0 z-30 h-[90%] 2xl:block xl:block hidden">
                     <BannerAnimation activeIndex={activeIndex} className={'h-full'}>
                         {
                             activeIndex === 0 &&
-                            <Image src={person4} className="h-full w-auto" alt="" />
+                            <Image src={person4} className="h-[600px] w-auto object-contain" alt="" />
                         }
                         {
                             activeIndex === 1 &&
-                            <Image src={person2} className="h-full w-auto" alt="" />
+                            <Image src={person2} className="h-[600px] w-auto object-contain" alt="" />
                         }
                         {
                             activeIndex === 2 &&
-                            <Image src={person3} className="h-full w-auto" alt="" />
+                            <Image src={person3} className="h-[600px] w-auto object-contain" alt="" />
                         }
                         {
                             activeIndex === 3 &&
-                            <Image src={person1} className="h-full w-auto" alt="" />
+                            <Image src={person1} className="h-[600px] w-auto object-contain" alt="" />
                         }
                         {
                             activeIndex === 4 &&
-                            <Image src={person5} className="h-full w-auto" alt="" />
+                            <Image src={person5} className="h-[600px] w-auto object-contain" alt="" />
                         }
                     </BannerAnimation>
                 </div>
