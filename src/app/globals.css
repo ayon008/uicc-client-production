@@ -420,7 +420,7 @@ input:not(:checked)~.collapse-title .icon-plus {
 
 
 .image-animation {
-  animation: scaleAnimation 20s linear infinite;
+  animation: scaleAnimation 70s linear infinite;
 }
 
 

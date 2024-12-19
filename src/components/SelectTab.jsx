@@ -160,7 +160,7 @@ const SelectTab = () => {
     return (
         <div className="mb-20">
             <div className='overflow-hidden relative'>
-                <Image src={bannerImage} alt="" className="w-full h-[650px] object-fill z-30 image-animation" />
+                <Image src={bannerImage} alt="" className="w-full h-[690px] object-fill z-30 image-animation" />
                 <div className='w-fit h-fit absolute top-16 left-0 z-20 overflow-hidden'>
                     <MotionImage
                         key={activeIndex}
