@@ -206,19 +206,19 @@ const SelectTab = () => {
             </div>
             <div className="grid grid-cols-5">
                 <div onClick={() => setActiveIndex(0)}>
-                    <h1 className={`${serif.className} ${activeIndex === 0 ? 'bg-deep-blue text-white' : 'text-deep-blue bg-transparent'} text-center text-2xl p-4 border-r-[0.60px] border-r-sky-500 border-opacity-35`}>Visa Solution</h1>
+                    <h1 className={`${serif.className} ${activeIndex === 0 ? 'bg-deep-blue text-white' : 'text-deep-blue bg-transparent'} text-center text-2xl p-4 border-r-[0.60px] border-r-sky-500 border-opacity-35 border-b-[0.60px] border-b-sky-500`}>Visa Solution</h1>
                 </div>
                 <div onClick={() => setActiveIndex(1)}>
-                    <h1 className={`${serif.className} ${activeIndex === 1 ? 'bg-deep-blue text-white' : 'text-deep-blue bg-transparent'} text-center text-2xl p-4 border-r-[0.60px] border-r-sky-500 border-opacity-35`}>Immigration</h1>
+                    <h1 className={`${serif.className} ${activeIndex === 1 ? 'bg-deep-blue text-white' : 'text-deep-blue bg-transparent'} text-center text-2xl p-4 border-r-[0.60px] border-r-sky-500 border-opacity-35 border-b-[0.60px] border-b-sky-500`}>Immigration</h1>
                 </div>
                 <div onClick={() => setActiveIndex(2)}>
-                    <h1 className={`${serif.className} ${activeIndex === 2 ? 'bg-deep-blue text-white' : 'text-deep-blue bg-transparent'} text-center text-2xl p-4 border-r-[0.60px] border-r-sky-500 border-opacity-35`}>Education</h1>
+                    <h1 className={`${serif.className} ${activeIndex === 2 ? 'bg-deep-blue text-white' : 'text-deep-blue bg-transparent'} text-center text-2xl p-4 border-r-[0.60px] border-r-sky-500 border-opacity-35 border-b-[0.60px] border-b-sky-500`}>Education</h1>
                 </div>
                 <div onClick={() => setActiveIndex(3)}>
-                    <h1 className={`${serif.className} ${activeIndex === 3 ? 'bg-deep-blue text-white' : 'text-deep-blue bg-transparent'} text-center text-2xl p-4 border-r-[0.60px] border-r-sky-500 border-opacity-35`}>Consultancy</h1>
+                    <h1 className={`${serif.className} ${activeIndex === 3 ? 'bg-deep-blue text-white' : 'text-deep-blue bg-transparent'} text-center text-2xl p-4 border-r-[0.60px] border-r-sky-500 border-opacity-35 border-b-[0.60px] border-b-sky-500`}>Consultancy</h1>
                 </div>
                 <div onClick={() => setActiveIndex(4)}>
-                    <h1 className={`${serif.className} ${activeIndex === 4 ? 'bg-deep-blue text-white' : 'text-deep-blue bg-transparent'} text-center text-2xl p-4 border-r-[0.60px] border-r-sky-500 border-opacity-35`}>Language Training</h1>
+                    <h1 className={`${serif.className} ${activeIndex === 4 ? 'bg-deep-blue text-white' : 'text-deep-blue bg-transparent'} text-center text-2xl p-4 border-r-[0.60px] border-r-sky-500 border-opacity-35 border-b-[0.60px] border-b-sky-500`}>Language Training</h1>
                 </div>
             </div>
         </div>
