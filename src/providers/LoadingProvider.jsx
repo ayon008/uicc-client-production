@@ -17,7 +17,7 @@ const LoadingProvider = ({ children }) => {
     useEffect(() => {
         const timer = setTimeout(() => {
             setLoading(false);
-        }, 800);
+        }, 1300);
         return () => clearTimeout(timer);
     }, []);
 
