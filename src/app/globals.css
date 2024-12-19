@@ -224,19 +224,19 @@ body {
   align-items: center;
 }
 
-input:checked~.collapse-title .icon-plus {
+input:checked ~ .collapse-title .icon-plus {
   display: none;
 }
 
-input:checked~.collapse-title .icon-minus {
+input:checked ~ .collapse-title .icon-minus {
   display: block;
 }
 
-input:not(:checked)~.collapse-title .icon-minus {
+input:not(:checked) ~ .collapse-title .icon-minus {
   display: none;
 }
 
-input:not(:checked)~.collapse-title .icon-plus {
+input:not(:checked) ~ .collapse-title .icon-plus {
   display: block;
 }
 
@@ -398,19 +398,19 @@ input:not(:checked)~.collapse-title .icon-plus {
 
 @keyframes scaleAnimation {
   0% {
-    transform: scale(1.1);
+    transform: scale(1.2);
   }
 
   25% {
-    transform: scale(1.075);
+    transform: scale(1.15);
   }
 
   50% {
-    transform: scale(1.05);
+    transform: scale(1.1);
   }
 
   75% {
-    transform: scale(1.025);
+    transform: scale(1.05);
   }
 
   100% {
@@ -418,12 +418,9 @@ input:not(:checked)~.collapse-title .icon-plus {
   }
 }
 
-
 .image-animation {
   animation: scaleAnimation 70s linear infinite;
 }
-
-
 
 /*  */
 /* .btn-hover {
@@ -515,13 +512,16 @@ textarea {
   height: 180px;
   background-repeat: no-repeat;
   background-size: cover;
-  background: linear-gradient(0deg,
+  background: linear-gradient(
+      0deg,
       rgba(49, 100, 228, 0.4) 0%,
-      rgba(49, 100, 228, 0.4) 100%),
-    url("../../public/assets/b2b545a4b68bed225816755c8afd2c42.png") lightgray 50% / cover no-repeat;
+      rgba(49, 100, 228, 0.4) 100%
+    ),
+    url("../../public/assets/b2b545a4b68bed225816755c8afd2c42.png") lightgray
+      50% / cover no-repeat;
 }
 
-.uni>ul>li {
+.uni > ul > li {
   color: #000;
   font-size: 16px;
   font-style: normal;
@@ -533,7 +533,7 @@ textarea {
   box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.1);
 }
 
-.supported-countries>li {
+.supported-countries > li {
   border-bottom: 1px solid #e8fffe;
   padding-top: 12px;
   padding-bottom: 12px;
@@ -544,10 +544,13 @@ textarea {
 }
 
 .singIn {
-  background: linear-gradient(0deg,
+  background: linear-gradient(
+      0deg,
       rgba(15, 23, 42, 0.7) 0%,
-      rgba(15, 23, 42, 0.7) 100%),
-    url("../../public/assets/ad07a74059db743be3df30fd24fa2814.png") lightgray 50% / cover no-repeat;
+      rgba(15, 23, 42, 0.7) 100%
+    ),
+    url("../../public/assets/ad07a74059db743be3df30fd24fa2814.png") lightgray
+      50% / cover no-repeat;
 }
 
 .signInForm {
