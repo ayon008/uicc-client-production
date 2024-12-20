@@ -17,12 +17,11 @@ export default function Home() {
   return (
     <div>
       <SelectTab />
-      {/* <Notice /> */}
+      <Notice />
       <AboutUs />
       <div className="overflow-x-hidden">
         <Accordion />
       </div>
-      {/* 
       <VisaService />
       <ServicesCom />
       <ServiceHistory />
@@ -30,7 +29,7 @@ export default function Home() {
       <SectionTitle subHeading={'OUR COURSES'} heading1={'Best available courses'} heading2={'for you and boost your carrier'} width={60} />
       <Slider />
       <Faq />
-      <NewsPortal /> */}
+      <NewsPortal />
     </div>
   );
 }

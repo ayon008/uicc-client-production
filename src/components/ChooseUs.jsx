@@ -9,7 +9,7 @@ import Animated from '@/shared/Animated';
 
 const ChooseUs = () => {
     return (
-        <div className="max-w-7xl relative mx-auto flex justify-between gap-6 2xl:mb-40 xl:mb-28 mb-16">
+        <div className="relative mx-auto flex justify-between gap-6 2xl:mb-40 xl:mb-28 mb-16">
             <div className='absolute top-0 bottom-0 2xl:right-1/2 xl:right-1/2 right-0 opacity-30 left-0 z-10 '>
                 <Image src={image} className='object-cover h-full w-full' alt='' />
             </div>

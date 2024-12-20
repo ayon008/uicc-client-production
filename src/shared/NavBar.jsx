@@ -370,6 +370,7 @@ const NavBar = () => {
 
     return (
         <div className={`w-full relative z-50`}>
+            {/* Nav Top Part */}
             <div className='w-full 2xl:h-[60px] shadow-xl xl:h-[60px] h-0 hidden bg-orange 2xl:flex xl:flex items-center justify-between'>
                 {/* Nav Start */}
                 <div className='nav-start  flex px-11 py-[12px] gap-1'>
@@ -635,7 +636,7 @@ const NavBar = () => {
                 <div className='flex 2xl:h-[100px] xl:h-[100px] h-[80px] items-center justify-between  max-w-[1440px] mx-auto relative 2xl:py-10 xl:py-10 2xl:px-11 xl:px-11 px-4'>
                     <div className='absolute top-0 2xl:left-11 xl:left-11 left-5'>
                         <div className='nav-start bg-white shadow-xl'>
-                            <Image className='2xl:w-[140px] xl:w-[140px] w-[70px] 2xl:h-[110px] xl:h-[110px] h-auto object-contain' src={logo} alt='logo' />
+                            <Image className='2xl:w-[140px] xl:w-[140px] w-[110px] 2xl:h-[110px] xl:h-[110px] h-auto object-contain' src={logo} alt='logo' />
                         </div>
                     </div>
                     <div className='2xl:w-[275px] xl:w-[275px] 2xl:block xl:block hidden h-full'>

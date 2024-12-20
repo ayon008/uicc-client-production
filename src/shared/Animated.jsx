@@ -2,7 +2,7 @@
 import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 
-const Animated = ({ children, className, index }) => {
+const Animated = ({ children, className, index, duration }) => {
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true }); // Trigger animation only once when in view
 
@@ -13,7 +13,7 @@ const Animated = ({ children, className, index }) => {
             initial={{
                 clipPath: 'inset(0 100% 0 0)', // Start off-screen to the right
                 opacity: 0,
-                 // Start invisible for a smooth fade-in
+                // Start invisible for a smooth fade-in
             }}
             animate={isInView && { // Trigger animation when in view
                 clipPath: 'inset(0 0% 0 0)', // Fully reveal the element
@@ -21,7 +21,7 @@ const Animated = ({ children, className, index }) => {
             }}
             transition={{
                 type: 'spring',
-                duration: 1.2, // Smooth transition
+                duration: duration ? duration : 1.2, // Smooth transition
                 ease: [0.25, 0.8, 0.25, 1], // Dynamic cubic-bezier curve
                 delay: 0.05, // Minimal delay for responsiveness
                 damping: 25, // Smooth spring effect

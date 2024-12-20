@@ -2,7 +2,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-const BannerAnimation = ({ children, className, activeIndex }) => {
+const BannerAnimation = ({ children, className, activeIndex, delay }) => {
     return (
         <motion.div
             key={activeIndex}
@@ -17,9 +17,9 @@ const BannerAnimation = ({ children, className, activeIndex }) => {
             }}
             transition={{
                 type: 'spring',
-                duration: 1.2,  // Increased duration for a smoother effect
+                duration: 40,  // Increased duration for a smoother effect
                 ease: [0.25, 0.8, 0.25, 1],  // A more natural cubic-bezier curve for a slower, more dynamic transition
-                delay: 0.7,  // Minimal delay to keep the responsiveness
+                delay: delay ? delay : 0.9,  // Minimal delay to keep the responsiveness
                 damping: 25,  // Reduced damping to make the transition feel smoother
                 stiffness: 100,  // Increased stiffness for a slightly snappy feel
             }}
