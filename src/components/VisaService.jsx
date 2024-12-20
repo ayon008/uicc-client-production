@@ -97,7 +97,7 @@ export default function VisaService() {
 
     return (
         <div className='sliders relative px-10 py-20'>
-            <div className='absolute right-0 w-full left-0 -top-10 pointer-events-none -z-10 opacity-35'>
+            {/* <div className='absolute right-0 w-full left-0 -top-10 pointer-events-none -z-10 opacity-35'>
                 <video
                     className=''
                     autoPlay
@@ -107,8 +107,10 @@ export default function VisaService() {
                     playsInline>
                     <source src={video} type="video/mp4" />
                 </video>
+            </div> */}
+            <div className='h-[190px]'>
+                <SectionTitle subHeading={'VISA SERVICES'} heading1={'Committed to provide '} heading2={'you the best visa services'} />
             </div>
-            <SectionTitle subHeading={'VISA SERVICES'} heading1={'Committed to provide '} heading2={'you the best visa services'} />
             <div className='2xl:block xl:block hidden'>
                 <Swiper
                     ref={swiperRef}

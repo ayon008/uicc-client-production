@@ -2,23 +2,21 @@
 import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 
-const TextAnimation = ({ children, className, delay }) => {
+const TextAnimation = ({ children, className, delay, repeat }) => {
     const ref = useRef(null);
-    const isInView = useInView(ref, { once: true }); // Trigger only once when in view
+    const isInView = useInView(ref, { once: repeat ? false : true }); // Trigger only once when in view
 
     return (
-        <motion.div ref={ref}>
+        <motion.div ref={ref} className="py-2">
             {isInView && ( // Start animation only when in view
                 <motion.div
                     initial={{
-                        clipPath: 'inset(0 100% 0 0)', // Start off-screen to the right
-                        letterSpacing: '0em', // Start with tight letter spacing
+                        clipPath: 'inset(0 100% 0 0)', // Start off-screen to the right // Start with tight letter spacing
                         opacity: 0, // Start invisible
                         x: -20, // Start slightly shifted to the left for smooth entry
                     }}
                     animate={{
-                        clipPath: 'inset(0 0% 0 0)', // Fully reveal the element
-                        letterSpacing: '0.05em', // Slight letter spacing increase
+                        clipPath: 'inset(0 0% 0 0)', // Fully reveal the element // Slight letter spacing increase
                         opacity: 1, // Fade in to full opacity
                         x: 0, // Move to normal position
                     }}
