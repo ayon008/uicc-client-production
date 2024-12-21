@@ -105,7 +105,7 @@ const AboutUs = () => {
                         <p><span className="dream relative">Dream into</span> Reality</p>
                     </TextAnimation>
                     <p className="">
-                        At Uttara International Career Council (UICC)**, we are dedicated to helping individuals unlock their global potential. Established with the vision of empowering students and professionals to pursue their dreams on an international scale, UICC offers a comprehensive range of services designed to guide you toward academic, linguistic, and career success abroad.
+                        At Uttara International Career Council (UICC), we are dedicated to helping individuals unlock their global potential. Established with the vision of empowering students and professionals to pursue their dreams on an international scale, UICC offers a comprehensive range of services designed to guide you toward academic, linguistic, and career success abroad.
                     </p>
                     <div className="flex justify-between 2xl:gap-0 xl:gap-0 gap-6 items-center">
                         <Animated>

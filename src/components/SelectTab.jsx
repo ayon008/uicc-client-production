@@ -162,7 +162,7 @@ const SelectTab = () => {
                             <div className='w-[2px] 2xl:h-[44px] xl:h-[44px] h-[55px] rounded-t-md rounded-b-md bg-white'>
 
                             </div>
-                            <h5 className={`text-[#FAEBD7] 2xl:text-base xl:text-base text-sm ${rubik.className}`}>We provide a complete immigration & visa services for USA Canada <br /> Australia UK Japan Korea for travel & Education</h5>
+                            <h5 className={`text-[#FAEBD7] 2xl:text-base xl:text-base text-sm ${rubik.className} 2xl:w-1/2 xl:w-1/2 w-[80%]`}>We provide a complete immigration & visa services for USA Canada Australia UK France Germany Japan Korea China Denmark Malaysia New Zealand Netherland Norway Sweden Switzerland Ireland for travel & Education</h5>
                         </div>
                     </BannerAnimation>
                     <BannerAnimation activeIndex={activeIndex} delay={2}>

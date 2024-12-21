@@ -78,7 +78,7 @@ const Footer = () => {
                         </div>
                         <div className='flex items-center justify-center px-10 gap-[2px]'>
                             <FaPhone />
-                            <p className='text-white text-sm hover:text-deep-blue transition-colors duration-500 cursor-pointer font-semibold 2xl:ml-0 xl:ml-0 ml-3'>+880-195837780</p>
+                            <p className='text-white text-sm hover:text-deep-blue transition-colors duration-500 cursor-pointer font-semibold 2xl:ml-0 xl:ml-0 ml-3'>+880-1958377801</p>
                         </div>
                     </div>
                 </div>

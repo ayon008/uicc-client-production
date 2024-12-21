@@ -70,7 +70,7 @@ const Country = ({ country, flag, i, image }) => {
                                     <p className='2xl:text-xl xl:text-xl text-lg font-normal'>Business Visa</p>
                                 </li>
                             </ul>
-                            <div className='2xl:mt-10 xl:mt-8'>
+                            <div className='2xl:mt-10 xl:mt-8 mt-6'>
                                 <Link href={'/signUp'}>
                                     <ButtonSecondary text={'Register Now'} />
                                 </Link>
@@ -147,7 +147,7 @@ const Country = ({ country, flag, i, image }) => {
                                         <div className='rounded-full w-fit h-fit p-1 bg-deep-blue'>
                                             <FaCheck color='white' />
                                         </div>
-                                        <p className='2xl:text-xl xl:text-xl text-lg font-normal'>{`9${i}`}% Visa Success rate</p>
+                                        <p className='2xl:text-xl xl:text-xl text-lg font-normal'>{`95`}% Visa Success rate</p>
                                     </li>
                                     <li className='flex items-center gap-1'>
                                         <div className='rounded-full w-fit h-fit p-1 bg-deep-blue'>
@@ -166,12 +166,6 @@ const Country = ({ country, flag, i, image }) => {
                                             <FaCheck color='white' />
                                         </div>
                                         <p className='2xl:text-xl xl:text-xl text-lg font-normal'>All kinds of Bank Support</p>
-                                    </li>
-                                    <li className='flex items-center gap-1'>
-                                        <div className='rounded-full w-fit h-fit p-1 bg-deep-blue'>
-                                            <FaCheck color='white' />
-                                        </div>
-                                        <p className='2xl:text-xl xl:text-xl text-lg font-normal'>90% Visa Success rate</p>
                                     </li>
                                 </ul>
                                 <div className='2xl:mt-10 xl:mt-8 mt-6'>
