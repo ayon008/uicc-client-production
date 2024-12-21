@@ -23,7 +23,7 @@ const SelectTab = () => {
     useEffect(() => {
         const interval = setInterval(() => {
             setActiveIndex(prevIndex => (prevIndex < 5 ? prevIndex + 1 : 0)); // Assuming you have 5 images
-        }, 10000);
+        }, 8000);
 
         // Cleanup interval on component unmount
         return () => clearInterval(interval);
