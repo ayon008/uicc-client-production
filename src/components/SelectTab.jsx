@@ -1,6 +1,6 @@
 'use client'
 import React, { act, useEffect, useState } from 'react';
-import bannerImage from '../../public/assets/freepik__expand__51261.png'
+import bannerImage from '../../public/assets/image (5).png'
 import flag from '../../public/assets/rb_2150369201 (1).png';
 import Image from 'next/image';
 import { serif } from '@/shared/Serif';
