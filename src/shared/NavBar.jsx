@@ -405,6 +405,7 @@ const NavBar = () => {
                             <span class="letter text-base font-semibold text-white">7</span>
                             <span class="letter text-base font-semibold text-white">8</span>
                             <span class="letter text-base font-semibold text-white">0</span>
+                            <span class="letter text-base font-semibold text-white">1</span>
                         </div>
                     </div>
                 </div>

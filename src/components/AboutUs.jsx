@@ -50,7 +50,7 @@ const AboutUs = () => {
                             </div>
                             <div>
                                 <p className={`text-white 2xl:text-lg xl:text-lg text-sm font-normal ${serif.className}`}>Call For Consultation</p>
-                                <h3 className={`mt-1 ${rubik.className} font-semibold text-white 2xl:text-2xl xl:text-2xl text-xl`}>+8801726108060</h3>
+                                <h3 className={`mt-1 ${rubik.className} font-semibold text-white 2xl:text-2xl xl:text-2xl text-xl`}>+8801958377801</h3>
                             </div>
                         </div>
                     </Animated>
