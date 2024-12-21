@@ -26,7 +26,9 @@ export default function Home() {
       <ServicesCom />
       <ServiceHistory />
       <ChooseUs />
-      <SectionTitle subHeading={'OUR COURSES'} heading1={'Best available courses'} heading2={'for you and boost your carrier'} width={60} />
+      <div className="h-[190px]">
+        <SectionTitle subHeading={'OUR COURSES'} heading1={'Best available courses'} heading2={'for you and boost your carrier'} width={60} />
+      </div>
       <Slider />
       <Faq />
       <NewsPortal />
