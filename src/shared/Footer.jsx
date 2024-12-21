@@ -119,7 +119,7 @@ const Footer = () => {
                             </li>
                         </ul>
                     </nav>
-                    <nav className='hidden 2xl:block xl:block bg-white w-[1px] h-[170px]'></nav>
+                    <nav className='hidden 2xl:block xl:block bg-white w-[1px] h-[260px]'></nav>
                     <nav>
                         <h6 className="footer-title relative text-lg">Services</h6>
                         <ul className="flex flex-col gap-3 list-disc pl-5">
@@ -135,9 +135,18 @@ const Footer = () => {
                             <li className="link link-hover">
                                 <Link href={'/visa-processing'}>Visa Processing</Link>
                             </li>
+                            <li className="link link-hover">
+                                <Link href={'/'}>Digital Marketing</Link>
+                            </li>
+                            <li className="link link-hover">
+                                <Link href={'/'}>Web Design</Link>
+                            </li>
+                            <li className="link link-hover">
+                                <Link href={'/'}>Web Development</Link>
+                            </li>
                         </ul>
                     </nav>
-                    <nav className='hidden 2xl:block xl:block bg-white w-[1px] h-[170px]'></nav>
+                    <nav className='hidden 2xl:block xl:block bg-white w-[1px] h-[260px]'></nav>
                     <nav>
                         <h6 className="footer-title relative text-lg">Quick Links</h6>
                         <ul className="flex flex-col gap-3 list-disc pl-5">
