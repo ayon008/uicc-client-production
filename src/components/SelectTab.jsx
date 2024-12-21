@@ -14,6 +14,7 @@ import person5 from '../../public/assets/smiley-woman-playing-with-paper-plane.p
 import { rubik } from '@/shared/Rubik';
 import person6 from '../../public/assets/file (8) (1).png'
 import ButtonSecondary from '@/shared/ButtonSecondary';
+import AnimatedImage from '@/shared/BannerImage';
 
 const SelectTab = () => {
     const [activeIndex, setActiveIndex] = useState(5);
@@ -22,7 +23,7 @@ const SelectTab = () => {
     useEffect(() => {
         const interval = setInterval(() => {
             setActiveIndex(prevIndex => (prevIndex < 5 ? prevIndex + 1 : 0)); // Assuming you have 5 images
-        }, 20000);
+        }, 10000);
 
         // Cleanup interval on component unmount
         return () => clearInterval(interval);
@@ -42,39 +43,61 @@ const SelectTab = () => {
                         initial={{ rotateX: 50, opacity: 0, bottom: 10, right: 0 }}
                         animate={{ rotateX: 0, opacity: 1, bottom: 0, right: 0 }}
                         transition={{
-                            duration: 2,
+                            duration: 1.5,
                             ease: [0.42, 0, 0.58, 1], // Custom cubic-bezier for smoother easing
                         }}
                         className='2xl:object-fill xl:object-fill object-cover w-full h-full overflow-hidden'
                     />
                 </div>
                 <div className="absolute right-0 w-fit bottom-0 z-30 h-fit 2xl:block xl:block hidden">
-                    <BannerAnimation activeIndex={activeIndex} className={'h-fit'}>
-                        {
-                            activeIndex === 0 &&
-                            <Image src={person4} className="h-[600px] w-auto object-contain" alt="" />
-                        }
-                        {
-                            activeIndex === 1 &&
-                            <Image src={person2} className="h-[600px] w-auto object-contain" alt="" />
-                        }
-                        {
-                            activeIndex === 2 &&
-                            <Image src={person3} className="h-[600px] w-auto object-contain" alt="" />
-                        }
-                        {
-                            activeIndex === 3 &&
-                            <Image src={person1} className="h-[600px] w-auto object-contain" alt="" />
-                        }
-                        {
-                            activeIndex === 4 &&
-                            <Image src={person5} className="h-[600px] w-auto object-contain" alt="" />
-                        }
-                        {
-                            activeIndex === 5 &&
-                            <Image src={person6} className="h-[600px] w-auto object-contain" alt="" />
-                        }
-                    </BannerAnimation>
+                    {
+                        activeIndex === 0 &&
+                        <AnimatedImage
+                            src={person4} // Replace with your image path
+                            alt="Example Image"
+                            className="w-[800px] object-contain"
+                        />
+                    }
+                    {
+                        activeIndex === 1 &&
+                        <AnimatedImage
+                            src={person2} // Replace with your image path
+                            alt="Example Image"
+                            className="w-auto object-contain"
+                        />
+                    }
+                    {
+                        activeIndex === 2 &&
+                        <AnimatedImage
+                            src={person3} // Replace with your image path
+                            alt="Example Image"
+                            className="w-auto object-contain"
+                        />
+                    }
+                    {
+                        activeIndex === 3 &&
+                        <AnimatedImage
+                            src={person1} // Replace with your image path
+                            alt="Example Image"
+                            className="w-auto object-contain"
+                        />
+                    }
+                    {
+                        activeIndex === 4 &&
+                        <AnimatedImage
+                            src={person5} // Replace with your image path
+                            alt="Example Image"
+                            className="w-[750px] object-contain"
+                        />
+                    }
+                    {
+                        activeIndex === 5 &&
+                        <AnimatedImage
+                            src={person6} // Replace with your image path
+                            alt="Example Image"
+                            className="w-[950px] object-contain"
+                        />
+                    }
                 </div>
                 <div className='absolute 2xl:w-auto xl:w-auto -translate-y-1/2 h-fit top-1/2 2xl:left-20 xl:left-16 left-6 z-40 mt-[50px]'>
                     <BannerAnimation activeIndex={activeIndex}>
@@ -84,11 +107,54 @@ const SelectTab = () => {
                     </BannerAnimation>
                     <BannerAnimation activeIndex={activeIndex} delay={1.2}>
                         <div className='my-6'>
-                            <h1 className={`text-[#FAEBD7] 2xl:text-7xl xl:text-7xl text-4xl ${serif.className}`}>
-                                We Ensure <br className='2xl:block xl:block hidden' />
-                                Great Lifestyle <br />
-                                For your Family
-                            </h1>
+                            {
+                                activeIndex === 0 &&
+                                <h1 className={`text-[#FAEBD7] 2xl:text-7xl xl:text-7xl text-4xl ${serif.className}`}>
+                                    We Ensure <br className='2xl:block xl:block hidden' />
+                                    Great Lifestyle <br />
+                                    For your Family
+                                </h1>
+                            }
+                            {
+                                activeIndex === 1 &&
+                                <h1 className={`text-[#FAEBD7] 2xl:text-7xl xl:text-7xl text-4xl ${serif.className}`}>
+                                    Immigration & <br className='2xl:block xl:block hidden' />
+                                    Visa Solutions <br />
+                                    the easy way
+                                </h1>
+                            }
+                            {
+                                activeIndex === 2 &&
+                                <h1 className={`text-[#FAEBD7] 2xl:text-7xl xl:text-7xl text-4xl ${serif.className}`}>
+                                    Transforming <br className='2xl:block xl:block hidden' />
+                                    Education for <br />
+                                    a Brighter Future
+                                </h1>
+                            }
+                            {
+                                activeIndex === 3 &&
+                                <h1 className={`text-[#FAEBD7] 2xl:text-7xl xl:text-7xl text-4xl ${serif.className}`}>
+                                    We Help You to <br className='2xl:block xl:block hidden' />
+                                    Explore the world <br />
+                                    with UICC
+                                </h1>
+                            }
+                            {
+                                activeIndex === 4 &&
+                                <h1 className={`text-[#FAEBD7] 2xl:text-7xl xl:text-7xl text-4xl ${serif.className}`}>
+                                    Language <br className='2xl:block xl:block hidden' />
+                                    Training Made <br />
+                                    Simple and Effective
+                                </h1>
+                            }
+                            {
+                                activeIndex === 5 &&
+                                <h1 className={`text-[#FAEBD7] 2xl:text-7xl xl:text-7xl text-4xl ${serif.className}`}>
+                                    Empowering <br className='2xl:block xl:block hidden' />
+                                    Minds, Shaping <br />
+                                    the Future
+                                </h1>
+                            }
                         </div>
                     </BannerAnimation>
                     <BannerAnimation activeIndex={activeIndex} delay={1.6}>
