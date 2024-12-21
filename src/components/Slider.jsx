@@ -2,7 +2,7 @@
 import React, { act, useRef, useState } from 'react';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
-import slider1 from '../../public/assets/vasily-koloda-8CqDvPuo_kI-unsplash.jpg'
+import slider1 from '../../public/assets/kelly-sikkema-fjNaOMcYNUs-unsplash.jpg'
 import slider2 from '../../public/assets/95fd7409683450e056377de24dc1e82b.png'
 import slider3 from '../../public/assets/5c2466386a1b75626cab32c62279a16c.png'
 import { motion } from "framer-motion";
@@ -45,7 +45,7 @@ export default function Slider() {
                         key={activeIndex}
                         initial={{ clipPath: 'inset(0 100% 0 0)', opacity: 0, }} animate={{ clipPath: 'inset(0 0% 0 0)', opacity: 1, }} transition={{ clipPath: { type: 'spring', duration: 1.5, ease: 'easeInOut', delay: 0.1, damping: 20, stiffness: 80 }, opacity: { duration: 1.5, ease: 'easeInOut', delay: 0.1 }, }}
                         className='relative'>
-                        <Image className='w-full max-h-[600px] xl:h-[550px] 2xl:h-[600px] h-[300px] object-fill' src={slider1} alt='' />
+                        <Image className='w-full max-h-[600px] xl:h-[600px] 2xl:h-[600px] h-[300px] object-cover' src={slider1} alt='' />
                         <div className='absolute bottom-0 w-1/2 left-0 bg-orange 2xl:py-6 xl:py-6 py-2 2xl:px-12 xl:px-12 px-3  2xl:block xl:block hidden'>
                             <h3 className='2xl:mt-6 xl:mt-6 my-3 font-semibold 2xl:text-3xl xl:text-2xl text-[10px] text-white'>IELTS Regular Programme</h3>
                             <p className='2xl:my-4 xl:my-4 my-3 2xl:text-2xl xl:text-xl font-medium text-[7px] text-white'>The IELTS Regular Programme helps students improve their English skills for the IELTS exam, focusing on speaking, listening, reading, and writing. It offers practice tests and expert guidance to achieve desired scores for study, work, or immigration.</p>
@@ -62,7 +62,7 @@ export default function Slider() {
                         key={activeIndex}
                         initial={{ clipPath: 'inset(0 100% 0 0)', opacity: 0.2, }} animate={{ clipPath: 'inset(0 0% 0 0)', opacity: 1, }} transition={{ clipPath: { type: 'spring', duration: 1.5, ease: 'easeInOut', delay: 0.1, damping: 20, stiffness: 80 }, opacity: { duration: 1.5, ease: 'easeInOut', delay: 0.1 }, }}
                         className='relative'>
-                        <Image className='w-full max-h-[600px] xl:h-[550px] 2xl:h-[600px] h-[300px] object-fill' src={slider2} alt='' />
+                        <Image className='w-full max-h-[600px] xl:h-[600px] 2xl:h-[600px] h-[300px] object-cover' src={slider2} alt='' />
                         <div className='absolute bottom-0 w-1/2 left-0 bg-orange 2xl:py-6 xl:py-6 py-2 2xl:px-12 xl:px-12 px-3  2xl:block xl:block hidden'>
                             <h3 className='2xl:mt-6 xl:mt-6 my-3 font-semibold 2xl:text-3xl xl:text-2xl text-[10px] text-white'>Visa Processing</h3>
                             <p className='2xl:my-4 xl:my-4 my-3 2xl:text-2xl xl:text-xl font-medium text-[7px] text-white'>We provide expert assistance with student, work, family, and tourist visa applications. Our services include guidance on documentation, application processing, and interview preparation to ensure a smooth and successful visa experience.</p>
@@ -79,7 +79,7 @@ export default function Slider() {
                         key={activeIndex}
                         initial={{ clipPath: 'inset(0 100% 0 0)', opacity: 0, }} animate={{ clipPath: 'inset(0 0% 0 0)', opacity: 1, }} transition={{ clipPath: { type: 'spring', duration: 1.5, ease: 'easeInOut', delay: 0.1, damping: 20, stiffness: 80 }, opacity: { duration: 1.5, ease: 'easeInOut', delay: 0.1 }, }}
                         className='relative'>
-                        <Image className='w-full max-h-[600px] xl:h-[550px] 2xl:h-[600px] h-[300px] object-cover object-top' src={slider3} alt='' />
+                        <Image className='w-full max-h-[600px] xl:h-[600px] 2xl:h-[600px] h-[300px] object-cover object-top' src={slider3} alt='' />
                         <div className='absolute bottom-0 w-1/2 left-0 bg-orange 2xl:py-6 xl:py-6 py-2 2xl:px-12 xl:px-12 px-3 2xl:block xl:block hidden'>
                             <h3 className='2xl:mt-6 xl:mt-6 my-3 font-semibold 2xl:text-3xl xl:text-2xl text-[10px] text-white'>Air Ticket</h3>
                             <p className='2xl:my-4 xl:my-4 my-3 2xl:text-2xl xl:text-xl font-medium text-[7px] text-white'>We offer reliable air ticket booking services, ensuring affordable prices, flexible options, and hassle-free travel arrangements for domestic and international flights.</p>
@@ -93,7 +93,7 @@ export default function Slider() {
                 </SwiperSlide>
                 {/* <SwiperSlide>
                     <div className='relative'>
-                        <Image className='w-full max-h-[600px] xl:h-[550px] 2xl:h-[600px] h-[300px] object-cover object-top' src={slider3} alt='' />
+                        <Image className='w-full max-h-[600px] xl:h-[600px] 2xl:h-[600px] h-[300px] object-cover object-top' src={slider3} alt='' />
                         <div className='absolute bottom-0 w-1/2 left-0 bg-orange 2xl:py-6 xl:py-6 py-2 2xl:px-12 xl:px-12 px-3'>
                             <h3 className='2xl:mt-6 xl:mt-6 my-3 font-semibold 2xl:text-3xl xl:text-2xl text-[10px] text-white'>Air Ticket</h3>
                             <p className='2xl:my-4 xl:my-4 my-3 2xl:text-2xl xl:text-xl font-medium text-[7px] text-white'>We offer reliable air ticket booking services, ensuring affordable prices, flexible options, and hassle-free travel arrangements for domestic and international flights.</p>
