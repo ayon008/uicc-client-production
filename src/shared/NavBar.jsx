@@ -180,7 +180,7 @@ const NavBar = () => {
                                                 initial="hidden"
                                                 className='border-b-[0.60px] border-opacity-30 border-b-gray'
                                             >
-                                                <a href={a.href} className=' parent-option-1 py-4'>
+                                                <Link href={a.href} className=' parent-option-1 py-4'>
                                                     <motion.span
                                                         variants={{
                                                             show: {
@@ -207,7 +207,7 @@ const NavBar = () => {
                                                             </span>
                                                         </span>
                                                     </motion.span>
-                                                </a>
+                                                </Link>
                                             </motion.div>
                                         )
                                     })
@@ -226,10 +226,10 @@ const NavBar = () => {
 
     const navItems = <>
         <li className={`2xl:text-xl xl:text-base text-sm ${serif.className} font-semibold hover:text-orange transition-all duration-100 ${pathname === '/' ? 'text-orange' : ''}`}>
-            <a href={'/'}>Home</a>
+            <Link href={'/'}>Home</Link>
         </li>
         <li className={`2xl:text-xl xl:text-base text-sm font-semibold hover:text-orange ${serif.className} transition-all duration-100 ${pathname === '/about' ? 'text-orange' : ''}`}>
-            <a href="/about">About</a>
+            <Link href="/about">About</Link>
         </li>
         <li className='relative'>
             <div
@@ -321,23 +321,23 @@ const NavBar = () => {
                         </li>
                         <li className='border-b-[0.60px] parent-option border-opacity-30 border-b-gray '>
                             <Option>
-                                <a href='/career-counseling'>
+                                <Link href='/career-counseling'>
                                     Career Counseling
-                                </a>
+                                </Link>
                             </Option>
                         </li>
                         <li className='border-b-[0.60px] parent-option border-opacity-30 border-b-gray '>
                             <Option show={true}>
-                                <a href={'/language-training'}>
+                                <Link href={'/language-training'}>
                                     Language Training
-                                </a>
+                                </Link>
                             </Option>
                         </li>
                         <li className='parent-option border-opacity-30 border-b-gray '>
                             <Option show={true}>
-                                <a href={'/air-ticket'}>
+                                <Link href={'/air-ticket'}>
                                     Air Ticket
-                                </a>
+                                </Link>
                             </Option>
                         </li>
                         <li className='parent-option border-opacity-30 border-b-gray '>
@@ -360,10 +360,10 @@ const NavBar = () => {
             </div>
         </li>
         <li className={`2xl:text-xl xl:text-base text-sm font-semibold hover:text-orange ${serif.className} transition-all duration-100 2xl:-mr-5 xl:-mr-5 pr-5 ${pathname === '/universities' ? 'text-orange' : ''}`}>
-            <a href="/universities">Associate Universities</a>
+            <Link href="/universities">Associate Universities</Link>
         </li>
         <li className={`2xl:text-xl xl:text-base text-sm font-semibold hover:text-orange ${serif.className} transition-all duration-100 ${pathname === '/contact' ? 'text-orange' : ''}`}>
-            <a href="/contact">Contact</a>
+            <Link href="/contact">Contact</Link>
         </li>
     </>
 
@@ -472,10 +472,10 @@ const NavBar = () => {
                                         <div className='mt-6'>
                                             <ul className='pb-10'>
                                                 <li className={`2xl:text-xl xl:text-base text-sm ${serif.className} hover:text-orange transition-all duration-100 font-bold pb-3 border-b-[0.60px] border-b-black border-opacity-20 ${pathname === '/' ? 'text-orange' : ''}`}>
-                                                    <a href={'/'}>Home</a>
+                                                    <Link href={'/'}>Home</Link>
                                                 </li>
                                                 <li className={`2xl:text-xl xl:text-base text-sm font-semibold hover:text-orange ${serif.className} py-3 border-b-[0.60px] border-b-black border-opacity-20 transition-all duration-100 ${pathname === '/about' ? 'text-orange' : ''}`}>
-                                                    <a href="/about">About</a>
+                                                    <Link href="/about">About</Link>
                                                 </li>
                                                 <li className={`2xl:text-xl xl:text-base text-sm font-semibold hover:text-orange ${serif.className} transition-all duration-100`}>
                                                     <div className='flex items-center justify-between border-b-[0.60px] border-b-black border-opacity-20 py-3'>
@@ -503,7 +503,7 @@ const NavBar = () => {
                                                             {
                                                                 navMobile?.map((a, i) => (
                                                                     <p key={i} className='py-2 text-black hover:text-orange transition-all duration-300 ease-linear border-b-[0.60px] border-b-black border-opacity-20'>
-                                                                        <a href={a.href}>{a.name}</a>
+                                                                        <Link href={a.href}>{a.name}</Link>
                                                                     </p>
                                                                 ))
                                                             }
@@ -537,42 +537,42 @@ const NavBar = () => {
                                                             {
                                                                 Visa?.map((a, i) => (
                                                                     <p key={i} className='py-2 text-black hover:text-orange transition-all duration-300 ease-linear border-b-[0.60px] border-b-black border-opacity-20'>
-                                                                        <a href={a.href}>{a.name}</a>
+                                                                        <Link href={a.href}>{a.name}</Link>
                                                                     </p>
                                                                 ))
                                                             }
                                                             <p className='py-2 text-black hover:text-orange border-b-[0.60px] border-b-black border-opacity-20 transition-all duration-300 ease-linear'>
-                                                                <a href={'/language-training'}>Language Training</a>
+                                                                <Link href={'/language-training'}>Language Training</Link>
                                                             </p>
                                                             <p className='py-2 text-black hover:text-orange transition-all duration-300 border-b-[0.60px] border-b-black border-opacity-20 ease-linear'>
-                                                                <a href={'/air-ticket'}>
+                                                                <Link href={'/air-ticket'}>
                                                                     Air Ticket
-                                                                </a>
+                                                                </Link>
                                                             </p>
                                                             <p className='py-2 text-black hover:text-orange transition-all duration-300 border-b-[0.60px] border-b-black border-opacity-20 ease-linear'>
-                                                                <a href={'/air-ticket'}>
+                                                                <Link href={'/air-ticket'}>
                                                                     Digital Marketing
-                                                                </a>
+                                                                </Link>
                                                             </p>
                                                             <p className='py-2 text-black hover:text-orange transition-all duration-300 border-b-[0.60px] border-b-black border-opacity-20 ease-linear'>
-                                                                <a href={'/air-ticket'}>
+                                                                <Link href={'/air-ticket'}>
                                                                     Web Design
-                                                                </a>
+                                                                </Link>
                                                             </p>
                                                             <p className='py-2 text-black hover:text-orange transition-all duration-300 border-b-[0.60px] border-b-black border-opacity-20 ease-linear'>
-                                                                <a href={'/air-ticket'}>
+                                                                <Link href={'/air-ticket'}>
                                                                     Web Development
-                                                                </a>
+                                                                </Link>
                                                             </p>
                                                         </motion.div>
 
                                                     </>
                                                 </li>
                                                 <li className={`2xl:text-xl xl:text-base text-sm ${serif.className} hover:text-orange transition-all text-black duration-100 font-bold py-3 border-b-[0.60px] border-b-black border-opacity-20 ${pathname === '/universities' ? 'text-orange' : ''}`}>
-                                                    <a href="/universities">Associate Universities</a>
+                                                    <Link href="/universities">Associate Universities</Link>
                                                 </li>
                                                 <li className={`2xl:text-xl xl:text-base text-sm ${serif.className} hover:text-orange transition-all text-black duration-100 font-bold py-3 ${pathname === '/contact' ? 'text-orange' : ''}`}>
-                                                    <a href="/contact">Contact</a>
+                                                    <Link href="/contact">Contact</Link>
                                                 </li>
                                             </ul>
                                         </div>
@@ -652,7 +652,7 @@ const NavBar = () => {
                         <div class="w-fit 2xl:block xl:block hidden">
                             <ul class="flex navItems items-center justify-between 2xl:gap-8 xl:gap-6">
                                 {
-                                    navItems
+                                    scrolled && navItems
                                 }
                             </ul>
                         </div>
@@ -694,10 +694,10 @@ const NavBar = () => {
                                     <div className='mt-6'>
                                         <ul className='pb-10'>
                                             <li className={`2xl:text-xl xl:text-base text-sm ${serif.className} hover:text-orange transition-all duration-100 font-bold pb-3 border-b-[0.60px] border-b-black border-opacity-20 ${pathname === '/' ? 'text-orange' : ''}`}>
-                                                <a href={'/'}>Home</a>
+                                                <Link href={'/'}>Home</Link>
                                             </li>
                                             <li className={`2xl:text-xl xl:text-base text-sm font-semibold hover:text-orange ${serif.className} py-3 border-b-[0.60px] border-b-black border-opacity-20 transition-all duration-100 ${pathname === '/about' ? 'text-orange' : ''}`}>
-                                                <a href="/about">About</a>
+                                                <Link href="/about">About</Link>
                                             </li>
                                             <li className={`2xl:text-xl xl:text-base text-sm font-semibold hover:text-orange ${serif.className} transition-all duration-100`}>
                                                 <div className='flex items-center justify-between border-b-[0.60px] border-b-black border-opacity-20 py-3'>
@@ -725,7 +725,7 @@ const NavBar = () => {
                                                         {
                                                             navMobile?.map((a, i) => (
                                                                 <p key={i} className='py-2 text-black hover:text-orange transition-all duration-300 ease-linear border-b-[0.60px] border-b-black border-opacity-20'>
-                                                                    <a href={a.href}>{a.name}</a>
+                                                                    <Link href={a.href}>{a.name}</Link>
                                                                 </p>
                                                             ))
                                                         }
@@ -759,42 +759,42 @@ const NavBar = () => {
                                                         {
                                                             Visa?.map((a, i) => (
                                                                 <p key={i} className='py-2 text-black hover:text-orange transition-all duration-300 ease-linear border-b-[0.60px] border-b-black border-opacity-20'>
-                                                                    <a href={a.href}>{a.name}</a>
+                                                                    <Link href={a.href}>{a.name}</Link>
                                                                 </p>
                                                             ))
                                                         }
                                                         <p className='py-2 text-black hover:text-orange border-b-[0.60px] border-b-black border-opacity-20 transition-all duration-300 ease-linear'>
-                                                            <a href={'/language-training'}>Language Training</a>
+                                                            <Link href={'/language-training'}>Language Training</Link>
                                                         </p>
                                                         <p className='py-2 text-black hover:text-orange transition-all duration-300 border-b-[0.60px] border-b-black border-opacity-20 ease-linear'>
-                                                            <a href={'/air-ticket'}>
+                                                            <Link href={'/air-ticket'}>
                                                                 Air Ticket
-                                                            </a>
+                                                            </Link>
                                                         </p>
                                                         <p className='py-2 text-black hover:text-orange transition-all duration-300 border-b-[0.60px] border-b-black border-opacity-20 ease-linear'>
-                                                            <a href={'/air-ticket'}>
+                                                            <Link href={'/air-ticket'}>
                                                                 Digital Marketing
-                                                            </a>
+                                                            </Link>
                                                         </p>
                                                         <p className='py-2 text-black hover:text-orange transition-all duration-300 border-b-[0.60px] border-b-black border-opacity-20 ease-linear'>
-                                                            <a href={'/air-ticket'}>
+                                                            <Link href={'/air-ticket'}>
                                                                 Web Design
-                                                            </a>
+                                                            </Link>
                                                         </p>
                                                         <p className='py-2 text-black hover:text-orange transition-all duration-300 border-b-[0.60px] border-b-black border-opacity-20 ease-linear'>
-                                                            <a href={'/air-ticket'}>
+                                                            <Link href={'/air-ticket'}>
                                                                 Web Development
-                                                            </a>
+                                                            </Link>
                                                         </p>
                                                     </motion.div>
 
                                                 </>
                                             </li>
                                             <li className={`2xl:text-xl xl:text-base text-sm ${serif.className} hover:text-orange transition-all text-black duration-100 font-bold py-3 border-b-[0.60px] border-b-black border-opacity-20 ${pathname === '/universities' ? 'text-orange' : ''}`}>
-                                                <a href="/universities">Associate Universities</a>
+                                                <Link href="/universities">Associate Universities</Link>
                                             </li>
                                             <li className={`2xl:text-xl xl:text-base text-sm ${serif.className} hover:text-orange transition-all text-black duration-100 font-bold py-3 ${pathname === '/contact' ? 'text-orange' : ''}`}>
-                                                <a href="/contact">Contact</a>
+                                                <Link href="/contact">Contact</Link>
                                             </li>
                                         </ul>
                                     </div>

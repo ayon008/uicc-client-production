@@ -16,8 +16,13 @@ const ServiceBanner = ({ text1, text2 }) => {
         <div className="relative 2xl:mt-[100px] xl:mt-[100px]">
             <div className='w-full h-full absolute inset-0 z-30 bg-black bg-opacity-20'></div>
             {/* Background image */}
-            <Image src={bannerImage} className="w-full h-auto max-h-[650px] object-cover z-20" alt="Banner" />
-
+            <div className="h-[600px] xl:h-[650px] 2xl:h-[700px]">
+                <Image
+                    src={bannerImage}
+                    className="w-full h-full 2xl:object-fill xl:object-cover z-20"
+                    alt="Banner"
+                />
+            </div>
             {/* Overlay with text */}
             <div className="absolute inset-0 z-40">
                 <div className="max-w-[1440px] mx-auto relative">

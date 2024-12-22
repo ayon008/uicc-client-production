@@ -1,8 +1,8 @@
 'use server'
 import React from 'react';
 import Image from 'next/image';
-import img1 from '@/../public/assets/element5-digital-OyCl7Y4y0Bk-unsplash.jpg'
-import img2 from '@/../public/assets/arthur-lambillotte-1382ByZsCtU-unsplash.jpg'
+import img1 from '@/../public/assets/1000001637.jpg'
+import img2 from '@/../public/assets/1000001628.jpg'
 import TickIcon from '@/components/TickIcon';
 import ServiceBanner from '@/shared/ServiceBanner';
 
