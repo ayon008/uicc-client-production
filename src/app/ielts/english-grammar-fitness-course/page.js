@@ -6,8 +6,6 @@ import img2 from '@/../public/assets/1000001628.jpg'
 import TickIcon from '@/components/TickIcon';
 import ServiceBanner from '@/shared/ServiceBanner';
 
-
-
 const Page = () => {
     return (
         <div>
