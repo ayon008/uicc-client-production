@@ -54,12 +54,12 @@ const NavBar = () => {
             document.body.style.overflow = '';
         };
     }, [open, nav]);
-
     const [render, setRender] = useState(false);
     useEffect(() => {
         setRender(true);
         setNav(false);
     }, [pathname]);
+
 
     const IELTS = [
         { name: 'IELTS Regular Batch', href: '/ielts' },
@@ -100,13 +100,12 @@ const NavBar = () => {
     ]
 
     const Visa = [
-        { name: 'Visa', href: '/visa-processing' },
+        { name: 'Immigration Visa', href: '/visa-processing' },
         { name: 'Student Visa', href: '/visa-processing/student-visa' },
         { name: 'Tourist Visa', href: '/visa-processing/tourist-visa' },
         { name: 'Work Visa', href: '/visa-processing/worker-visa' },
         { name: 'Family Visa', href: '/visa-processing/family-visa' }
     ];
-
 
     const Option = ({ children, arr, show }) => {
         return (
@@ -264,7 +263,7 @@ const NavBar = () => {
                                 },
                             }
                         }}
-                        className='w-[350px] pt-10 px-10 pb-6 absolute top-[60px] bg-white left-0'>
+                        className={`w-[350px] pt-10 px-10 pb-6 absolute top-[60px] bg-white left-0 ${render ? 'block' : 'hidden'}`}>
                         <li className='border-b-[0.60px] parent-option border-opacity-30 border-b-gray '>
                             <Option arr={IELTS}>IELTS</Option>
                         </li>
@@ -316,7 +315,7 @@ const NavBar = () => {
                                 },
                             }
                         }}
-                        className='w-[350px] pt-10 px-10 pb-6 absolute top-[60px] bg-white left-0'>
+                        className={`w-[350px] pt-10 px-10 pb-6 absolute top-[60px] bg-white left-0  ${render ? 'block' : 'hidden'}`}>
                         <li className='border-b-[0.60px] parent-option border-opacity-30 border-b-gray '>
                             <Option show={true} arr={Visa}>Visa Processing</Option>
                         </li>
@@ -639,7 +638,7 @@ const NavBar = () => {
                     animate={{ top: scrolled ? 0 : -200 }}
                     exit={{ top: -2000, transition: { duration: 0, ease: "linear" } }}
                     transition={{ duration: 0.5, ease: "linear", delay: 0.01 }}
-                    className={`bg-[#FBFCFF] shadow-xl fixed right-0 left-0 z-50`}
+                    className={`bg-[#FBFCFF] ${scrolled ? 'pointer-events-auto' : 'pointer-events-none'} shadow-xl fixed right-0 left-0 z-50`}
                 >
                     <div className='flex 2xl:h-[100px] xl:h-[100px] h-[80px] items-center justify-between  max-w-[1440px] mx-auto relative 2xl:py-10 xl:py-10 2xl:px-11 xl:px-11 px-4'>
                         <div className='absolute top-0 2xl:left-11 xl:left-11 left-5'>
@@ -657,8 +656,9 @@ const NavBar = () => {
                                 }
                             </ul>
                         </div>
+                        {/* nav mobile */}
                         <div className="dropdown 2xl:ml-0 xl:ml-0 ml-auto 2xl:hidden xl:hidden block">
-                            <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
+                            <div onClick={() => setNav(true)} className="btn btn-ghost btn-circle">
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     className="h-5 w-5"
@@ -672,11 +672,134 @@ const NavBar = () => {
                                         d="M4 6h16M4 12h16M4 18h7" />
                                 </svg>
                             </div>
-                            <ul
-                                tabIndex={0}
-                                className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow right-0">
-                                {navItems}
-                            </ul>
+                            <div
+                                className={`h-screen w-full bg-white overflow-y-auto overflow-x-hidden z-[60] transition-all duration-1000 ease-in-out fixed top-0 right-0 ${nav ? 'left-0' : '-left-full'
+                                    }`}
+                            >
+                                <span
+                                    onClick={() => setNav(false)}
+                                    className="absolute top-2 right-4 text-3xl cursor-pointer"
+                                >
+                                    X
+                                </span>
+
+                                <div className="pt-10 px-10 pb-20 w-full">
+                                    <Image src={logo} alt="" className="w-[100px] h-auto" />
+                                    <div className='relative mt-4 mb-5'>
+                                        <input className="w-full border border-black rounded-[30px] bg-[#F8F8F8] input input-border" placeholder="Search..." />
+                                        <div className="absolute right-4 mt-2 top-1/2 -translate-y-1/2">
+                                            <MdSearch size={24} color="#c6250c" className="" />
+                                        </div>
+                                    </div>
+                                    <div className='mt-6'>
+                                        <ul className='pb-10'>
+                                            <li className={`2xl:text-xl xl:text-base text-sm ${serif.className} hover:text-orange transition-all duration-100 font-bold pb-3 border-b-[0.60px] border-b-black border-opacity-20 ${pathname === '/' ? 'text-orange' : ''}`}>
+                                                <Link href={'/'}>Home</Link>
+                                            </li>
+                                            <li className={`2xl:text-xl xl:text-base text-sm font-semibold hover:text-orange ${serif.className} py-3 border-b-[0.60px] border-b-black border-opacity-20 transition-all duration-100 ${pathname === '/about' ? 'text-orange' : ''}`}>
+                                                <Link href="/about">About</Link>
+                                            </li>
+                                            <li className={`2xl:text-xl xl:text-base text-sm font-semibold hover:text-orange ${serif.className} transition-all duration-100`}>
+                                                <div className='flex items-center justify-between border-b-[0.60px] border-b-black border-opacity-20 py-3'>
+                                                    <div>
+                                                        Education
+                                                    </div>
+                                                    <div className='bg-slate-300 p-1 rounded bg-opacity-45' onClick={() => {
+                                                        setClicked1(!clicked1)
+                                                        setClicked2(false)
+                                                    }}>
+                                                        <motion.div
+                                                            animate={{ rotate: clicked1 ? 180 : 0 }}
+                                                            transition={{ duration: 0.3, ease: 'easeInOut' }}
+                                                            className="h-fit"
+                                                        >
+                                                            <FaChevronDown size={14} />
+                                                        </motion.div>
+                                                    </div>
+                                                </div>
+                                                <>
+                                                    <motion.div
+                                                        animate={clicked1 ? { height: 'fit-content', pointerEvents: 'auto' } : { height: '0px', pointerEvents: 'none' }}
+                                                        transition={{ duration: 0.5, ease: 'easeInOut' }}
+                                                        className='w-full overflow-hidden pl-4'>
+                                                        {
+                                                            navMobile?.map((a, i) => (
+                                                                <p key={i} className='py-2 text-black hover:text-orange transition-all duration-300 ease-linear border-b-[0.60px] border-b-black border-opacity-20'>
+                                                                    <Link href={a.href}>{a.name}</Link>
+                                                                </p>
+                                                            ))
+                                                        }
+                                                    </motion.div>
+
+                                                </>
+                                            </li>
+                                            <li className={`2xl:text-xl xl:text-base text-sm font-semibold hover:text-orange ${serif.className} transition-all duration-100`}>
+                                                <div className='flex items-center justify-between border-b-[0.60px] border-b-black border-opacity-20 py-3'>
+                                                    <div>
+                                                        Services
+                                                    </div>
+                                                    <div className='bg-slate-300 p-1 rounded bg-opacity-45' onClick={() => {
+                                                        setClicked2(!clicked2)
+                                                        setClicked1(false)
+                                                    }}>
+                                                        <motion.div
+                                                            animate={{ rotate: clicked2 ? 180 : 0 }}
+                                                            transition={{ duration: 0.3, ease: 'easeInOut' }}
+                                                            className="h-fit"
+                                                        >
+                                                            <FaChevronDown size={14} />
+                                                        </motion.div>
+                                                    </div>
+                                                </div>
+                                                <>
+                                                    <motion.div
+                                                        animate={clicked2 ? { height: 'fit-content', pointerEvents: 'auto' } : { height: '0px', pointerEvents: 'none' }}
+                                                        transition={{ duration: 0.5, ease: 'easeInOut' }}
+                                                        className='w-full overflow-hidden pl-4'>
+                                                        {
+                                                            Visa?.map((a, i) => (
+                                                                <p key={i} className='py-2 text-black hover:text-orange transition-all duration-300 ease-linear border-b-[0.60px] border-b-black border-opacity-20'>
+                                                                    <Link href={a.href}>{a.name}</Link>
+                                                                </p>
+                                                            ))
+                                                        }
+                                                        <p className='py-2 text-black hover:text-orange border-b-[0.60px] border-b-black border-opacity-20 transition-all duration-300 ease-linear'>
+                                                            <Link href={'/language-training'}>Language Training</Link>
+                                                        </p>
+                                                        <p className='py-2 text-black hover:text-orange transition-all duration-300 border-b-[0.60px] border-b-black border-opacity-20 ease-linear'>
+                                                            <Link href={'/air-ticket'}>
+                                                                Air Ticket
+                                                            </Link>
+                                                        </p>
+                                                        <p className='py-2 text-black hover:text-orange transition-all duration-300 border-b-[0.60px] border-b-black border-opacity-20 ease-linear'>
+                                                            <Link href={'/air-ticket'}>
+                                                                Digital Marketing
+                                                            </Link>
+                                                        </p>
+                                                        <p className='py-2 text-black hover:text-orange transition-all duration-300 border-b-[0.60px] border-b-black border-opacity-20 ease-linear'>
+                                                            <Link href={'/air-ticket'}>
+                                                                Web Design
+                                                            </Link>
+                                                        </p>
+                                                        <p className='py-2 text-black hover:text-orange transition-all duration-300 border-b-[0.60px] border-b-black border-opacity-20 ease-linear'>
+                                                            <Link href={'/air-ticket'}>
+                                                                Web Development
+                                                            </Link>
+                                                        </p>
+                                                    </motion.div>
+
+                                                </>
+                                            </li>
+                                            <li className={`2xl:text-xl xl:text-base text-sm ${serif.className} hover:text-orange transition-all text-black duration-100 font-bold py-3 border-b-[0.60px] border-b-black border-opacity-20 ${pathname === '/universities' ? 'text-orange' : ''}`}>
+                                                <Link href="/universities">Associate Universities</Link>
+                                            </li>
+                                            <li className={`2xl:text-xl xl:text-base text-sm ${serif.className} hover:text-orange transition-all text-black duration-100 font-bold py-3 ${pathname === '/contact' ? 'text-orange' : ''}`}>
+                                                <Link href="/contact">Contact</Link>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div className='hidden items-center gap-6 2xl:flex xl:flex'>
                             <div className='w-fit'>

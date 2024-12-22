@@ -1,10 +1,7 @@
-'use server'
 import React from 'react';
 import Image from 'next/image';
-import img1 from '@/../public/assets/44923e5447f015910dcbb865d34f84e2.png'
-import img2 from '@/../public/assets/b655cb9ea254db8e60a6ccaa93a1d36b.png'
-import FaTicket from '@/icons/FaTicket';
-import FaTelegram from '@/icons/FaTelegram';
+import img1 from '../../../public/assets/1000001636.jpg'
+import img2 from '@/../public/assets/1000001641.jpg'
 import TickIcon from '@/components/TickIcon';
 import ServiceBanner from '@/shared/ServiceBanner';
 
@@ -40,12 +37,12 @@ const Page = () => {
                         </span>
                     </li>
                 </ul>
-                <div className='flex items-center mt-10 2xl:gap-6 xl:gap-6 gap-3 w-full'>
+                <div className='flex 2xl:flex-row xl:flex-row flex-col items-center mt-10 2xl:gap-6 xl:gap-6 gap-3 w-full'>
                     <div className='w-1/2'>
-                        <Image className='2xl:flex-1 xl:flex-1 w-full' src={img1} alt='' />
+                        <Image placeholder='blur' className='2xl:flex-1 xl:flex-1 w-full h-[300px] object-cover' src={img1} alt='' />
                     </div>
                     <div className='w-1/2'>
-                        <Image className='2xl:flex-1 xl:flex-1 w-full' src={img2} alt='' />
+                        <Image placeholder='blur' className='2xl:flex-1 xl:flex-1 w-full h-[300px] object-cover' src={img2} alt='' />
                     </div>
                 </div>
                 <h2 className='2xl:text-5xl xl:text-4xl font-semibold my-10'>

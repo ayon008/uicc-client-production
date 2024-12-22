@@ -63,7 +63,7 @@ const SelectTab = () => {
                         <AnimatedImage
                             src={person2} // Replace with your image path
                             alt="Example Image"
-                            className="w-auto object-contain"
+                            className="w-auto object-contain h-[600px]"
                         />
                     }
                     {
@@ -79,7 +79,7 @@ const SelectTab = () => {
                         <AnimatedImage
                             src={person1} // Replace with your image path
                             alt="Example Image"
-                            className="w-auto object-contain"
+                            className="w-auto object-contain h-[600px]"
                         />
                     }
                     {
@@ -87,7 +87,7 @@ const SelectTab = () => {
                         <AnimatedImage
                             src={person5} // Replace with your image path
                             alt="Example Image"
-                            className="w-[750px] object-contain"
+                            className="w-[750px] object-contain h-[600px]"
                         />
                     }
                     {
@@ -95,7 +95,7 @@ const SelectTab = () => {
                         <AnimatedImage
                             src={person6} // Replace with your image path
                             alt="Example Image"
-                            className="w-[950px] object-contain"
+                            className="w-[950px] object-contain h-[600px]"
                         />
                     }
                 </div>
@@ -109,7 +109,7 @@ const SelectTab = () => {
                         <div className='my-6'>
                             {
                                 activeIndex === 0 &&
-                                <h1 className={`text-[#FAEBD7] 2xl:text-7xl xl:text-7xl text-4xl ${serif.className}`}>
+                                <h1 className={`text-[#FAEBD7] 2xl:text-7xl xl:text-7xl text-4xl ${serif.className} py-2`}>
                                     We Ensure <br className='2xl:block xl:block hidden' />
                                     Great Lifestyle <br />
                                     For your Family
@@ -117,7 +117,7 @@ const SelectTab = () => {
                             }
                             {
                                 activeIndex === 1 &&
-                                <h1 className={`text-[#FAEBD7] 2xl:text-7xl xl:text-7xl text-4xl ${serif.className}`}>
+                                <h1 className={`text-[#FAEBD7] 2xl:text-7xl xl:text-7xl text-4xl ${serif.className} py-2`}>
                                     Immigration & <br className='2xl:block xl:block hidden' />
                                     Visa Solutions <br />
                                     the easy way
@@ -125,7 +125,7 @@ const SelectTab = () => {
                             }
                             {
                                 activeIndex === 2 &&
-                                <h1 className={`text-[#FAEBD7] 2xl:text-7xl xl:text-7xl text-4xl ${serif.className}`}>
+                                <h1 className={`text-[#FAEBD7] 2xl:text-7xl xl:text-7xl text-4xl ${serif.className} py-2`}>
                                     Transforming <br className='2xl:block xl:block hidden' />
                                     Education for <br />
                                     a Brighter Future
@@ -133,7 +133,7 @@ const SelectTab = () => {
                             }
                             {
                                 activeIndex === 3 &&
-                                <h1 className={`text-[#FAEBD7] 2xl:text-7xl xl:text-7xl text-4xl ${serif.className}`}>
+                                <h1 className={`text-[#FAEBD7] 2xl:text-7xl xl:text-7xl text-4xl ${serif.className} py-2`}>
                                     We Help You to <br className='2xl:block xl:block hidden' />
                                     Explore the world <br />
                                     with UICC
@@ -141,7 +141,7 @@ const SelectTab = () => {
                             }
                             {
                                 activeIndex === 4 &&
-                                <h1 className={`text-[#FAEBD7] 2xl:text-7xl xl:text-7xl text-4xl ${serif.className}`}>
+                                <h1 className={`text-[#FAEBD7] 2xl:text-7xl xl:text-7xl text-4xl ${serif.className} py-2`}>
                                     Language <br className='2xl:block xl:block hidden' />
                                     Training Made <br />
                                     Simple and Effective
@@ -149,7 +149,7 @@ const SelectTab = () => {
                             }
                             {
                                 activeIndex === 5 &&
-                                <h1 className={`text-[#FAEBD7] 2xl:text-7xl xl:text-7xl text-4xl ${serif.className}`}>
+                                <h1 className={`text-[#FAEBD7] 2xl:text-7xl xl:text-7xl text-4xl ${serif.className} py-2`}>
                                     Empowering <br className='2xl:block xl:block hidden' />
                                     Minds, Shaping <br />
                                     the Future

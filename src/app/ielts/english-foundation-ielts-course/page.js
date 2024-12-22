@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
-import img1 from '@/../public/assets/nasjere-williams-lTOWLfjutqU-unsplash.jpg'
-import img2 from '@/../public/assets/alihan-turgut-R3rc6oMXkck-unsplash.jpg'
+import img1 from '@/../public/assets/1000001638.jpg'
+import img2 from '@/../public/assets/1000001628.jpg'
 import TickIcon from '@/components/TickIcon';
 import ServiceBanner from '@/shared/ServiceBanner';
 
@@ -10,7 +10,7 @@ import ServiceBanner from '@/shared/ServiceBanner';
 const Page = () => {
     return (
         <div>
-            <ServiceBanner text1={'English Foundation'} text2={'IELTS Course'}/>
+            <ServiceBanner text1={'English Foundation'} text2={'IELTS Course'} />
             <div className='2xl:p-20 xl:p-16'>
                 <h1 className='2xl:text-5xl xl:text-4xl font-semibold'>IELTS Programme</h1>
                 <p className='2xl:text-xl xl:text-lg font-normal mt-6'>
@@ -39,12 +39,12 @@ const Page = () => {
                         </span>
                     </li>
                 </ul>
-                <div className='flex items-center mt-10 2xl:gap-6 xl:gap-6 gap-3 w-full'>
+                <div className='flex 2xl:flex-row xl:flex-row flex-col items-center mt-10 2xl:gap-6 xl:gap-6 gap-3 w-full'>
                     <div className='w-1/2'>
-                        <Image className='2xl:flex-1 xl:flex-1 w-full' src={img1} alt='' />
+                        <Image placeholder='blur' className='2xl:flex-1 xl:flex-1 w-full h-[300px] object-cover' src={img1} alt='' />
                     </div>
                     <div className='w-1/2'>
-                        <Image className='2xl:flex-1 xl:flex-1 w-full' src={img2} alt='' />
+                        <Image placeholder='blur' className='2xl:flex-1 xl:flex-1 w-full h-[300px] object-cover' src={img2} alt='' />
                     </div>
                 </div>
                 <h2 className='2xl:text-5xl xl:text-4xl font-semibold my-10'>

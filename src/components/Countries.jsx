@@ -9,20 +9,13 @@ import au from '../../public/assets/au.png'
 import ca from '../../public/assets/ca.png'
 import us from '../../public/assets/us.png'
 import gb from '../../public/assets/gb.png'
-import jp from '../../public/assets/jp.png'
+import jp from '../../public/assets/WhatsApp Image 2024-12-22 at 10.19.15_001c24a9.jpg'
 import nz from '../../public/assets/nz.png'
-import aus from '../../public/assets/images.jpg'
-import kr from '../../public/assets/kr.png'
-import uk from '../../public/assets/c6cae16cfb0b890601f8050cc179326a.png'
-import usa from '../../public/assets/2ba37f8e6ba6d9af3ea7e40a47287986.png'
-import can from '../../public/assets/6948c86a0fde16ff34c4a0d0e3c15f7e.png'
-import jap from '../../public/assets/1b589b44d0cb35eda74d26ac516e6899.png'
-import sk from '../../public/assets/e4ddbc2dec6441d0cd7eb408b7589d7e.png'
-import nzl from '../../public/assets/82c7acee9c6a83e97829b10c33b06123.png'
+import kr from '../../public/assets/WhatsApp Image 2024-12-21 at 16.19.01_0bd7d7bf.jpg'
 import Link from 'next/link';
 import ButtonSecondary from '@/shared/ButtonSecondary';
 import { serif } from '@/shared/Serif';
-import { motion, useMotionValue } from 'framer-motion'
+import { motion } from 'framer-motion'
 
 const Country = ({ country, flag, i, image }) => {
     console.log(country);
@@ -197,13 +190,13 @@ const Accordion = () => {
 
     // Define accordion items
     const accordionItems = [
-        { title: 'Australia', image: aus, flag: au },
-        { title: 'Canada', image: can, flag: ca },
-        { title: 'USA', image: usa, flag: us },
-        { title: 'UK', image: uk, flag: gb },
-        { title: 'New Zealand', image: nzl, flag: nz },
-        { title: 'JAPAN', image: jap, flag: jp },
-        { title: 'South Korea', image: sk, flag: kr },
+        { title: 'Australia', image: "", flag: au },
+        { title: 'Canada', image: "", flag: ca },
+        { title: 'USA', image: "", flag: us },
+        { title: 'UK', image: "", flag: gb },
+        { title: 'New Zealand', image: "", flag: nz },
+        { title: 'JAPAN', image: "", flag: jp },
+        { title: 'South Korea', image: "", flag: kr },
     ];
 
     return (
