@@ -1,7 +1,7 @@
 
 import Image from 'next/image';
-import img1 from '@/../public/assets/kelly-sikkema-fjNaOMcYNUs-unsplash.jpg'
-import img2 from '@/../public/assets/b655cb9ea254db8e60a6ccaa93a1d36b.png'
+import img1 from '../../../../public/assets/1000001629.jpg'
+import img2 from '../../../../public/assets/1000001630.jpg'
 import FaTicket from '@/icons/FaTicket';
 import FaTelegram from '@/icons/FaTelegram';
 import TickIcon from '@/components/TickIcon';
@@ -10,7 +10,7 @@ import ServiceBanner from '@/shared/ServiceBanner';
 const Page = () => {
     return (
         <div>
-            <ServiceBanner text1={'Student Visa'}/>
+            <ServiceBanner text1={'Student Visa'} />
             <div className='2xl:p-20 xl:p-16'>
                 <h1 className='2xl:text-5xl xl:text-4xl font-semibold'>Student Visa Services</h1>
                 <p className='2xl:text-xl xl:text-lg font-normal mt-6'>
@@ -93,12 +93,12 @@ const Page = () => {
                         </span>
                     </li>
                 </ul>
-                <div className='flex items-center mt-10 2xl:gap-6 xl:gap-6 gap-3 w-full'>
-                    <div className='w-1/2'>
-                        <Image className='2xl:flex-1 xl:flex-1 w-full' src={img1} alt='' />
+                <div className='flex 2xl:flex-row xl:flex-row flex-col items-center mt-10 2xl:gap-6 xl:gap-6 gap-3 w-full'>
+                    <div className='2xl:w-1/2 xl:w-1/2 w-full'>
+                        <Image placeholder='blur' className='2xl:flex-1 xl:flex-1 w-full 2xl:h-[450px] xl:h-[350px] 350px object-cover' src={img1} alt='' />
                     </div>
-                    <div className='w-1/2'>
-                        <Image className='2xl:flex-1 xl:flex-1 w-full' src={img2} alt='' />
+                    <div className='2xl:w-1/2 xl:w-1/2 w-full'>
+                        <Image placeholder='blur' className='2xl:flex-1 xl:flex-1 w-full 2xl:h-[450px] xl:h-[350px] 350px object-cover' src={img2} alt='' />
                     </div>
                 </div>
                 <h2 className='2xl:text-5xl xl:text-4xl font-semibold my-10'>

@@ -16,10 +16,10 @@ const ServiceBanner = ({ text1, text2 }) => {
         <div className="relative 2xl:mt-[100px] xl:mt-[100px]">
             <div className='w-full h-full absolute inset-0 z-30 bg-black bg-opacity-20'></div>
             {/* Background image */}
-            <div className="h-[600px] xl:h-[650px] 2xl:h-[700px]">
+            <div className="h-[400px] xl:h-[650px] 2xl:h-[700px]">
                 <Image
                     src={bannerImage}
-                    className="w-full h-full 2xl:object-fill xl:object-cover z-20"
+                    className="w-full h-full 2xl:object-fill xl:object-cover object-fill z-20"
                     alt="Banner"
                 />
             </div>
