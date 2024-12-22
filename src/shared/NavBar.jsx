@@ -1,7 +1,7 @@
 'use client'
 import Facebook from '@/icons/Facebook';
 import FaEmail from '@/icons/FaEmail';
-import FaaedIn from '@/icons/FaaedIn';
+import FaLinkedIn from '@/icons/FaLinkedIn';
 import FaLocation from '@/icons/FaLocation';
 import FaPhone from '@/icons/FaPhone';
 import FaTwitter from '@/icons/FaTwitter';
@@ -10,12 +10,12 @@ import Image from 'next/image';
 import React, { useEffect, useState } from 'react';
 import logo from '../../public/assets/logo (1).svg';
 import { MdArrowForwardIos, MdSearch } from 'react-icons/md';
-import a from 'next/a';
+import Link from 'next/link';
 import DropDown from '@/icons/DrowDown';
 import { motion } from "framer-motion";
 import { usePathname } from 'next/navigation';
 import { GiHamburgerMenu } from 'react-icons/gi';
-import { FaChevronDown, FaFacebookSquare, FaaedinIn, FaTwitterSquare, FaWhatsappSquare } from 'react-icons/fa';
+import { FaChevronDown, FaFacebookSquare, FaLinkedinIn, FaTwitterSquare, FaWhatsappSquare } from 'react-icons/fa';
 import { IoCloseOutline } from 'react-icons/io5';
 import { serif } from './Serif';
 import { useRouter } from 'next/navigation';
@@ -381,7 +381,7 @@ const NavBar = () => {
                     {/* Nav Start */}
                     <div className='nav-start  flex px-11 py-[12px] gap-1'>
                         <Facebook />
-                        <FaaedIn />
+                        <FaLinkedIn />
                         <FaTwitter />
                         <FaWhatsapp />
                     </div>
@@ -622,7 +622,7 @@ const NavBar = () => {
                                 <p className='mt-3 text-center'>+880-195837780</p>
                                 <div className='flex items-center justify-center gap-6 mt-6'>
                                     <FaFacebookSquare size={'1.5rem'} />
-                                    <FaaedinIn size={'1.5rem'} />
+                                    <FaLinkedinIn size={'1.5rem'} />
                                     <FaWhatsappSquare size={'1.5rem'} />
                                     <FaTwitterSquare size={'1.5rem'} />
                                 </div>
