@@ -22,6 +22,11 @@ const ServiceBanner = ({ text1, text2, img }) => {
                     alt="Banner"
                 />
             </div>
+
+
+
+
+            
             {/* Overlay with text */}
             <div className="absolute inset-0 z-40">
                 <div className="max-w-[1440px] mx-auto relative">
@@ -36,7 +41,7 @@ const ServiceBanner = ({ text1, text2, img }) => {
                         {text1}
                     </motion.h1>
                     <motion.h1
-                        className="2xl:text-5xl xl:text-5xl text-2xl font-bold absolute left-11 2xl:top-[350px] xl:top-[300px] top-[250px] text-white uppercase tracking-wider"
+                        className="2xl:text-5xl xl:text-5xl text-2xl font-bold absolute left-11 2xl:top-[390px] xl:top-[340px] top-[250px] text-white uppercase tracking-wider"
                         initial="hidden"
                         animate="visible"
                         variants={textVariants}
