@@ -27,7 +27,7 @@ const ServiceBanner = ({ text1, text2, img }) => {
                 <div className="max-w-[1440px] mx-auto relative">
                     {/* Animated text */}
                     <motion.h1
-                        className="2xl:text-5xl xl:text-5xl text-2xl font-bold absolute left-11 2xl:top-[300px] xl:top-[250px] top-[180px] text-white uppercase tracking-wider"
+                        className="2xl:text-5xl xl:text-5xl text-2xl font-bold absolute left-11 2xl:top-[320px] xl:top-[270px] top-[200px] text-white uppercase tracking-wider"
                         initial="hidden"
                         animate="visible"
                         variants={textVariants}
