@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import img2 from '@/../public/assets/hoi-an-photographer-AILAeiIBrBg-unsplash.jpg'
+import img1 from '@/../public/assets/family-with-luggage-exploring-map-min.jpeg'
 import FaTicket from '@/icons/FaTicket';
 import FaTelegram from '@/icons/FaTelegram';
 import TickIcon from '@/components/TickIcon';
@@ -40,15 +41,14 @@ const Page = () => {
                         </span>
                     </li>
                 </ul>
-                {/* <div className='flex items-center  2xl:gap-6 xl:gap-6 gap-3 w-full'>
-                    <div className='w-1/2'>
-                        <Image className='2xl:flex-1 xl:flex-1 w-full' src={img1} alt='' />
+                <div className='flex 2xl:flex-row xl:flex-row flex-col items-center mt-10 2xl:gap-6 xl:gap-6 gap-3 w-full'>
+                    <div className='2xl:w-1/2 xl:w-1/2 w-full'>
+                        <Image placeholder='blur' className='2xl:flex-1 xl:flex-1 w-full 2xl:h-[450px] xl:h-[400px] 350px object-fill w-full' src={img1} alt='' />
                     </div>
-                    <div className='w-1/2'>
-                        <Image className='2xl:flex-1 xl:flex-1 w-full' src={img2} alt='' />
+                    <div className='2xl:w-1/2 xl:w-1/2 w-full'>
+                        <Image placeholder='blur' className='2xl:flex-1 xl:flex-1 w-full 2xl:h-[450px] xl:h-[400px] 350px object-cover' src={img2} alt='' />
                     </div>
-                </div> */}
-                <Image className='max-h-[450px] object-cover w-full mt-10' src={img2} alt='' />
+                </div>
                 <div className="flex-1 flex flex-col justify-between px-10 mt-16 py-6 bg-[#FBFCFF]">
                     <div className="">
                         <div className="flex items-center gap-2">

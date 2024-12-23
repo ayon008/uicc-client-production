@@ -120,11 +120,13 @@ const NavBar = () => {
                             color: '#c6250c', // Change color on hover
                             x: 40, // Move 40px to the right
                             transition: { duration: 0.3, ease: 'easeInOut' }, // Smooth transition
+                            pointerEvents: 'auto', //
                         },
                         hidden: {
                             color: '#000000', // Default color
                             x: 0, // Default position
                             transition: { duration: 0.3, ease: 'easeInOut' },
+                            pointerEvents: 'none', //	
                         },
                     }}
                     className="relative"

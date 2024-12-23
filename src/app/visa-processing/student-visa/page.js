@@ -1,7 +1,7 @@
 
 import Image from 'next/image';
-import img1 from '../../../../public/assets/1000001629.jpg'
-import img2 from '../../../../public/assets/1000001630.jpg'
+import img1 from '../../../../public/assets/young-caucasian-woman-holding-passport-usa-flag-isolated-green-chroma-background-min.jpg'
+import img2 from '../../../../public/assets/beautiful-young-smiling-girl-holds-tickets-travel-rest-travel-tour-min.jpg'
 import FaTicket from '@/icons/FaTicket';
 import FaTelegram from '@/icons/FaTelegram';
 import TickIcon from '@/components/TickIcon';
