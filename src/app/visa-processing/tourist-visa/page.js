@@ -1,5 +1,5 @@
 
-'use server'
+
 import Image from 'next/image';
 import img1 from '@/../public/assets/image (1).png'
 import img2 from '@/../public/assets/image (4).png'

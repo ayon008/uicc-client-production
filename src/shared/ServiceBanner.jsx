@@ -13,7 +13,7 @@ const ServiceBanner = ({ text1, text2, img }) => {
 
     return (
         <div className="relative 2xl:mt-[100px] xl:mt-[100px]">
-            <div className='w-full h-full absolute inset-0 z-30 bg-black bg-opacity-20'></div>
+            <div className='w-full h-full absolute inset-0 z-30 bg-black bg-opacity-30'></div>
             {/* Background image */}
             <div className="h-[400px] xl:h-[650px] 2xl:h-[700px]">
                 <Image
@@ -36,7 +36,7 @@ const ServiceBanner = ({ text1, text2, img }) => {
                         {text1}
                     </motion.h1>
                     <motion.h1
-                        className="2xl:text-5xl xl:text-5xl text-2xl font-bold absolute left-11 2xl:top-[350px] xl:top-[300px] top-[250px] text-white uppercase tracking-wider"
+                        className="2xl:text-5xl xl:text-5xl text-2xl font-bold absolute left-11 2xl:top-[390px] xl:top-[340px] top-[250px] text-white uppercase tracking-wider"
                         initial="hidden"
                         animate="visible"
                         variants={textVariants}

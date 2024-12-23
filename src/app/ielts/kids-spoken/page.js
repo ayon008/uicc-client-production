@@ -1,4 +1,4 @@
-'use server'
+
 import React from 'react';
 import Image from 'next/image';
 import img1 from '../../../../public/assets/surprised-male-teacher-wearing-glasses-points-blackboard-with-pointer-stick-sitting-table-with-school-tools-classroom-min.jpg'

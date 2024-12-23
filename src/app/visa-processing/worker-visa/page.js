@@ -1,4 +1,4 @@
-'use server'
+
 import Image from 'next/image';
 import img1 from '@/../public/assets/mina-rad-K9T9hdf4PmI-unsplash.jpg'
 import img2 from '@/../public/assets/royal-anwar-u5T5b3lNYw8-unsplash.jpg'

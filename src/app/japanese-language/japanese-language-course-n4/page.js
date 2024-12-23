@@ -1,15 +1,16 @@
-'use server'
+
 import React from 'react';
 import Image from 'next/image';
 import img1 from '@/../public/assets/timothy-ries-nlLII3H_tcY-unsplash.jpg'
 import FaTicket from '@/icons/FaTicket';
 import TickIcon from '@/components/TickIcon';
 import ServiceBanner from '@/shared/ServiceBanner';
+import img2 from '../../../../public/assets/close-up-pupils-doing-japanese-calligraphy-called-shodo.jpg';
 
 const Page = () => {
     return (
         <div>
-            <ServiceBanner text1={'Japanese Language Course N4'} />
+            <ServiceBanner text1={'Japanese Language'} text2={'Course N4'} img={img2} />
             <div className='2xl:p-20 xl:p-16 p-12'>
                 <h2 className='2xl:text-5xl xl:text-4xl font-semibold my-10'>
                     Japanese Language
@@ -87,15 +88,14 @@ const Page = () => {
                         </span>
                     </li>
                 </ul>
-                {/* <div className='flex items-center mt-10 2xl:gap-6 xl:gap-6 gap-3 w-full'>
-                    <div className='w-1/2'>
-                        <Image className='2xl:flex-1 xl:flex-1 w-full' src={img1} alt='' />
+                <div className='flex 2xl:flex-row xl:flex-row flex-col items-center mt-10 2xl:gap-6 xl:gap-6 gap-3 w-full'>
+                    <div className='2xl:w-1/2 xl:w-1/2 w-full'>
+                        <Image placeholder='blur' className='2xl:flex-1 xl:flex-1 w-full 2xl:h-[450px] xl:h-[350px] 350px object-cover' src={img1} alt='' />
                     </div>
-                    <div className='w-1/2'>
-                        <Image className='2xl:flex-1 xl:flex-1 w-full' src={img2} alt='' />
+                    <div className='2xl:w-1/2 xl:w-1/2 w-full'>
+                        <Image placeholder='blur' className='2xl:flex-1 xl:flex-1 w-full 2xl:h-[450px] xl:h-[350px] 350px object-cover' src={img2} alt='' />
                     </div>
-                </div> */}
-                <Image className='w-full max-h-[500px] object-cover mt-10' src={img1} alt='' />
+                </div>
                 <h2 className='2xl:text-5xl xl:text-4xl font-semibold my-10'>
                     COURSE CONTENTS
                 </h2>

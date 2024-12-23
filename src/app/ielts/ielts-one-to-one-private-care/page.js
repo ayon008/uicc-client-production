@@ -1,4 +1,4 @@
-'use server'
+
 import React from 'react';
 import Image from 'next/image';
 import img1 from '@/../public/assets/young-foreign-student-english-language-lesson.jpg'

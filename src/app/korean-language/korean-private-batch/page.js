@@ -1,9 +1,8 @@
-'use server'
+
 import React from 'react';
 import Image from 'next/image';
-import img1 from '@/../public/assets/manuel-cosentino-n--CMLApjfI-unsplash.jpg'
-import FaTicket from '@/icons/FaTicket';
-import FaTelegram from '@/icons/FaTelegram';
+import img1 from '../../../../public/assets/creative-happy-business-team-brainstorming-idea-by-using-mind-map-immaculate-min.jpg'
+import img2 from '../../../../public/assets/IMG_1558.JPEG.jpg'
 import TickIcon from '@/components/TickIcon';
 import ServiceBanner from '@/shared/ServiceBanner';
 
@@ -11,7 +10,7 @@ import ServiceBanner from '@/shared/ServiceBanner';
 const Page = () => {
     return (
         <div>
-            <ServiceBanner text1={'Korean Private Batch'}/>
+            <ServiceBanner text1={'Korean Private Batch'} img={img1} />
             <div className='2xl:p-20 xl:p-16 p-12'>
                 <h1 className='2xl:text-5xl xl:text-4xl font-semibold'>Korean Language</h1>
                 <p className='2xl:text-xl xl:text-lg font-normal mt-6'>
@@ -153,15 +152,14 @@ const Page = () => {
                         </span>
                     </li>
                 </ul>
-                {/* <div className='flex items-center mt-10 2xl:gap-6 xl:gap-6 gap-3 w-full'>
-                    <div className='w-1/2'>
-                        <Image className='2xl:flex-1 xl:flex-1 w-full' src={img1} alt='' />
+                <div className='flex 2xl:flex-row xl:flex-row flex-col items-center mt-10 2xl:gap-6 xl:gap-6 gap-3 w-full'>
+                    <div className='2xl:w-1/2 xl:w-1/2 w-full'>
+                        <Image placeholder='blur' className='2xl:flex-1 xl:flex-1 w-full 2xl:h-[450px] xl:h-[350px] 350px object-cover' src={img1} alt='' />
                     </div>
-                    <div className='w-1/2'>
-                        <Image className='2xl:flex-1 xl:flex-1 w-full' src={img2} alt='' />
+                    <div className='2xl:w-1/2 xl:w-1/2 w-full'>
+                        <Image placeholder='blur' className='2xl:flex-1 xl:flex-1 w-full 2xl:h-[450px] xl:h-[350px] 350px object-cover' src={img2} alt='' />
                     </div>
-                </div> */}
-                <Image className='w-full max-h-[500px] object-cover mt-10' src={img1} alt='' />
+                </div>
                 <h2 className='2xl:text-5xl xl:text-4xl font-semibold my-10'>
                     FACILITIES
                 </h2>
