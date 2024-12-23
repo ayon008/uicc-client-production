@@ -20,13 +20,9 @@ const ServiceBanner = ({ text1, text2, img }) => {
                     src={img}
                     className="w-full h-full 2xl:object-fill xl:object-cover object-fill z-20"
                     alt="Banner"
+                    priority
                 />
             </div>
-
-
-
-
-            
             {/* Overlay with text */}
             <div className="absolute inset-0 z-40">
                 <div className="max-w-[1440px] mx-auto relative">
