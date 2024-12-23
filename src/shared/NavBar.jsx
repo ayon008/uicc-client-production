@@ -104,7 +104,8 @@ const NavBar = () => {
         { name: 'Student Visa', href: '/visa-processing/student-visa' },
         { name: 'Tourist Visa', href: '/visa-processing/tourist-visa' },
         { name: 'Work Visa', href: '/visa-processing/worker-visa' },
-        { name: 'Family Visa', href: '/visa-processing/family-visa' }
+        { name: 'Family Visa/Schooling Visa', href: '/visa-processing/family-visa' },
+        { name: 'Citizenship Through Investment', href: '' }
     ];
 
     const Option = ({ children, arr, show }) => {

@@ -1,7 +1,7 @@
 
 import Image from 'next/image';
-import img1 from '@/../public/assets/WhatsApp Image 2024-12-23 at 16.50.58_0e3d27c9.jpg'
-import img2 from '@/../public/assets/WhatsApp Image 2024-12-23 at 16.27.30_35fc9bc3.jpg'
+import img1 from '../../../public/assets/WhatsApp Image 2024-12-23 at 16.50.58_0e3d27c9.jpg'
+import img2 from '../../../public/assets/WhatsApp Image 2024-12-23 at 16.27.30_35fc9bc3.jpg'
 import FaTicket from '@/icons/FaTicket';
 import FaTelegram from '@/icons/FaTelegram';
 import TickIcon from '@/components/TickIcon';
@@ -83,6 +83,14 @@ const Page = () => {
                 <h2 className='2xl:text-5xl xl:text-4xl font-semibold my-10'>
                     Job Market Preparation
                 </h2>
+                <div className='flex 2xl:flex-row xl:flex-row flex-col items-center mt-10 2xl:gap-6 xl:gap-6 gap-3 w-full'>
+                    <div className='2xl:w-1/2 xl:w-1/2 w-full'>
+                        <Image placeholder='blur' className='2xl:flex-1 xl:flex-1 w-full 2xl:h-[450px] xl:h-[350px] 350px object-cover' src={img1} alt='' />
+                    </div>
+                    <div className='2xl:w-1/2 xl:w-1/2 w-full'>
+                        <Image placeholder='blur' className='2xl:flex-1 xl:flex-1 w-full 2xl:h-[450px] xl:h-[350px] 350px object-cover' src={img2} alt='' />
+                    </div>
+                </div>
                 <ul className='space-y-10'>
                     <li className='flex items-center'>
                         <TickIcon />
@@ -126,6 +134,16 @@ const Page = () => {
                         </span>
                     </li>
                 </ul>
+
+                <div className='flex 2xl:flex-row xl:flex-row flex-col items-center my-10 2xl:gap-6 xl:gap-6 gap-3 w-full'>
+                    <div className='2xl:w-1/2 xl:w-1/2 w-full'>
+                        <Image placeholder='blur' className='2xl:flex-1 xl:flex-1 w-full 2xl:h-[450px] xl:h-[350px] 350px object-cover' src={img1} alt='' />
+                    </div>
+                    <div className='2xl:w-1/2 xl:w-1/2 w-full'>
+                        <Image placeholder='blur' className='2xl:flex-1 xl:flex-1 w-full 2xl:h-[450px] xl:h-[350px] 350px object-cover' src={img2} alt='' />
+                    </div>
+                </div>
+
                 <h2 className='2xl:text-5xl xl:text-4xl font-semibold my-10'>
                     Industry-Specific Counseling
                 </h2>
@@ -143,14 +161,6 @@ const Page = () => {
                         </span>
                     </li>
                 </ul>
-                <div className='flex 2xl:flex-row xl:flex-row flex-col items-center mt-10 2xl:gap-6 xl:gap-6 gap-3 w-full'>
-                    <div className='2xl:w-1/2 xl:w-1/2 w-full'>
-                        <Image placeholder='blur' className='2xl:flex-1 xl:flex-1 w-full 2xl:h-[450px] xl:h-[400px] 350px object-fill w-full' src={img1} alt='' />
-                    </div>
-                    <div className='2xl:w-1/2 xl:w-1/2 w-full'>
-                        <Image placeholder='blur' className='2xl:flex-1 xl:flex-1 w-full 2xl:h-[450px] xl:h-[400px] 350px object-cover' src={img2} alt='' />
-                    </div>
-                </div>
                 <div className="mt-10 py-10 flex-1 flex flex-col justify-between px-10 bg-[#FBFCFF]">
                     <div className="">
                         <div className="flex items-center gap-2">
