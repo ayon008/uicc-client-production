@@ -1,8 +1,13 @@
 'use client'
+import { usePathname } from 'next/navigation';
 import React, { useEffect } from 'react';
 
 const Cursor = () => {
-
+    const pathName = usePathname();
+    useEffect(() => {
+        // Scroll to the top-right corner of the viewport
+        window.scrollTo({ left: document.body.scrollWidth, top: 0, behavior: 'smooth' });
+    }, [pathName]);
 
     useEffect(() => {
         const cursorDot = document.querySelector('[data-cursor-dot]');
