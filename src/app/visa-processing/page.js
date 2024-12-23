@@ -1,8 +1,7 @@
-'use cserver'
 import React from 'react';
 import Image from 'next/image';
-import img1 from '../../../public/assets/1000001625.jpg'
-import img2 from '../../../public/assets/1000001632.jpg'
+import img1 from '../../../public/assets/WhatsApp Image 2024-12-23 at 16.48.49_f81afce7.jpg'
+import img2 from '../../../public/assets/WhatsApp Image 2024-12-23 at 16.24.08_351067f2.jpg'
 import FaTicket from '@/icons/FaTicket';
 import FaTelegram from '@/icons/FaTelegram';
 import TickIcon from '@/components/TickIcon';
@@ -75,13 +74,13 @@ const Page = () => {
                     </li>
                 </ul>
                 <div className='flex 2xl:flex-row xl:flex-row flex-col items-center mt-10 2xl:gap-6 xl:gap-6 gap-3 w-full'>
-                                    <div className='2xl:w-1/2 xl:w-1/2 w-full'>
-                                        <Image placeholder='blur' className='2xl:flex-1 xl:flex-1 w-full 2xl:h-[450px] xl:h-[350px] 350px object-cover' src={img1} alt='' />
-                                    </div>
-                                    <div className='2xl:w-1/2 xl:w-1/2 w-full'>
-                                        <Image placeholder='blur' className='2xl:flex-1 xl:flex-1 w-full 2xl:h-[450px] xl:h-[350px] 350px object-cover' src={img2} alt='' />
-                                    </div>
-                                </div>
+                    <div className='2xl:w-1/2 xl:w-1/2 w-full'>
+                        <Image placeholder='blur' className='2xl:flex-1 xl:flex-1 w-full 2xl:h-[450px] xl:h-[350px] 350px object-cover' src={img1} alt='' />
+                    </div>
+                    <div className='2xl:w-1/2 xl:w-1/2 w-full'>
+                        <Image placeholder='blur' className='2xl:flex-1 xl:flex-1 w-full 2xl:h-[450px] xl:h-[350px] 350px object-cover' src={img2} alt='' />
+                    </div>
+                </div>
                 <h2 className='2xl:text-5xl xl:text-4xl font-semibold my-10'>
                     Interview Preparation and Mock Interviews
                 </h2>

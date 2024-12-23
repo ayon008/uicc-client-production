@@ -1,10 +1,8 @@
 
 
 import Image from 'next/image';
-import img1 from '@/../public/assets/image (1).png'
-import img2 from '@/../public/assets/image (4).png'
-import FaTicket from '@/icons/FaTicket';
-import FaTelegram from '@/icons/FaTelegram';
+import img1 from '@/../public/WhatsApp Image 2024-12-23 at 15.29.50_4df6b5e5.jpg'
+import img2 from '@/../public/assets/WhatsApp Image 2024-12-23 at 15.32.46_9fd1375e.jpg'
 import TickIcon from '@/components/TickIcon';
 import ServiceBanner from '@/shared/ServiceBanner';
 
