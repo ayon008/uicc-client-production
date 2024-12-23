@@ -11,7 +11,7 @@ import ServiceBanner from '@/shared/ServiceBanner';
 const Page = () => {
     return (
         <div>
-            <ServiceBanner text1={'Family Visa'}/>
+            <ServiceBanner text1={'Family Visa'} img={img2} />
             <div className='2xl:p-20 xl:p-16 p-12'>
                 <h1 className='2xl:text-5xl xl:text-4xl font-semibold'>Family Visa Services</h1>
                 <p className='2xl:text-xl xl:text-lg font-normal mt-6'>

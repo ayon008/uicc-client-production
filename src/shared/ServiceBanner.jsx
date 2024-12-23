@@ -3,9 +3,8 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import React from 'react';
-import bannerImage from '../../public/assets/95fd7409683450e056377de24dc1e82b.png';
 
-const ServiceBanner = ({ text1, text2 }) => {
+const ServiceBanner = ({ text1, text2, img }) => {
     // Define the animation variants
     const textVariants = {
         hidden: { x: '-100%', opacity: 0 }, // Start off-screen to the left
@@ -18,7 +17,7 @@ const ServiceBanner = ({ text1, text2 }) => {
             {/* Background image */}
             <div className="h-[400px] xl:h-[650px] 2xl:h-[700px]">
                 <Image
-                    src={bannerImage}
+                    src={img}
                     className="w-full h-full 2xl:object-fill xl:object-cover object-fill z-20"
                     alt="Banner"
                 />
@@ -28,7 +27,7 @@ const ServiceBanner = ({ text1, text2 }) => {
                 <div className="max-w-[1440px] mx-auto relative">
                     {/* Animated text */}
                     <motion.h1
-                        className="2xl:text-5xl xl:text-5xl text-2xl font-bold absolute left-11 2xl:top-20 xl:top-20 top-28 text-white uppercase tracking-wider"
+                        className="2xl:text-5xl xl:text-5xl text-2xl font-bold absolute left-11 2xl:top-[300px] xl:top-[250px] top-[180px] text-white uppercase tracking-wider"
                         initial="hidden"
                         animate="visible"
                         variants={textVariants}
@@ -37,7 +36,7 @@ const ServiceBanner = ({ text1, text2 }) => {
                         {text1}
                     </motion.h1>
                     <motion.h1
-                        className="2xl:text-5xl xl:text-5xl text-2xl font-bold absolute left-11 2xl:top-36 xl:top-36 top-36 text-white uppercase tracking-wider"
+                        className="2xl:text-5xl xl:text-5xl text-2xl font-bold absolute left-11 2xl:top-[350px] xl:top-[300px] top-[250px] text-white uppercase tracking-wider"
                         initial="hidden"
                         animate="visible"
                         variants={textVariants}

@@ -32,7 +32,7 @@ const links = [
             { name: 'English Grammar Fitness Course', href: '/ielts/english-grammar-fitness-course' },
             { name: 'English Communication Skill Development Course', href: '/ielts/english-communication-skill-development-course' },
             { name: 'Spoken Private', href: '/ielts/spoken-private' },
-            { name: 'Kids Spoken', href: '/ielts/kids-spoken' },
+            { name: 'Kids English', href: '/ielts/kids-spoken' },
             { name: 'Spoken English Junior', href: '/ielts/spoken-english-junior' }
         ]
     },
