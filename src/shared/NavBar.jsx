@@ -18,7 +18,6 @@ import { GiHamburgerMenu } from 'react-icons/gi';
 import { FaChevronDown, FaFacebookSquare, FaLinkedinIn, FaTwitterSquare, FaWhatsappSquare } from 'react-icons/fa';
 import { IoCloseOutline } from 'react-icons/io5';
 import { serif } from './Serif';
-import { useRouter } from 'next/navigation';
 const NavBar = () => {
     const [scrolled, setScrolled] = useState(false);
     const pathname = usePathname();
@@ -55,9 +54,13 @@ const NavBar = () => {
         };
     }, [open, nav]);
     const [render, setRender] = useState(false);
+    const [mouse, setMouse] = useState(false);
+    const [mouse1, setMouse1] = useState(false);
     useEffect(() => {
         setRender(true);
         setNav(false);
+        setMouse(false);
+        setMouse1(false)
     }, [pathname]);
 
 
@@ -189,12 +192,14 @@ const NavBar = () => {
                                                             show: {
                                                                 color: '#c6250c', // Change color on hover
                                                                 x: 40, // Move 40px to the right
-                                                                transition: { duration: 0.3, ease: 'easeInOut' }, // Smooth transition
+                                                                transition: { duration: 0.3, ease: 'easeInOut' },
+                                                                pointerEvents: 'auto' // Smooth transition
                                                             },
                                                             hidden: {
                                                                 color: '#000000', // Default color
                                                                 x: 0, // Default position
                                                                 transition: { duration: 0.3, ease: 'easeInOut' },
+                                                                pointerEvents: 'none'
                                                             },
                                                         }}
                                                         className="relative"
@@ -225,7 +230,6 @@ const NavBar = () => {
         )
     }
 
-    console.log(nav);
 
     const navItems = <>
         <li className={`2xl:text-xl xl:text-base text-sm ${serif.className} font-semibold hover:text-orange transition-all duration-100 ${pathname === '/' ? 'text-orange' : ''}`}>
@@ -234,7 +238,7 @@ const NavBar = () => {
         <li className={`2xl:text-xl xl:text-base text-sm font-semibold hover:text-orange ${serif.className} transition-all duration-100 ${pathname === '/about' ? 'text-orange' : ''}`}>
             <Link href="/about">About</Link>
         </li>
-        <li className='relative'>
+        <li className='relative' onMouseEnter={() => setMouse(true)} onMouseLeave={() => setMouse(false)}>
             <div
             >
                 <motion.div
@@ -246,17 +250,17 @@ const NavBar = () => {
                         <DropDown />
                     </div>
                     <motion.div
-                        variants={{
-                            show: {
-                                opacity: 1,
-                                y: 0,
-                                pointerEvents: 'auto',
-                                transition: {
-                                    duration: 0.4, // Animation duration when showing
-                                    delay: 0.2, // Add delay when showing
-                                },
+                        animate={mouse ? {
+                            opacity: 1,
+                            y: 0,
+                            pointerEvents: 'auto',
+                            transition: {
+                                duration: 0.4, // Animation duration when showing
+                                delay: 0.2, // Add delay when showing
                             },
-                            hidden: {
+                        }
+                            :
+                            {
                                 opacity: 0,
                                 y: 40,
                                 pointerEvents: 'none',
@@ -265,8 +269,8 @@ const NavBar = () => {
                                     delay: 0.1, // Add delay when hiding
                                 },
                             }
-                        }}
-                        className={`w-[350px] pt-10 px-10 pb-6 absolute top-[60px] bg-white left-0 ${render ? 'block' : 'hidden'}`}>
+                        }
+                        className={`w-[350px] ${mouse ? 'block' : 'hidden'} pt-10 px-10 pb-6 absolute top-[60px] bg-white left-0`}>
                         <li className='border-b-[0.60px] parent-option border-opacity-30 border-b-gray '>
                             <Option arr={IELTS}>IELTS</Option>
                         </li>
@@ -286,7 +290,7 @@ const NavBar = () => {
                 </motion.div>
             </div>
         </li>
-        <li className='relative'>
+        <li className='relative' onMouseEnter={() => setMouse1(true)} onMouseLeave={() => setMouse1(false)}>
             <div
             >
                 <motion.div
@@ -298,17 +302,17 @@ const NavBar = () => {
                         <DropDown />
                     </div>
                     <motion.div
-                        variants={{
-                            show: {
-                                opacity: 1,
-                                y: 0,
-                                pointerEvents: 'auto',
-                                transition: {
-                                    duration: 0.4, // Animation duration when showing
-                                    delay: 0.2, // Add delay when showing
-                                },
+                        animate={mouse1 ? {
+                            opacity: 1,
+                            y: 0,
+                            pointerEvents: 'auto',
+                            transition: {
+                                duration: 0.4, // Animation duration when showing
+                                delay: 0.2, // Add delay when showing
                             },
-                            hidden: {
+                        }
+                            :
+                            {
                                 opacity: 0,
                                 y: 40,
                                 pointerEvents: 'none',
@@ -317,8 +321,8 @@ const NavBar = () => {
                                     delay: 0.1, // Add delay when hiding
                                 },
                             }
-                        }}
-                        className={`w-[350px] pt-10 px-10 pb-6 absolute top-[60px] bg-white left-0  ${render ? 'block' : 'hidden'}`}>
+                        }
+                        className={`w-[350px] pt-10 px-10 pb-6 absolute top-[60px] bg-white left-0  ${mouse1 ? 'block' : 'hidden'}`}>
                         <li className='border-b-[0.60px] parent-option border-opacity-30 border-b-gray '>
                             <Option show={true} arr={Visa}>Visa Processing</Option>
                         </li>
