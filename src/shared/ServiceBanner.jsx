@@ -18,7 +18,7 @@ const ServiceBanner = ({ text1, text2, img }) => {
             <div className="h-[400px] xl:h-[650px] 2xl:h-[700px]">
                 <Image
                     src={img}
-                    className="w-full h-full 2xl:object-fill xl:object-cover object-fill z-20"
+                    className="w-full h-full 2xl:object-fill xl:object-cover object-fill z-20 aspect-[16/9]"
                     alt="Banner"
                     priority
                 />
