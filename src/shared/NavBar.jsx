@@ -349,7 +349,9 @@ const NavBar = () => {
                         </li>
                         <li className='parent-option border-opacity-30 border-b-gray '>
                             <Option show={true}>
-                                Digital Marketing
+                                <Link href={'/digital-marketing'}>
+                                    Digital Marketing
+                                </Link>
                             </Option>
                         </li>
                         <li className='parent-option border-opacity-30 border-b-gray '>
@@ -557,7 +559,7 @@ const NavBar = () => {
                                                                 </Link>
                                                             </p>
                                                             <p className='py-2 text-black hover:text-orange transition-all duration-300 border-b-[0.60px] border-b-black border-opacity-20 ease-linear'>
-                                                                <Link href={'/air-ticket'}>
+                                                                <Link href={'/digital-marketing'}>
                                                                     Digital Marketing
                                                                 </Link>
                                                             </p>
@@ -779,7 +781,7 @@ const NavBar = () => {
                                                             </Link>
                                                         </p>
                                                         <p className='py-2 text-black hover:text-orange transition-all duration-300 border-b-[0.60px] border-b-black border-opacity-20 ease-linear'>
-                                                            <Link href={'/air-ticket'}>
+                                                            <Link href={'/digital-marketing'}>
                                                                 Digital Marketing
                                                             </Link>
                                                         </p>

@@ -1,17 +1,14 @@
 
 import React from 'react';
 import Image from 'next/image';
-import img1 from '@/../public/assets/44923e5447f015910dcbb865d34f84e2.png'
-import img2 from '@/../public/assets/b655cb9ea254db8e60a6ccaa93a1d36b.png'
-import FaTicket from '@/icons/FaTicket';
-import FaTelegram from '@/icons/FaTelegram';
+import img1 from '../../../public/assets/WhatsApp Image 2024-12-25 at 12.33.18_60033bf6.jpg'
 import TickIcon from '@/components/TickIcon';
 import ServiceBanner from '@/shared/ServiceBanner';
 
 const Page = () => {
     return (
         <div>
-            <ServiceBanner text1={'Language Training'} />
+            <ServiceBanner text1={'Language Training'} img={img1} />
             <div className='2xl:p-20 xl:p-16 p-12'>
                 <h1 className='2xl:text-5xl xl:text-4xl font-semibold'>Language Training at UICC</h1>
                 <p className='2xl:text-xl xl:text-lg font-normal mt-6'>
