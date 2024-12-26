@@ -356,12 +356,14 @@ const NavBar = () => {
                         </li>
                         <li className='parent-option border-opacity-30 border-b-gray '>
                             <Option show={true}>
-                                Web Design
+                                <Link href={'/digital-marketing'}>
+                                    Graphics Design
+                                </Link>
                             </Option>
                         </li>
                         <li className='parent-option border-opacity-30 border-b-gray '>
                             <Option show={true}>
-                                Web Development
+                                Web Design & Development
                             </Option>
                         </li>
                     </motion.div>
@@ -564,15 +566,16 @@ const NavBar = () => {
                                                                 </Link>
                                                             </p>
                                                             <p className='py-2 text-black hover:text-orange transition-all duration-300 border-b-[0.60px] border-b-black border-opacity-20 ease-linear'>
-                                                                <Link href={'/air-ticket'}>
-                                                                    Web Design
+                                                                <Link href={'/digital-marketing'}>
+                                                                    Graphics Design
                                                                 </Link>
                                                             </p>
                                                             <p className='py-2 text-black hover:text-orange transition-all duration-300 border-b-[0.60px] border-b-black border-opacity-20 ease-linear'>
                                                                 <Link href={'/air-ticket'}>
-                                                                    Web Development
+                                                                    Web Design & Development
                                                                 </Link>
                                                             </p>
+                                                        
                                                         </motion.div>
 
                                                     </>
@@ -786,15 +789,16 @@ const NavBar = () => {
                                                             </Link>
                                                         </p>
                                                         <p className='py-2 text-black hover:text-orange transition-all duration-300 border-b-[0.60px] border-b-black border-opacity-20 ease-linear'>
-                                                            <Link href={'/air-ticket'}>
-                                                                Web Design
+                                                            <Link href={'/digital-marketing'}>
+                                                                Graphics Design
                                                             </Link>
                                                         </p>
                                                         <p className='py-2 text-black hover:text-orange transition-all duration-300 border-b-[0.60px] border-b-black border-opacity-20 ease-linear'>
                                                             <Link href={'/air-ticket'}>
-                                                                Web Development
+                                                                Web Design & Development
                                                             </Link>
                                                         </p>
+                                                    
                                                     </motion.div>
 
                                                 </>
