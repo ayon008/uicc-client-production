@@ -13,21 +13,27 @@ const Page = () => {
             <ServiceBanner text1={'Digital Marketing'} img={img1} />
             <div className='2xl:p-20 xl:p-16 p-12'>
                 <h1 className='2xl:text-5xl xl:text-4xl font-semibold'>Introduction to Digital Marketing.</h1>
-                <Image className='my-8' src={img1} alt='' />
-                <p className='2xl:text-xl xl:text-lg font-normal mt-6'>
-                    In today’s hyper-connected world communications are conducted through online, internet is the keystone of communication. Digital marketing is also called online marketing, it is a key tool for business success but what exactly is digital marketing? and why has it become essential in today’s business strategies? Some common strategies and techniques in digital marketing include:
-                </p>
-                <p className='2xl:text-xl xl:text-lg font-normal my-10'>
-                    <span className='font-bold text-3xl inline-block mb-[6px]'>Defining Digital Marketing</span> <br />
-                    Digital marketing includes a wide range of online channels and strategies to promote products and services through various digital channels, this includes not only email, social media, web-based advertising etc. Unlike traditional marketing channels that rely on print, television and radio advertising more so, digital marketing helps to reach the target audience and engage online better.
-                </p>
+                <div className="flex 2xl:flex-row xl:flex-row flex-col items-stretch my-10 gap-10">
+                    <div className="2xl:w-1/2 xl:w-1/2 w-full">
+                        <p className='2xl:text-xl xl:text-lg font-normal text-left'>
+                            In today’s hyper-connected world communications are conducted through online, internet is the keystone of communication. Digital marketing is also called online marketing, it is a key tool for business success but what exactly is digital marketing? and why has it become essential in today’s business strategies? Some common strategies and techniques in digital marketing include:
+                        </p>
+                        <p className='2xl:text-xl xl:text-lg font-normal mt-6'>
+                            <span className='font-bold text-3xl inline-block mb-[6px]'>Defining Digital Marketing</span> <br />
+                            Digital marketing includes a wide range of online channels and strategies to promote products and services through various digital channels, this includes not only email, social media, web-based advertising etc. Unlike traditional marketing channels that rely on print, television and radio advertising more so, digital marketing helps to reach the target audience and engage online better.
+                        </p>
+                    </div>
+                    <div className="2xl:w-1/2 xl:w-1/2 w-full">
+                        <Image className='w-full' src={img1} alt='' />
+                    </div>
+                </div>
                 <p className='2xl:text-xl xl:text-lg font-normal my-10'>
                     <span className='font-bold text-3xl inline-block mb-[6px]'>Components of digital marketing</span> <br />
-                    Search Engine Optimization : Search engine optimization is the process of increasing website visibility and ranking on search engine result pages, by strategic use of keywords, content optimization and link building, businesses can increase their organic traffic and improve their online presence.
+                    <span className="font-bold">Search Engine Optimization</span> : Search engine optimization is the process of increasing website visibility and ranking on search engine result pages, by strategic use of keywords, content optimization and link building, businesses can increase their organic traffic and improve their online presence.
                 </p>
                 <p className='2xl:text-xl xl:text-lg font-normal my-10'>
                     <span className='font-bold text-3xl inline-block mb-[6px]'>Social Media Marketing (SMM)</span> <br />
-                    Search Engine Optimization : Search engine optimization is the process of increasing website visibility and ranking on search engine result pages, by strategic use of keywords, content optimization and link building, businesses can increase their organic traffic and improve their online presence.
+                    <span className="font-bold">Search Engine Optimization</span> : Search engine optimization is the process of increasing website visibility and ranking on search engine result pages, by strategic use of keywords, content optimization and link building, businesses can increase their organic traffic and improve their online presence.
                 </p>
                 <p className='2xl:text-xl xl:text-lg font-normal my-10'>
                     <span className='font-bold text-3xl inline-block mb-[6px]'>Content Marketing</span> <br />
