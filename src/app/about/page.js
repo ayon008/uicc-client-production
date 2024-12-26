@@ -4,6 +4,7 @@ import image from '@/../public/assets/1b3da64de52034b51f6246051b268a8a.png'
 import image1 from '@/../public/assets/8465bf6b1213d39678808487b085218f.png'
 import image2 from '@/../public/assets/fec51fd1393a3cb27b4bfd98f36e8c9e.png'
 import image3 from '@/../public/assets/461e8b3f78c3c1e2faa3a3e4f1360f16.png'
+import img1 from '../../../public/assets/WhatsApp Image 2024-12-26 at 13.06.53_edce4c89.jpg'
 import ServiceBanner from '@/shared/ServiceBanner';
 import SectionTitle from '@/shared/SectionTitles';
 import BottomSection from '@/shared/BottomSection';
@@ -25,7 +26,7 @@ const page = () => {
                     <source src={video} type="video/mp4" />
                 </video>
             </div>
-            <ServiceBanner text1={'About Us'} />
+            <ServiceBanner text1={'About Us'} img={img1} />
             <div className='2xl:my-20 xl:my-16 my-10 2xl:px-0 xl:px-0 px-6'>
                 <SectionTitle heading1={'We Help Making your'} heading2={'Dream into Reality'} subHeading={'About Our Company'} />
             </div>

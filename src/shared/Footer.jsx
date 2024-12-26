@@ -139,10 +139,10 @@ const Footer = () => {
                                 <Link href={'/'}>Digital Marketing</Link>
                             </li>
                             <li className="link link-hover">
-                                <Link href={'/'}>Web Design</Link>
+                                <Link href={'/'}>Graphics Design</Link>
                             </li>
                             <li className="link link-hover">
-                                <Link href={'/'}>Web Development</Link>
+                                <Link href={'/'}>Web Design & Development</Link>
                             </li>
                         </ul>
                     </nav>
