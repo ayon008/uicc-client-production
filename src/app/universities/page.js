@@ -196,7 +196,7 @@ const Card = ({ university }) => {
                     ))}
                 </ul>
                 <div className="mt-6">
-                    <ButtonPrimary text={'Read More'} />
+                    <ButtonPrimary text={'Register Now'} />
                 </div>
             </div>
         </div>

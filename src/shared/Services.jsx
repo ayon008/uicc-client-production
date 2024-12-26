@@ -14,7 +14,7 @@ const Services = ({ heading, subHeading, text, btn, href, color }) => {
                 <h1 className={`2xl:text-2xl xl:text-xl ${color === 'black' ? 'text-deep-blue' : 'text-white'} font-semibold`}>{subHeading}</h1>
                 <p className={`my-4  ${color === 'black' ? 'text-deep-blue' : 'text-white'}`}>{text}</p>
                 <Link href={`${href}`}>
-                    <ButtonPrimary text={`${btn ? 'Read More' : 'Register Now'}`} />
+                    <ButtonPrimary text={`${btn ? 'Register Now' : 'Register Now'}`} />
                 </Link>
             </div>
         </div>

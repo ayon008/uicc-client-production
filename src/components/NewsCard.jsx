@@ -20,7 +20,7 @@ const NewsCard = ({ text, heading, img }) => {
                         <h1 className='2xl:text-[28px] xl:text-2xl text-sm font-semibold 2xl:mt-6 xl:mt-6 mt-1'>{heading}</h1>
                         <p className='2xl:text-[12px] xl:text-[10px] text-[10px] 2xl:mt-3 xl:mt-3 mt-1'>{text}</p>
                         <Link href="/" className='mt-auto'>
-                            <ButtonPrimary text={'Read More'} />
+                            <ButtonPrimary text={'Register Now'} />
                         </Link>
                     </div>
                 </div>
