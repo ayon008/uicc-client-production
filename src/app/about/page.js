@@ -26,7 +26,7 @@ const page = () => {
                     <source src={video} type="video/mp4" />
                 </video>
             </div>
-            <ServiceBanner text1={'About Us'} img={img1} />
+            <ServiceBanner show={true} text1={'About Us'} img={img1} />
             <div className='2xl:my-20 xl:my-16 my-10 2xl:px-0 xl:px-0 px-6'>
                 <SectionTitle heading1={'We Help Making your'} heading2={'Dream into Reality'} subHeading={'About Our Company'} />
             </div>
