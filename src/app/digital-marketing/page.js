@@ -33,7 +33,7 @@ const Page = () => {
                 </p>
                 <p className='2xl:text-xl xl:text-lg font-normal my-10'>
                     <span className='font-bold text-3xl inline-block mb-[6px]'>Social Media Marketing (SMM)</span> <br />
-                    <span className="font-bold">Search Engine Optimization</span> : Search engine optimization is the process of increasing website visibility and ranking on search engine result pages, by strategic use of keywords, content optimization and link building, businesses can increase their organic traffic and improve their online presence.
+                    <span className="font-bold">Social Media Marketing (SMM)</span> : Social media plays a crucial role in people’s daily life. Social media marketing involves creating and sharing contents on social media platforms like Facebook, Instagram, Twitter, LinkedIn, to connect with audience, build brand awareness, drive website traffic, and generate leads. Effective social media marketing requires a deep understanding of audiences, strategic content planning and consistent engagement
                 </p>
                 <p className='2xl:text-xl xl:text-lg font-normal my-10'>
                     <span className='font-bold text-3xl inline-block mb-[6px]'>Content Marketing</span> <br />

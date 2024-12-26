@@ -114,7 +114,7 @@ export default function VisaService() {
             <div className='2xl:block xl:block hidden'>
                 <Swiper
                     ref={swiperRef}
-                    speed={600}
+                    speed={300}
                     pagination={{ clickable: true }}
                     autoplay={{
                         delay: 8000, // Time in milliseconds before moving to the next slide
