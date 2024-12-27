@@ -356,7 +356,7 @@ const NavBar = () => {
                         </li>
                         <li className='parent-option border-opacity-30 border-b-gray '>
                             <Option show={true}>
-                                <Link href={'/digital-marketing'}>
+                                <Link href={'/graphics-design'}>
                                     Graphics Design
                                 </Link>
                             </Option>
@@ -566,7 +566,7 @@ const NavBar = () => {
                                                                 </Link>
                                                             </p>
                                                             <p className='py-2 text-black hover:text-orange transition-all duration-300 border-b-[0.60px] border-b-black border-opacity-20 ease-linear'>
-                                                                <Link href={'/digital-marketing'}>
+                                                                <Link href={'/graphics-design'}>
                                                                     Graphics Design
                                                                 </Link>
                                                             </p>
@@ -789,7 +789,7 @@ const NavBar = () => {
                                                             </Link>
                                                         </p>
                                                         <p className='py-2 text-black hover:text-orange transition-all duration-300 border-b-[0.60px] border-b-black border-opacity-20 ease-linear'>
-                                                            <Link href={'/digital-marketing'}>
+                                                            <Link href={'/graphics-design'}>
                                                                 Graphics Design
                                                             </Link>
                                                         </p>
