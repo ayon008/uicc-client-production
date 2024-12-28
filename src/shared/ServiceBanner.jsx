@@ -14,7 +14,7 @@ const ServiceBanner = ({ text1, text2, img, show }) => {
     return (
         <div className="relative 2xl:mt-[100px] xl:mt-[100px]">
             {
-                !show && <div className='w-full h-full absolute inset-0 z-30 bg-black bg-opacity-30'></div>
+                !show && <div className='w-full h-full absolute inset-0 z-30 bg-black bg-opacity-10'></div>
             }
             {/* Background image */}
             <div className="h-[400px] xl:h-[650px] 2xl:h-[700px]">

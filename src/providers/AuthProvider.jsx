@@ -171,6 +171,13 @@ const AuthProvider = ({ children }) => {
                 console.log(currentUser);
                 try {
                     setUser(currentUser);
+                    fetch('https://uicc-server.vercel.app/user', {
+                        method: 'POST', // Use uppercase for the method
+                        headers: { // Specify headers explicitly
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(currentUser) // Stringify the body for JSON
+                    })
                 } catch (error) {
                     console.log(error.message);
                 } finally {

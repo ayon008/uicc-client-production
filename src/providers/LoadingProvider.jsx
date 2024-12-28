@@ -15,6 +15,13 @@ const LoadingProvider = ({ children }) => {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
+        fetch('https://uicc-server.vercel.app/visitor', {
+            method: 'POST', // Use uppercase for the method
+            headers: { // Specify headers explicitly
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ visitorCount: 1 }) // Stringify the body for JSON
+        })
         const timer = setTimeout(() => {
             setLoading(false);
         }, 3000);

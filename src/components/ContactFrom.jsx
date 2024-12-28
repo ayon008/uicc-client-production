@@ -131,7 +131,7 @@ const ContactForm = () => {
 
                 </div>
                 <div className="form-control mt-10 w-1/2 mx-auto">
-                    <ButtonPrimary width={true} text={'Send Message'}/>
+                    <ButtonPrimary width={true} text={'Send Message'} />
                 </div>
             </form>
         </div>

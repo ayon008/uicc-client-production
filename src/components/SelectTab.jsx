@@ -15,6 +15,7 @@ import { rubik } from '@/shared/Rubik';
 import person6 from '../../public/assets/file (8) (1).png'
 import ButtonSecondary from '@/shared/ButtonSecondary';
 import AnimatedImage from '@/shared/BannerImage';
+import Link from 'next/link';
 
 const SelectTab = () => {
     const [activeIndex, setActiveIndex] = useState(5);
@@ -167,7 +168,9 @@ const SelectTab = () => {
                     </BannerAnimation>
                     <BannerAnimation activeIndex={activeIndex} delay={2}>
                         <div className='mt-6'>
-                            <ButtonSecondary text={'Register Now'} />
+                            <Link href={'/signUp'}>
+                                <ButtonSecondary text={'Register Now'} />
+                            </Link>
                         </div>
                     </BannerAnimation>
                 </div>

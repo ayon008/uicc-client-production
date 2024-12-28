@@ -2,8 +2,7 @@ import Image from 'next/image';
 import React from 'react';
 import image from '../../public/assets/pexels-cottonbro-4667331.jpg'
 import Animated from '@/shared/Animated';
-import img1 from '../../public/assets/1.png'
-import img2 from '../../public/assets/2.png'
+import img1 from '../../public/assets/1 (1).png'
 import { FaPhoneAlt, FaPlus } from 'react-icons/fa';
 import { rubik, serif } from '@/app/layout';
 import { FiSend } from 'react-icons/fi';
@@ -22,7 +21,14 @@ import TextAnimation from '@/shared/TextAnimation';
 import ButtonSecondary from '@/shared/ButtonSecondary';
 // import video from '../../public/assets/About.mp4';
 
-const AboutUs = () => {
+const AboutUs = async () => {
+    const res = await fetch('https://uicc-server.vercel.app/visitors')
+    const data = await res.json();
+    const visitors = data?.visitorCount;
+    const userRes = await fetch('https://uicc-server.vercel.app/users');
+    const userData = await userRes.json();
+    const totalUser = userData?.userCount + 4021;
+    console.log(totalUser);
     return (
         <div className='relative'>
             <div className='absolute right-0 left-0 top-0 bottom-0 -z-10'>
@@ -88,10 +94,22 @@ const AboutUs = () => {
                         </div>
                     </Animated>
                     <Animated className='2xl:block xl:block hidden absolute top-10 -right-14'>
-                        <Image className="" src={img1} alt="" />
+                        <div className="relative">
+                            <Image className="z-30" src={img1} alt="" />
+                            <div className="absolute top-1/2 -translate-y-1/2 z-40 left-10">
+                                <h4>Visitors</h4>
+                                <p>{visitors}</p>
+                            </div>
+                        </div>
                     </Animated>
                     <Animated className='2xl:block xl:block hidden absolute -left-14 bottom-28'>
-                        <Image className="" src={img2} alt="" />
+                    <div className="relative">
+                            <Image className="z-30" src={img1} alt="" />
+                            <div className="absolute top-1/2 -translate-y-1/2 z-40 left-10">
+                                <h4>Students</h4>
+                                <p>{totalUser}</p>
+                            </div>
+                        </div>
                     </Animated>
                 </div>
                 <div className="flex flex-col justify-between 2xl:space-y-0 xl:space-y-0 space-y-6">

@@ -11,6 +11,7 @@ import video from '@/../public/assets/Abstract White Background 4K - Motion Grap
 import us from '../../../public/assets/Image-80 (3).png'
 import img1 from '../../../public/assets/FotoJet.png';
 import jap from '../../../public/assets/Image-80 (5).png'
+import Link from 'next/link';
 
 // List of Australian universities
 const universities = [
@@ -198,7 +199,9 @@ const Card = ({ university }) => {
                 </ul>
             </div>
             <div className="mt-auto h-fit">
-                <ButtonPrimary text={'Register Now'} />
+                <Link href={"/signUp"}>
+                    <ButtonPrimary text={'Register Now'} />
+                </Link>
             </div>
         </div>
     );
