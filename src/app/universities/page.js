@@ -9,6 +9,7 @@ import BottomSection from '@/shared/BottomSection';
 import ButtonPrimary from '@/shared/ButtonPrimary';
 import video from '@/../public/assets/Abstract White Background 4K - Motion Graphics Background Loop - White Video Loop.mp4';
 import us from '../../../public/assets/Image-80 (3).png'
+import img1 from '../../../public/assets/FotoJet.png';
 import jap from '../../../public/assets/Image-80 (5).png'
 
 // List of Australian universities
@@ -216,7 +217,7 @@ const page = () => {
                     <source src={video} type="video/mp4" />
                 </video>
             </div>
-            <ServiceBanner text1={'Universities'} />
+            <ServiceBanner text1={'Universities'} img={img1} />
             <div className="2xl:my-28 xl:my-20 my-10">
                 <SectionTitle
                     subHeading={'Associate Universities'}

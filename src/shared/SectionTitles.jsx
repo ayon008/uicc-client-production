@@ -25,7 +25,7 @@ const SectionTitle = ({ subHeading, heading1, heading2, width }) => {
                 </div>
                 <div className={`flex items-center justify-center gap-2`}>
                     <h2 className="">
-                        <TextAnimation repeat={true} delay={0.4} className={`2xl:text-5xl xl:text-5xl text-2xl mt-2 text-center mx-auto ${serif.className}`}>
+                        <TextAnimation repeat={true} delay={0} className={`2xl:text-5xl xl:text-5xl text-2xl mt-2 text-center mx-auto ${serif.className}`}>
                             {heading2}
                         </TextAnimation>
                     </h2>
