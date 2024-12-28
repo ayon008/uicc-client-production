@@ -2,6 +2,7 @@
 import React from 'react';
 import Image from 'next/image';
 import img1 from '../../../public/assets/WhatsApp Image 2024-12-26 at 15.29.42_574c13a6.jpg'
+import img2 from '../../../public/assets/WhatsApp Image 2024-12-28 at 13.41.43_c5d60cad.jpg';
 import TickIcon from '@/components/TickIcon';
 import ServiceBanner from '@/shared/ServiceBanner';
 import logo1 from '../../../public/assets/Microsoft_Office_PowerPoint_Logo_512px.png'
@@ -14,7 +15,7 @@ import logo5 from '../../../public/assets/images.png'
 const Page = () => {
     return (
         <div>
-            <ServiceBanner text1={'Graphics Design'} img={img1} />
+            <ServiceBanner text1={'Graphics Design'} img={img2} />
             <div className='2xl:p-20 xl:p-16 p-12'>
                 <div className="grid grid-cols-2 items-stretch my-10 gap-10"
                     style={{

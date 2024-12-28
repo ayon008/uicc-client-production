@@ -1,14 +1,18 @@
 
 import React from 'react';
 import Image from 'next/image';
-import img1 from '../../../public/assets/WhatsApp Image 2024-12-26 at 15.29.42_574c13a6.jpg'
+import img1 from '../../../public/assets/WhatsApp Image 2024-12-28 at 13.41.41_802367cb.jpg'
+import img2 from '../../../public/assets/WhatsApp Image 2024-12-28 at 13.41.43_28c0fa6a.jpg'
+import img3 from '../../../public/assets/WhatsApp Image 2024-12-28 at 13.41.41_a38d43d2.jpg';
 import TickIcon from '@/components/TickIcon';
 import ServiceBanner from '@/shared/ServiceBanner';
-import logo1 from '../../../public/assets/Microsoft_Office_PowerPoint_Logo_512px.png'
-import logo2 from '../../../public/assets/download.png'
-import logo3 from '../../../public/assets/png-clipart-logo-product-design-brand-font-adobe-illustrator-text-trademark-thumbnail.png'
-import logo4 from '../../../public/assets/download.jpeg'
-import logo5 from '../../../public/assets/images.png'
+import logo1 from '../../../public/assets/images (1).png'
+import logo2 from '../../../public/assets/png-transparent-visual-studio-code-hd-logo-thumbnail.png'
+import logo3 from '../../../public/assets/images.jpeg'
+import logo4 from '../../../public/assets/png-transparent-vuejs-logos-and-brands-line-filled-icon-thumbnail.png'
+import logo5 from '../../../public/assets/download (1).png'
+import logo6 from '../../../public/assets/download (2).png';
+import { FaChalkboardTeacher } from 'react-icons/fa';
 
 
 const Page = () => {
@@ -44,7 +48,7 @@ const Page = () => {
                         </p>
                     </div>
                     <div className="w-full h-full">
-                        <Image className='w-full h-full object-cover' src={img1} alt='' />
+                        <Image className='w-full h-full object-cover' src={img2} alt='' />
                     </div>
                 </div>
                 <p className='2xl:text-xl xl:text-lg font-normal my-10'>
@@ -73,26 +77,44 @@ const Page = () => {
                 <p className='2xl:text-xl xl:text-lg font-normal my-10'>
                     <span className='font-bold text-3xl inline-block mb-[6px]'>Softwares you will learn</span> <br />
                 </p>
-                <div className='grid grid-cols-2 gap-6'>
+                <div className='grid grid-cols-2 gap-10'>
                     <div className='flex items-center gap-5'>
                         <Image src={logo1} className='w-[50px]' alt='' />
-                        <h3 className='text-2xl font-semibold text-slate-600'>Microsoft Office <br />PowerPoint</h3>
+                        <h3 className='text-2xl font-semibold text-slate-600'>Figma</h3>
                     </div>
                     <div className='flex items-center gap-5'>
                         <Image src={logo3} className='w-[50px]' alt='' />
-                        <h3 className='text-2xl font-semibold text-slate-600'>Adobe Illustrator</h3>
+                        <h3 className='text-2xl font-semibold text-slate-600'>Web Browser</h3>
                     </div>
                     <div className='flex items-center gap-5'>
                         <Image src={logo5} className='w-[50px]' alt='' />
-                        <h3 className='text-2xl font-semibold text-slate-600'>Adobe XD</h3>
+                        <h3 className='text-2xl font-semibold text-slate-600'>Laravel</h3>
                     </div>
                     <div className='flex items-center gap-5'>
                         <Image src={logo2} className='w-[50px]' alt='' />
-                        <h3 className='text-2xl font-semibold text-slate-600'>Adobe Photoshop</h3>
+                        <h3 className='text-2xl font-semibold text-slate-600'>VS Code</h3>
                     </div>
                     <div className='flex items-center gap-5'>
                         <Image src={logo4} className='w-[50px]' alt='' />
-                        <h3 className='text-2xl font-semibold text-slate-600'>Adobe InDesign</h3>
+                        <h3 className='text-2xl font-semibold text-slate-600'>Vue Js</h3>
+                    </div>
+                    <div className='flex items-center gap-5'>
+                        <Image src={logo6} className='w-[50px]' alt='' />
+                        <h3 className='text-2xl font-semibold text-slate-600'>PHP</h3>
+                    </div>
+                </div>
+                <div className="grid grid-cols-2 items-stretch my-16">
+                    <div className='w-full h-full'>
+                        <Image src={img3} className='h-full w-full object-fill' alt="" />
+                    </div>
+                    <div>
+                        <div className='w-full h-full pl-10 py-6' style={{ background: "linear-gradient(180deg, #fdfde5, #f8f9d8" }}>
+                            <FaChalkboardTeacher size={'1.5rem'} color='#B8860B' />
+                            <p className='2xl:text-xl xl:text-lg font-normal mt-8 2xl:w-[65%] xl:w-[65%]'>
+                                <span className='font-bold text-3xl inline-block mb-[10px]'>Review Class</span> <br />
+                                Do you face difficulty when you review the previous concepts? To ensure the best learning outcome, we arrange review classes that help our students overcome any problem in their skill development process. You will be able to understand the topics that you find complex under the close supervision of our skilled mentors.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>

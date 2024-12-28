@@ -179,7 +179,7 @@ const universities = [
 const Card = ({ university }) => {
     let img = university.country === 'USA' ? us : university.country === 'Japan' ? jap : image1;
     return (
-        <div className="rounded-xl box-shadow p-6">
+        <div className="rounded-xl box-shadow p-6 h-[400px] flex flex-col">
             <div className="flex items-center gap-2">
                 <Image src={img} alt={`${university.name} image`} />
                 <div>
@@ -196,9 +196,9 @@ const Card = ({ university }) => {
                         </li>
                     ))}
                 </ul>
-                <div className="mt-6">
-                    <ButtonPrimary text={'Register Now'} />
-                </div>
+            </div>
+            <div className="mt-auto h-fit">
+                <ButtonPrimary text={'Register Now'} />
             </div>
         </div>
     );
