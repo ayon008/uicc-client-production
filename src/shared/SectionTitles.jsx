@@ -6,7 +6,7 @@ import { serif } from './Serif';
 
 const SectionTitle = ({ subHeading, heading1, heading2, width }) => {
     return (
-        <div>
+        <div className="h-[160px]">
             <div className="flex items-center justify-center gap-2">
                 <FaTelegram />
                 <h2 className="">
