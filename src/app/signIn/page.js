@@ -129,10 +129,10 @@ const Page = () => {
                         </div>
                     </form>
                     <div className='pt-4 pb-8 px-8'>
-                        <button onClick={() => googleLogin()} style={{ borderRadius: '26px' }} className='btn bg-white w-full'>
+                        {/* <button onClick={() => googleLogin()} style={{ borderRadius: '26px' }} className='btn bg-white w-full'>
                             <Facebook />
                             <span>Login with Facebook </span>
-                        </button>
+                        </button> */}
                         <button onClick={() => googleLogin()} style={{ borderRadius: '26px' }} className='btn mt-4 bg-white w-full'>
                             <Google />
                             <span>Login with Google </span>

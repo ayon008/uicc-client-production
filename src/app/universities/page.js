@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import React from 'react';
 import image1 from '../../../public/assets/Image-80 (2).png';
+import sk from '../../../public/assets/Image-80 (4).png'
 import { FaCheck } from 'react-icons/fa';
 import { ButtonTerTiary } from '../page';
 import ServiceBanner from '@/shared/ServiceBanner';
@@ -74,6 +75,116 @@ const universities = [
             'Global Research Network',
             'Innovative Learning Environment',
             'Comprehensive Degree Programs'
+        ]
+    },
+    {
+        name: 'Keio University',
+        country: 'Japan',
+        description: 'Admission Service',
+        benefits: [
+            'Diverse Academic Offerings',
+            'Strong Focus on Research',
+            'Vibrant Campus Life',
+            'Global Alumni Network'
+        ]
+    },
+    {
+        name: 'Waseda University',
+        country: 'Japan',
+        description: 'Admission Service',
+        benefits: [
+            'Diverse Academic Offerings',
+            'Strong Focus on Research',
+            'Vibrant Campus Life',
+            'Global Alumni Network'
+        ]
+    },
+    {
+        name: 'Ritsumeikan University',
+        country: 'Japan',
+        description: 'Admission Service',
+        benefits: [
+            'Diverse Academic Offerings',
+            'Strong Focus on Research',
+            'Vibrant Campus Life',
+            'Global Alumni Network'
+        ]
+    },
+    {
+        name: 'Nihon University',
+        country: 'Japan',
+        description: 'Admission Service',
+        benefits: [
+            'Diverse Academic Offerings',
+            'Strong Focus on Research',
+            'Vibrant Campus Life',
+            'Global Alumni Network'
+        ]
+    },
+    {
+        name: 'Meiji University',
+        country: 'Japan',
+        description: 'Admission Service',
+        benefits: [
+            'Diverse Academic Offerings',
+            'Strong Focus on Research',
+            'Vibrant Campus Life',
+            'Global Alumni Network'
+        ]
+    },
+    {
+        name: 'Kindai University',
+        country: 'Japan',
+        description: 'Admission Service',
+        benefits: [
+            'Diverse Academic Offerings',
+            'Strong Focus on Research',
+            'Vibrant Campus Life',
+            'Global Alumni Network'
+        ]
+    },
+    {
+        name: 'Doshisha University',
+        country: 'Japan',
+        description: 'Admission Service',
+        benefits: [
+            'Diverse Academic Offerings',
+            'Strong Focus on Research',
+            'Vibrant Campus Life',
+            'Global Alumni Network'
+        ]
+    },
+    {
+        name: 'Hosei University',
+        country: 'Japan',
+        description: 'Admission Service',
+        benefits: [
+            'Diverse Academic Offerings',
+            'Strong Focus on Research',
+            'Vibrant Campus Life',
+            'Global Alumni Network'
+        ]
+    },
+    {
+        name: 'Rikkyo University',
+        country: 'Japan',
+        description: 'Admission Service',
+        benefits: [
+            'Diverse Academic Offerings',
+            'Strong Focus on Research',
+            'Vibrant Campus Life',
+            'Global Alumni Network'
+        ]
+    },
+    {
+        name: 'Tokyo University of Science',
+        country: 'Japan',
+        description: 'Admission Service',
+        benefits: [
+            'Diverse Academic Offerings',
+            'Strong Focus on Research',
+            'Vibrant Campus Life',
+            'Global Alumni Network'
         ]
     },
     {
@@ -820,12 +931,221 @@ const universities = [
             'Vibrant Campus Life',
             'Global Alumni Network'
         ]
+    },
+    {
+        name: 'Yonsei University',
+        country: 'South Korea',
+        description: 'Admission Service',
+        benefits: [
+            'Diverse Academic Offerings',
+            'Strong Focus on Research',
+            'Vibrant Campus Life',
+            'Global Alumni Network'
+        ]
+    },
+    {
+        name: 'Korea University',
+        country: 'South Korea',
+        description: 'Admission Service',
+        benefits: [
+            'Diverse Academic Offerings',
+            'Strong Focus on Research',
+            'Vibrant Campus Life',
+            'Global Alumni Network'
+        ]
+    },
+    {
+        name: 'Hanyang University',
+        country: 'South Korea',
+        description: 'Admission Service',
+        benefits: [
+            'Diverse Academic Offerings',
+            'Strong Focus on Research',
+            'Vibrant Campus Life',
+            'Global Alumni Network'
+        ]
+    },
+    {
+        name: 'Sungkyunkwan University',
+        country: 'South Korea',
+        description: 'Admission Service',
+        benefits: [
+            'Diverse Academic Offerings',
+            'Strong Focus on Research',
+            'Vibrant Campus Life',
+            'Global Alumni Network'
+        ]
+    },
+    {
+        name: 'Kyung Hee University',
+        country: 'South Korea',
+        description: 'Admission Service',
+        benefits: [
+            'Diverse Academic Offerings',
+            'Strong Focus on Research',
+            'Vibrant Campus Life',
+            'Global Alumni Network'
+        ]
+    },
+    {
+        name: 'Pohang University of Science and Technology',
+        country: 'South Korea',
+        description: 'Admission Service',
+        benefits: [
+            'Diverse Academic Offerings',
+            'Strong Focus on Research',
+            'Vibrant Campus Life',
+            'Global Alumni Network'
+        ]
+    },
+    {
+        name: 'Ewha Womans University',
+        country: 'South Korea',
+        description: 'Admission Service',
+        benefits: [
+            'Diverse Academic Offerings',
+            'Strong Focus on Research',
+            'Vibrant Campus Life',
+            'Global Alumni Network'
+        ]
+    },
+    {
+        name: 'Chung-Ang University',
+        country: 'South Korea',
+        description: 'Admission Service',
+        benefits: [
+            'Diverse Academic Offerings',
+            'Strong Focus on Research',
+            'Vibrant Campus Life',
+            'Global Alumni Network'
+        ]
+    },
+    {
+        name: 'Sejong University',
+        country: 'South Korea',
+        description: 'Admission Service',
+        benefits: [
+            'Diverse Academic Offerings',
+            'Strong Focus on Research',
+            'Vibrant Campus Life',
+            'Global Alumni Network'
+        ]
+    },
+    {
+        name: 'Sogang University',
+        country: 'South Korea',
+        description: 'Admission Service',
+        benefits: [
+            'Diverse Academic Offerings',
+            'Strong Focus on Research',
+            'Vibrant Campus Life',
+            'Global Alumni Network'
+        ]
+    },
+    {
+        name: 'Sungshin Women’s University',
+        country: 'South Korea',
+        description: 'Admission Service',
+        benefits: [
+            'Diverse Academic Offerings',
+            'Strong Focus on Research',
+            'Vibrant Campus Life',
+            'Global Alumni Network'
+        ]
+    },
+    {
+        name: 'Inha University',
+        country: 'South Korea',
+        description: 'Admission Service',
+        benefits: [
+            'Diverse Academic Offerings',
+            'Strong Focus on Research',
+            'Vibrant Campus Life',
+            'Global Alumni Network'
+        ]
+    },
+    {
+        name: 'Ajou University',
+        country: 'South Korea',
+        description: 'Admission Service',
+        benefits: [
+            'Diverse Academic Offerings',
+            'Strong Focus on Research',
+            'Vibrant Campus Life',
+            'Global Alumni Network'
+        ]
+    },
+    {
+        name: 'Yeungnam University',
+        country: 'South Korea',
+        description: 'Admission Service',
+        benefits: [
+            'Diverse Academic Offerings',
+            'Strong Focus on Research',
+            'Vibrant Campus Life',
+            'Global Alumni Network'
+        ]
+    },
+    {
+        name: 'Konkuk University',
+        country: 'South Korea',
+        description: 'Admission Service',
+        benefits: [
+            'Diverse Academic Offerings',
+            'Strong Focus on Research',
+            'Vibrant Campus Life',
+            'Global Alumni Network'
+        ]
+    },
+    {
+        name: 'Soongsil University',
+        country: 'South Korea',
+        description: 'Admission Service',
+        benefits: [
+            'Diverse Academic Offerings',
+            'Strong Focus on Research',
+            'Vibrant Campus Life',
+            'Global Alumni Network'
+        ]
+    },
+    {
+        name: 'Catholic University of Korea',
+        country: 'South Korea',
+        description: 'Admission Service',
+        benefits: [
+            'Diverse Academic Offerings',
+            'Strong Focus on Research',
+            'Vibrant Campus Life',
+            'Global Alumni Network'
+        ]
+    },
+    {
+        name: 'Hallym University',
+        country: 'South Korea',
+        description: 'Admission Service',
+        benefits: [
+            'Diverse Academic Offerings',
+            'Strong Focus on Research',
+            'Vibrant Campus Life',
+            'Global Alumni Network'
+        ]
+    },
+    {
+        name: 'Hongik University',
+        country: 'South Korea',
+        description: 'Admission Service',
+        benefits: [
+            'Diverse Academic Offerings',
+            'Strong Focus on Research',
+            'Vibrant Campus Life',
+            'Global Alumni Network'
+        ]
     }
 ];
 
 
 const Card = ({ university }) => {
-    let img = university.country === 'USA' ? us : university.country === 'Japan' ? jap : image1;
+    let img = university.country === 'USA' ? us : university.country === 'Japan' ? jap : university.country === 'South Korea' ? sk : image1;
     return (
         <div className="rounded-xl box-shadow p-6 h-[400px] flex flex-col">
             <div className="flex items-center gap-2">
