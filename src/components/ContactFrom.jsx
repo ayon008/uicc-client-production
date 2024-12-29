@@ -20,9 +20,13 @@ const ContactForm = () => {
             });
 
             // Simulate a form submission delay
-            await new Promise((resolve) => setTimeout(resolve, 2000));
-            console.log(data);
-
+            fetch('https://uicc-server.vercel.app/contact', {
+                method: 'POST', // Use uppercase for the method
+                headers: { // Specify headers explicitly
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data) // Stringify the body for JSON
+            })
             // Handle success
             Swal.fire({
                 icon: 'success',
