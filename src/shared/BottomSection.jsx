@@ -4,7 +4,7 @@ const BottomSection = () => {
         <div className='2xl:px-10 xl:px-10 px-0 2xl:py-36 xl:py-28 py-12'>
             <div className='bottomSection flex flex-col'>
                 <div className='h-fit my-auto flex 2xl:flex-row xl:flex-row flex-col justify-between items-center 2xl:px-14 xl:px-10 px-6'>
-                    <p className='text-white h-fit 2xl:text-5xl xl:text-4xl text-lg font-semibold'>Subscribe To Immigway <br /> For All the offers</p>
+                    <p className='text-white h-fit 2xl:text-5xl xl:text-4xl text-lg font-semibold'>Subscribe To Uttaraicc <br /> For All the offers</p>
                     <form className='2xl:min-w-[400px] xl:min-w-[400px] relative h-fit'>
                         <input className='rounded-[40px] p-4 w-full' type='email' placeholder='Email' />
                         <button type='submit' className='absolute bottom-[5px] right-2'>
