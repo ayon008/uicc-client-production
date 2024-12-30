@@ -18,6 +18,7 @@ import { GiHamburgerMenu } from 'react-icons/gi';
 import { FaChevronDown, FaFacebookSquare, FaLinkedinIn, FaTwitterSquare, FaWhatsappSquare } from 'react-icons/fa';
 import { IoCloseOutline } from 'react-icons/io5';
 import { serif } from './Serif';
+import useAuth from '@/app/Hooks/useAuth';
 const NavBar = () => {
     const [scrolled, setScrolled] = useState(false);
     const pathname = usePathname();
@@ -39,6 +40,13 @@ const NavBar = () => {
             window.removeEventListener('scroll', handleScroll);
         };
     }, []);
+
+    const { user, logOut } = useAuth();
+
+    const handleLogOut = () => {
+        logOut();
+    }
+
 
     useEffect(() => {
         // Disable scrolling on the body when the menu is open
@@ -592,12 +600,17 @@ const NavBar = () => {
                                 </div>
                             </div>
                             <div className='hidden items-center gap-6 2xl:flex xl:flex'>
-                                <div className='w-fit'>
+                                {/* <div className='w-fit'>
                                     <button className="rounded-[30px] flex items-center btn text-orange bg-red-100 btn-outline 2xl:text-lg xl:text-base text-sm">
                                         <MdSearch size={24} color="#c6250c" />
                                         <span>Search</span>
                                     </button>
-                                </div>
+                                </div> */}
+                                {
+                                    user && <li onClick={() => handleLogOut()} className={`2xl:text-xl xl:text-base text-sm ${serif.className} font-semibold hover:text-orange transition-all cursor-pointer duration-100 ${pathname === '/' ? 'text-orange' : ''}`}>
+                                        Log Out
+                                    </li>
+                                }
                                 <div className='btn' onClick={() => setOpen(!open)}>
                                     <GiHamburgerMenu size={'1.5rem'} />
                                 </div>
@@ -816,10 +829,15 @@ const NavBar = () => {
                         </div>
                         <div className='hidden items-center gap-6 2xl:flex xl:flex'>
                             <div className='w-fit'>
-                                <button className="rounded-[30px] flex items-center btn text-orange bg-red-100 btn-outline 2xl:text-lg xl:text-base text-sm">
+                                {/* <button className="rounded-[30px] flex items-center btn text-orange bg-red-100 btn-outline 2xl:text-lg xl:text-base text-sm">
                                     <MdSearch size={24} color="#c6250c" />
                                     <span>Search</span>
-                                </button>
+                                </button> */}
+                                {
+                                    user && <li onClick={() => handleLogOut()} className={`2xl:text-xl xl:text-base text-sm ${serif.className} font-semibold hover:text-orange transition-all cursor-pointer duration-100 ${pathname === '/' ? 'text-orange' : ''}`}>
+                                        Log Out
+                                    </li>
+                                }
                             </div>
                             <div className='btn' onClick={() => setOpen(!open)}>
                                 <GiHamburgerMenu size={'1.5rem'} />

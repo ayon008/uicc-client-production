@@ -144,21 +144,6 @@ const AuthProvider = ({ children }) => {
         }
     };
 
-
-    const userInfo = {
-        user,
-        logOut,
-        createWithGoogle,
-        createAccount,
-        signIn,
-        loader,
-        updatedProfile,
-        changePassword,
-        verifyPassword,
-        reauthenticateAndDelete,
-        deleteGoogleUser
-    };
-
     const isRequestInProgress = useRef(false);
 
     useEffect(() => {
@@ -196,6 +181,21 @@ const AuthProvider = ({ children }) => {
             unSubscribe();
         };
     }, [auth]);
+
+
+    const userInfo = {
+        user,
+        logOut,
+        createWithGoogle,
+        createAccount,
+        signIn,
+        loader,
+        updatedProfile,
+        changePassword,
+        verifyPassword,
+        reauthenticateAndDelete,
+        deleteGoogleUser
+    };
 
     return (
         <AuthContext.Provider value={userInfo}>
