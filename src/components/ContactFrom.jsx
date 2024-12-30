@@ -135,7 +135,12 @@ const ContactForm = () => {
 
                 </div>
                 <div className="form-control mt-10 w-1/2 mx-auto">
-                    <ButtonPrimary width={true} text={'Send Message'} />
+                    <a href="https://wa.me/8801958377801"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Chat on WhatsApp">
+                        <ButtonPrimary width={true} text={'Send Message'} />
+                    </a>
                 </div>
             </form>
         </div>

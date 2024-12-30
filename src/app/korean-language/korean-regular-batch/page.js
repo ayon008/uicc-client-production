@@ -129,7 +129,7 @@ const Page = () => {
                     <li className='flex items-center'>
                         <TickIcon />
                         <span>
-                            Course fee: 11,000/-  ~  10,000/-
+                            Course fee: 10,000/-
                         </span>
                     </li>
                 </ul>

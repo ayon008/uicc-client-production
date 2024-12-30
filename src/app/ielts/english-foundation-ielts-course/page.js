@@ -35,15 +35,15 @@ const Page = () => {
                     <li className='flex items-center'>
                         <TickIcon />
                         <span>
-                            Tk: 30,000/-
+                            Course fee: 30,000/-
                         </span>
                     </li>
                 </ul>
                 <div className='flex 2xl:flex-row xl:flex-row flex-col items-center mt-10 2xl:gap-6 xl:gap-6 gap-3 w-full'>
-                    <div  className='2xl:w-1/2 xl:w-1/2 w-full'>
+                    <div className='2xl:w-1/2 xl:w-1/2 w-full'>
                         <Image placeholder='blur' className='2xl:flex-1 xl:flex-1 w-full 2xl:h-[450px] xl:h-[350px] 350px object-cover' src={img1} alt='' />
                     </div>
-                    <div  className='2xl:w-1/2 xl:w-1/2 w-full'>
+                    <div className='2xl:w-1/2 xl:w-1/2 w-full'>
                         <Image placeholder='blur' className='2xl:flex-1 xl:flex-1 w-full 2xl:h-[450px] xl:h-[350px] 350px object-cover' src={img2} alt='' />
                     </div>
                 </div>

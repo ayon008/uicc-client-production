@@ -110,7 +110,6 @@ const Footer = () => {
                             <li className="link link-hover">
                                 <Link href={'/universities'}>Top Universities</Link>
                             </li>
-                            <li className="link link-hover">Top Countries</li>
                             <li className="link link-hover">
                                 <Link href={'/ielts'}>Education</Link>
                             </li>

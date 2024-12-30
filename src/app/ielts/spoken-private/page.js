@@ -9,7 +9,7 @@ import ServiceBanner from '@/shared/ServiceBanner';
 const Page = () => {
     return (
         <div>
-            <ServiceBanner text1={'Spoken Private'} img={img1}/>
+            <ServiceBanner text1={'Spoken Private'} img={img1} />
             <div className='2xl:p-20 xl:p-16 p-12'>
                 <h1 className='2xl:text-5xl xl:text-4xl font-semibold'>IELTS Programme</h1>
                 <p className='2xl:text-xl xl:text-lg font-normal mt-6'>
@@ -44,18 +44,18 @@ const Page = () => {
                     <li className='flex items-center'>
                         <TickIcon />
                         <span>
-                            Tk: 20,000/-
+                            Course fee: 20,000/-
                         </span>
                     </li>
                 </ul>
                 <div className='flex 2xl:flex-row xl:flex-row flex-col items-center mt-10 2xl:gap-6 xl:gap-6 gap-3 w-full'>
-                                    <div className='2xl:w-1/2 xl:w-1/2 w-full'>
-                                        <Image placeholder='blur' className='2xl:flex-1 xl:flex-1 w-full 2xl:h-[450px] xl:h-[350px] 350px object-cover' src={img1} alt='' />
-                                    </div>
-                                    <div className='2xl:w-1/2 xl:w-1/2 w-full'>
-                                        <Image placeholder='blur' className='2xl:flex-1 xl:flex-1 w-full 2xl:h-[450px] xl:h-[350px] 350px object-cover' src={img2} alt='' />
-                                    </div>
-                                </div>
+                    <div className='2xl:w-1/2 xl:w-1/2 w-full'>
+                        <Image placeholder='blur' className='2xl:flex-1 xl:flex-1 w-full 2xl:h-[450px] xl:h-[350px] 350px object-cover' src={img1} alt='' />
+                    </div>
+                    <div className='2xl:w-1/2 xl:w-1/2 w-full'>
+                        <Image placeholder='blur' className='2xl:flex-1 xl:flex-1 w-full 2xl:h-[450px] xl:h-[350px] 350px object-cover' src={img2} alt='' />
+                    </div>
+                </div>
                 <h2 className='2xl:text-5xl xl:text-4xl font-semibold my-10'>
                     What You Will Learn from the Course
                 </h2>

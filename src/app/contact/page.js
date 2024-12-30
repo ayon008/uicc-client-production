@@ -29,7 +29,7 @@ const page = () => {
                         <p className="2xl:text-xl xl:text-lg text-center 2xl:mt-2 xl:mt-2 mt-1 text-[#808080]">
                             <a
                                 href="mailto:info@uttara.com"
-                                className="hover:text-blue-500 transition-colors duration-300"
+                                className="hover:underline"
                             >
                                 info@uttara.com
                             </a>
@@ -37,7 +37,7 @@ const page = () => {
                         <p className="2xl:text-xl xl:text-lg text-center 2xl:mt-2 xl:mt-2 mt-1 text-[#808080]">
                             <a
                                 href="mailto:uttaraicc@gmail.com"
-                                className="hover:text-blue-500 transition-colors duration-300"
+                                className="hover:underline"
                             >
                                 uttaraicc@gmail.com
                             </a>
@@ -66,8 +66,12 @@ const page = () => {
                     </div>
                     <div className="card-body 2xl:mt-14 xl:mt-14 mt-8">
                         <h2 className="text-center 2xl:text-2xl xl:text-xl text-lg font-medium">Call Us Anytime</h2>
-                        <p className='2xl:text-xl xl:text-lg 2xl:mt-6 xl:mt-6 mt-3 text-center text-[#808080]'>+880-1958377801</p>
-                        <p className='2xl:text-xl xl:text-lg text-center 2xl:mt-2 xl:mt-2 mt-1 text-[#808080]'>+880-1958377802</p>
+                        <p className='2xl:text-xl xl:text-lg 2xl:mt-6 xl:mt-6 mt-3 text-center text-[#808080]'>
+                            <a href="tel:+8801958377801" className="hover:underline">+880-1958377801</a>
+                        </p>
+                        <p className='2xl:text-xl xl:text-lg text-center 2xl:mt-2 xl:mt-2 mt-1 text-[#808080]'>
+                            <a href="tel:+8801958377802" className="hover:underline">+880-1958377802</a>
+                        </p>
                     </div>
                 </div>
             </div>

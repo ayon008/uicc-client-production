@@ -28,7 +28,7 @@ const AboutUs = async () => {
     const userRes = await fetch('https://uicc-server.vercel.app/users');
     const userData = await userRes.json();
     const totalUser = userData?.userCount + 4021;
-    console.log(totalUser);
+    console.log(totalUser,visitors);
     return (
         <div className='relative'>
             <div className='absolute right-0 left-0 top-0 bottom-0 -z-10'>
