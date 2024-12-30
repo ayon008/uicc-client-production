@@ -39,7 +39,7 @@ const Page = () => {
     console.log(password, confirmPassword);
 
 
-    const { createAccount, createWithGoogle, updatedProfile } = useAuth();
+    const { createAccount, createWithGoogle, updatedProfile, user } = useAuth();
 
     const onSubmit = async (data) => {
         const { email, password, name } = data;
@@ -76,8 +76,8 @@ const Page = () => {
         }
     };
 
-    const googleLogin = () => {
-        createWithGoogle();
+    const googleLogin = async () => {
+        await createWithGoogle();
         return router.push('/')
     }
 
