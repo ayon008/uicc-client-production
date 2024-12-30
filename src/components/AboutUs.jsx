@@ -19,24 +19,17 @@ import FaTicket from '@/icons/FaTicket';
 import Link from 'next/link';
 import TextAnimation from '@/shared/TextAnimation';
 import ButtonSecondary from '@/shared/ButtonSecondary';
+import { getData } from '@/js/getData';
 // import video from '../../public/assets/About.mp4';
 
 const AboutUs = async () => {
-    try {
-        const res = await fetch('https://uicc-server.vercel.app/visitors');
-        if (!res.ok) throw new Error(`Failed to fetch visitors: ${res.status}`);
-        const data = await res.json();
-        const visitors = data?.visitorCount;
-
-        const userRes = await fetch('https://uicc-server.vercel.app/users');
-        if (!userRes.ok) throw new Error(`Failed to fetch users: ${userRes.status}`);
-        const userData = await userRes.json();
-        const totalUser = userData?.userCount + 4021;
-
-        console.log(totalUser, visitors);
-    } catch (error) {
-        console.error('Error fetching data:', error);
-    }
+    const [data, user] = await Promise.all([
+        getData('https://uicc-server.vercel.app/visitors'),
+        getData('https://uicc-server.vercel.app/users')
+    ]);
+    const totalUser = user?.userCount + 4021;
+    const visitors = data?.visitorCount;
+    console.log(totalUser, visitors);
     return (
         <div className='relative'>
             <div className='absolute right-0 left-0 top-0 bottom-0 -z-10'>
