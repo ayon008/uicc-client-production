@@ -22,13 +22,21 @@ import ButtonSecondary from '@/shared/ButtonSecondary';
 // import video from '../../public/assets/About.mp4';
 
 const AboutUs = async () => {
-    const res = await fetch('https://uicc-server.vercel.app/visitors')
-    const data = await res.json();
-    const visitors = data?.visitorCount;
-    const userRes = await fetch('https://uicc-server.vercel.app/users');
-    const userData = await userRes.json();
-    const totalUser = userData?.userCount + 4021;
-    console.log(totalUser,visitors);
+    try {
+        const res = await fetch('https://uicc-server.vercel.app/visitors');
+        if (!res.ok) throw new Error(`Failed to fetch visitors: ${res.status}`);
+        const data = await res.json();
+        const visitors = data?.visitorCount;
+
+        const userRes = await fetch('https://uicc-server.vercel.app/users');
+        if (!userRes.ok) throw new Error(`Failed to fetch users: ${userRes.status}`);
+        const userData = await userRes.json();
+        const totalUser = userData?.userCount + 4021;
+
+        console.log(totalUser, visitors);
+    } catch (error) {
+        console.error('Error fetching data:', error);
+    }
     return (
         <div className='relative'>
             <div className='absolute right-0 left-0 top-0 bottom-0 -z-10'>
@@ -103,7 +111,7 @@ const AboutUs = async () => {
                         </div>
                     </Animated>
                     <Animated className='2xl:block xl:block hidden absolute -left-14 bottom-28'>
-                    <div className="relative">
+                        <div className="relative">
                             <Image className="z-30" src={img1} alt="" />
                             <div className="absolute top-1/2 -translate-y-1/2 z-40 left-10">
                                 <h4>Students</h4>
