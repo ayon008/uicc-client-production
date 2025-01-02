@@ -116,12 +116,8 @@ export default function VisaService() {
                     ref={swiperRef}
                     speed={300}
                     pagination={{ clickable: true }}
-                    autoplay={{
-                        delay: 8000, // Time in milliseconds before moving to the next slide
-                        disableOnInteraction: false, // Keeps autoplay running after user interaction
-                    }}
                     onSlideChange={handleSlideChange}
-                    modules={[Autoplay]}
+                    modules={[]}
                     className="mySwiper mt-10">
                     <SwiperSlide>
                         <div className='grid 2xl:grid-cols-3 xl:grid-cols-3 gap-6'>
