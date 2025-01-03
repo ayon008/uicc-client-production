@@ -27,6 +27,7 @@ import marketing3 from '../../../public/assets/WhatsApp Image 2025-01-01 at 13.3
 import office from '../../../public/assets/WhatsApp Image 2025-01-01 at 13.38.32_0b721a90.jpg'
 import officeAssi from '../../../public/assets/WhatsApp Image 2025-01-01 at 13.41.55_3b69d93e.jpg'
 import executive from '../../../public/assets/WhatsApp Image 2025-01-01 at 13.40.42_9f86dda3.jpg'
+import team from '../../../public/assets/WhatsApp Image 2025-01-03 at 16.01.52_c0501035.jpg'
 import Listen from '@/components/Listen';
 import { serif } from '@/shared/Serif';
 
@@ -90,8 +91,9 @@ const page = () => {
             </div>
             <div>
                 <SectionTitle heading1={'We Have the Best Team'} subHeading={'Our Team'} />
-                <div className='2xl:grid xl:grid hidden grid-cols-3 gap-6 count px-10 pb-10'>
-                    <div>
+                <div className='count px-10 pb-10'>
+                    <Image src={team} className='' alt='' />
+                    {/* <div>
                         <div className='h-[500px] w-full'>
                             <Image className='max-w-full max-h-full' src={instructor2} alt='' />
                         </div>
@@ -155,7 +157,7 @@ const page = () => {
                             <h2 className={`text-center text-white text-2xl uppercase ${serif.className} font-normal`}>Shamim Hawladar</h2>
                             <p className={`text-center ${serif.className} font-normal uppercase text-lg text-white`}>Office Assistant</p>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
                 <ServiceHistory count={'count'} />
                 <BottomSection />
