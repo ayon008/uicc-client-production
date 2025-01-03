@@ -51,7 +51,7 @@ const page = () => {
                 <div className='flex-1 2xl:block xl:block hidden'>
                     <Image
                         className="w-full h-full object-cover"
-                        style={{ objectPosition: '-520px center' }}
+                        // style={{ objectPosition: '-520px center' }}
                         src={image}
                         alt=""
                     />
@@ -92,63 +92,65 @@ const page = () => {
                 <SectionTitle heading1={'We Have the Best Team'} subHeading={'Our Team'} />
                 <div className='2xl:grid xl:grid hidden grid-cols-3 gap-6 count px-10 pb-10'>
                     <div>
-                        <Image className='h-[400px] object-fill object-center' src={instructor2} alt='' />
+                        <div className='h-[500px] w-full'>
+                            <Image className='max-w-full max-h-full' src={instructor2} alt='' />
+                        </div>
                         <div className='mt-4 space-y-2'>
                             <h2 className={`text-center text-white text-2xl uppercase ${serif.className} font-normal`}>ADNAN HOSSEN SHOUROB</h2>
                             <p className={`text-center ${serif.className} font-normal uppercase text-lg text-white`}>CHIEF INSTRUCTOR</p>
                         </div>
                     </div>
                     <div>
-                        <Image className='h-[400px] object-fill object-center' src={instructor1} alt='' />
+                        <Image className='h-[500px] object-fill object-center' src={instructor1} alt='' />
                         <div className='mt-4 space-y-2'>
                             <h2 className={`text-center text-white text-2xl uppercase ${serif.className} font-normal`}>MD SHAMIM</h2>
                             <p className={`text-center ${serif.className} font-normal uppercase text-lg text-white`}>INSTRUCTOR</p>
                         </div>
                     </div>
                     <div>
-                        <Image className='h-[400px] object-fill object-center' src={itExecutive} alt='' />
+                        <Image className='h-[500px] object-fill object-center' src={itExecutive} alt='' />
                         <div className='mt-4 space-y-2'>
                             <h2 className={`text-center text-white text-2xl uppercase ${serif.className} font-normal`}>MD Rakibul Islam Raj</h2>
                             <p className={`text-center ${serif.className} font-normal uppercase text-lg text-white`}>IT Executive</p>
                         </div>
                     </div>
                     <div>
-                        <Image className='h-[400px] object-fill object-center' src={marketing1} alt='' />
+                        <Image className='h-[500px] object-fill object-center' src={marketing1} alt='' />
                         <div className='mt-4 space-y-2'>
                             <h2 className={`text-center text-white text-2xl uppercase ${serif.className} font-normal`}>Nasir uddin Sumon</h2>
                             <p className={`text-center ${serif.className} font-normal uppercase text-lg text-white`}>Marketing Executive</p>
                         </div>
                     </div>
                     <div>
-                        <Image className='h-[400px] object-fill object-center' src={marketing2} alt='' />
+                        <Image className='h-[500px] object-fill object-center' src={marketing2} alt='' />
                         <div className='mt-4 space-y-2'>
                             <h2 className={`text-center text-white text-2xl uppercase ${serif.className} font-normal`}>MD Mafujur Rahman Rokun</h2>
                             <p className={`text-center ${serif.className} font-normal uppercase text-lg text-white`}>Marketing Executive</p>
                         </div>
                     </div>
                     <div>
-                        <Image className='h-[400px] object-fill object-center' src={marketing3} alt='' />
+                        <Image className='h-[500px] object-fill object-center' src={marketing3} alt='' />
                         <div className='mt-4 space-y-2'>
                             <h2 className={`text-center text-white text-2xl uppercase ${serif.className} font-normal`}>MD Mafujur Rahman Rokun</h2>
                             <p className={`text-center ${serif.className} font-normal uppercase text-lg text-white`}>Marketing Executive</p>
                         </div>
                     </div>
                     <div>
-                        <Image className='h-[400px] object-fill object-center' src={executive} alt='' />
+                        <Image className='h-[500px] object-fill object-center' src={executive} alt='' />
                         <div className='mt-4 space-y-2'>
                             <h2 className={`text-center text-white text-2xl uppercase ${serif.className} font-normal`}>Nasir Sikder Antor</h2>
                             <p className={`text-center ${serif.className} font-normal uppercase text-lg text-white`}>Junior Executive</p>
                         </div>
                     </div>
                     <div>
-                        <Image className='h-[400px] object-fill object-center' src={office} alt='' />
+                        <Image className='h-[500px] object-fill object-center' src={office} alt='' />
                         <div className='mt-4 space-y-2'>
                             <h2 className={`text-center text-white text-2xl uppercase ${serif.className} font-normal`}>Anisur Rahman</h2>
                             <p className={`text-center ${serif.className} font-normal uppercase text-lg text-white`}>Office Executive</p>
                         </div>
                     </div>
                     <div>
-                        <Image className='h-[400px] object-fill object-center' src={officeAssi} alt='' />
+                        <Image className='h-[500px] object-fill object-center' src={officeAssi} alt='' />
                         <div className='mt-4 space-y-2'>
                             <h2 className={`text-center text-white text-2xl uppercase ${serif.className} font-normal`}>Shamim Hawladar</h2>
                             <p className={`text-center ${serif.className} font-normal uppercase text-lg text-white`}>Office Assistant</p>
