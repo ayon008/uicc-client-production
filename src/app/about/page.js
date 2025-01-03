@@ -131,7 +131,7 @@ const page = () => {
                     <div>
                         <Image className='h-[500px] object-fill object-center' src={marketing3} alt='' />
                         <div className='mt-4 space-y-2'>
-                            <h2 className={`text-center text-white text-2xl uppercase ${serif.className} font-normal`}>MD Mafujur Rahman Rokun</h2>
+                            <h2 className={`text-center text-white text-2xl uppercase ${serif.className} font-normal`}>MD Mamun Ur Rashid</h2>
                             <p className={`text-center ${serif.className} font-normal uppercase text-lg text-white`}>Marketing Executive</p>
                         </div>
                     </div>
