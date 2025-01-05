@@ -10,7 +10,8 @@ import ContactForm from '@/components/ContactFrom';
 import BottomSection from '@/shared/BottomSection';
 import img1 from '../../../public/assets/WhatsApp Image 2024-12-29 at 13.44.31_6adcb3ad.jpg'
 import email from '../../../public/assets/WhatsApp Image 2024-12-29 at 13.51.40_3e364274.jpg';
-import contact from '../../../public/assets/WhatsApp Image 2025-01-03 at 15.08.14_8ca6923c.jpg'
+import contact from '../../../public/assets/WhatsApp Image 2025-01-03 at 15.08.14_8ca6923c.jpg';
+import call from '../../../public/assets/WhatsApp Image 2025-01-03 at 16.29.28_5163cdd5.jpg'
 
 
 const page = () => {
@@ -47,7 +48,7 @@ const page = () => {
                 </div>
                 <div className="card card-compact rounded-lg shadow-xl relative">
                     <figure>
-                        <Image src={image} alt='email' className='max-h-[227px] object-fill' />
+                        <Image src={call} alt='email' className='max-h-[227px] object-cover' />
                     </figure>
                     <div className='bg-white shadow-xl p-6 rounded-2xl absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-fit h-fit max-h-[227px]'>
                         <HiOutlineLocationMarker size={48} color="black" />
@@ -60,7 +61,7 @@ const page = () => {
                 </div>
                 <div className="card card-compact rounded-lg shadow-xl relative">
                     <figure>
-                        <Image src={contact} alt='email' className='max-h-[227px] object-fill' />
+                        <Image src={contact} alt='email' className='max-h-[227px] object-cover' />
                     </figure>
                     <div className='bg-white shadow-xl p-6 rounded-2xl absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-fit h-fit max-h-[227px]'>
                         <FaPhoneAlt size={48} color="black" />
