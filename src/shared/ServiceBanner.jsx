@@ -17,7 +17,7 @@ const ServiceBanner = ({ text1, text2, img, show }) => {
                 !show && <div className='w-full h-full absolute inset-0 z-30 bg-black bg-opacity-10'></div>
             }
             {/* Background image */}
-            <div className="h-[400px] xl:h-[650px] 2xl:h-[700px]">
+            <div className="h-[400px] xl:h-[650px] 2xl:h-[700px] max-w-[1920px] mx-auto relative">
                 <Image
                     src={img}
                     className="w-full h-full 2xl:object-fill xl:object-cover object-fill z-20 aspect-[16/9]"
@@ -27,10 +27,10 @@ const ServiceBanner = ({ text1, text2, img, show }) => {
             </div>
             {/* Overlay with text */}
             <div className="absolute inset-0 z-40">
-                <div className="max-w-[1440px] mx-auto relative">
+                <div className="max-w-[1920px] mx-auto relative">
                     {/* Animated text */}
                     <motion.h1
-                        className="2xl:text-5xl xl:text-5xl text-2xl font-bold absolute left-11 2xl:top-[320px] xl:top-[270px] top-[200px] text-white uppercase tracking-wider"
+                        className="2xl:text-5xl xl:text-5xl text-2xl font-bold absolute xl:left-11 2xl:left-16 2xl:top-[320px] xl:top-[270px] top-[200px] text-white uppercase tracking-wider"
                         initial="hidden"
                         animate="visible"
                         variants={textVariants}
@@ -39,7 +39,7 @@ const ServiceBanner = ({ text1, text2, img, show }) => {
                         {text1}
                     </motion.h1>
                     <motion.h1
-                        className="2xl:text-5xl xl:text-5xl text-2xl font-bold absolute left-11 2xl:top-[390px] xl:top-[340px] top-[250px] text-white uppercase tracking-wider"
+                        className="2xl:text-5xl xl:text-5xl text-2xl font-bold absolute xl:left-11 2xl:left-16 2xl:top-[390px] xl:top-[340px] top-[250px] text-white uppercase tracking-wider"
                         initial="hidden"
                         animate="visible"
                         variants={textVariants}
