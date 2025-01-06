@@ -30,7 +30,7 @@ const ServiceBanner = ({ text1, text2, img, show }) => {
                 <div className="max-w-[1920px] mx-auto relative">
                     {/* Animated text */}
                     <motion.h1
-                        className="2xl:text-5xl xl:text-5xl text-2xl font-bold absolute xl:left-11 2xl:left-16 2xl:top-[320px] xl:top-[270px] top-[200px] text-white uppercase tracking-wider"
+                        className="2xl:text-5xl xl:text-5xl text-2xl font-bold absolute xl:left-11 2xl:left-16 left-11 2xl:top-[320px] xl:top-[270px] top-[200px] text-white uppercase tracking-wider"
                         initial="hidden"
                         animate="visible"
                         variants={textVariants}
@@ -39,7 +39,7 @@ const ServiceBanner = ({ text1, text2, img, show }) => {
                         {text1}
                     </motion.h1>
                     <motion.h1
-                        className="2xl:text-5xl xl:text-5xl text-2xl font-bold absolute xl:left-11 2xl:left-16 2xl:top-[390px] xl:top-[340px] top-[250px] text-white uppercase tracking-wider"
+                        className="2xl:text-5xl xl:text-5xl text-2xl font-bold absolute xl:left-11 2xl:left-16 left-11 2xl:top-[390px] xl:top-[340px] top-[250px] text-white uppercase tracking-wider"
                         initial="hidden"
                         animate="visible"
                         variants={textVariants}
